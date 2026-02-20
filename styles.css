@@ -1,0 +1,65 @@
+/** Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    padding: 10px 0;
+    text-align: center;
+    background: #35424a;
+    color: #ffffff;
+}
+
+/* Responsive Layout */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Hover Effects */
+section:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s;
+}
+
+a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
