@@ -8,24 +8,62 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the Fitness Learning Hub</h1>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">FitHub</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#programs" class="nav-link">Programs</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>Welcome to the Fitness Learning Hub</h1>
+            <p>Transform Your Body, Transform Your Life</p>
+        </div>
     </header>
     <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We provide resources and guidance for your fitness journey. Learn from experienced trainers and nutritionists.</p>
+        <section id="about" class="about-section">
+            <div class="section-content">
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400" alt="Fitness Training">
+                </div>
+                <div class="section-text">
+                    <h2>About Us</h2>
+                    <p>We provide resources and guidance for your fitness journey. Learn from experienced trainers and nutritionists. Our mission is to help you achieve your health goals through personalized coaching and community support.</p>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Programs</h2>
-            <ul>
-                <li>Personal Training</li>
-                <li>Nutrition Coaching</li>
-                <li>Group Classes</li>
-            </ul>
+        <section id="programs" class="programs-section">
+            <h2>Our Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=300" alt="Personal Training">
+                    <h3>Personal Training</h3>
+                    <p>One-on-one coaching tailored to your goals and fitness level.</p>
+                </div>
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300" alt="Nutrition Coaching">
+                    <h3>Nutrition Coaching</h3>
+                    <p>Expert guidance on healthy eating and meal planning.</p>
+                </div>
+                <div class="program-card">
+                    <img src="https://images.unsplash.com/photo-1518611505868-d7b87081b3f0?w=300" alt="Group Classes">
+                    <h3>Group Classes</h3>
+                    <p>Fun and energetic group fitness classes for all levels.</p>
+                </div>
+            </div>
         </section>
-        <section>
+        <section id="contact" class="contact-section">
             <h2>Contact Us</h2>
-            <p>Get in touch for more information about our fitness programs!</p>
+            <p>Ready to start your fitness journey? Get in touch for more information about our programs!</p>
+            <div class="contact-info">
+                <p>📧 Email: info@fithub.com</p>
+                <p>📱 Phone: +41 123 456 789</p>
+                <p>📍 Location: Bern, Switzerland</p>
+            </div>
         </section>
     </main>
     <footer>
