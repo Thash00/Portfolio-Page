@@ -213,6 +213,40 @@ main {
     font-size: 14px;
 }
 
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #0099ff 0%, #00d4ff 100%);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 153, 255, 0.4);
+}
+
 /* Contact Section */
 .contact-section {
     background: linear-gradient(135deg, #ffe8d6 0%, #fff0e0 100%);
