@@ -13,4 +13,12 @@ function displayDateTime() {
 // Call the function on page load
 window.onload = function() {
     displayDateTime();
+    
+    // Add event listener for Hello World button
+    const helloButton = document.getElementById('helloButton');
+    if (helloButton) {
+        helloButton.addEventListener('click', function() {
+            alert('Hello world');
+        });
+    }
 };
