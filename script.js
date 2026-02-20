@@ -1,5 +1,5 @@
 // script.js
-// JavaScript for interactivity on the portfolio page
+// JavaScript for interactivity on the fitness learning website
 
 // Function to display current date and time in UTC
 function displayDateTime() {
