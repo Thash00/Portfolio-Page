@@ -33,6 +33,25 @@
         </section>
         <section id="nutrition" class="programs-section">
             <h2>Nutrition & Ernährung Services</h2>
+            
+            <!-- Kalorienrechner Sektion -->
+            <div class="calorie-calculator">
+                <h3>🍎 Lebensmittel Kalorienrechner</h3>
+                <p>Suche ein Lebensmittel und erfahre die Nährwertinformationen</p>
+                
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="foodInput" 
+                        placeholder="z.B. Apfel, Hähnchen, Reis..."
+                        class="food-search"
+                    >
+                    <button id="searchFoodBtn" class="btn btn-primary">Suchen</button>
+                </div>
+                
+                <div id="calorieResults" class="calorie-results"></div>
+            </div>
+            
             <div class="programs-grid">
                 <div class="program-card">
                     <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300" alt="Nutrition Coaching">
