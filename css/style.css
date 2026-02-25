@@ -65,8 +65,17 @@ header {
 
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px 20px 80px 20px;
     background: linear-gradient(135deg, #800020 0%, #C41E3A 50%, #E63946 100%);
+}
+
+.hero-logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .hero h1 {
