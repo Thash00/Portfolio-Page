@@ -31,11 +31,25 @@ body {
     padding: 15px 20px;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(230,57,70,0.5);
+}
+
 .logo {
     color: #ffffff;
     font-size: 28px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin: 0;
 }
 
 .nav-menu {
