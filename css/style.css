@@ -36,6 +36,19 @@ body {
     font-size: 28px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin: 0;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-menu {
