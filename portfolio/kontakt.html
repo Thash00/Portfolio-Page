@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio – Kontakt</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Mein Portfolio</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="karriere.html">Karriere</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Kontakt</h1>
+    <section>
+      <p>Schreibe mir eine Nachricht oder nutze die Kontaktangaben:</p>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">E-Mail</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Absenden</button>
+      </form>
+      <div id="formSuccess" class="hidden">Danke! Die Nachricht wurde (lokal) empfangen.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Mein Name</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
