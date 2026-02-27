@@ -1,62 +1,72 @@
 /* =========================================================
-   style.css – Portfolio (Light/Dark) + Responsive Basics
+   style.css – Modern Portfolio (Pink Accent) + Darkmode
    ========================================================= */
 
-/* ---------- Theme Tokens (Default = Light) ---------- */
+/* -------------------- Theme Tokens (Default = Light) -------------------- */
 :root{
-  --bg:#fafafa;
-  --text:#222;
-  --muted:#666;
-  --accent:#0077cc;
+  --bg:#f7f7fb;
+  --text:#1b1c22;
+  --muted:#6a6b76;
+
+  /* Hauptakzent wie im Beispiel */
+  --accent:#ff2d55;
 
   --surface:#ffffff;
-  --border:#eeeeee;
-  --input-border:#dddddd;
+  --border:#ececf2;
 
-  --radius:8px;
+  --radius:14px;
+  --shadow: 0 18px 50px rgba(0,0,0,.08);
+
+  --container: 1080px;
 }
 
-/* Dark theme: aktiv wenn <html data-theme="dark"> */
+/* Darkmode über <html data-theme="dark"> */
 :root[data-theme="dark"]{
   --bg:#0f1115;
-  --text:#e9e9ea;
-  --muted:#b6b6b9;
-  --accent:#4aa3ff;
+  --text:#eef0f3;
+  --muted:#b0b4bd;
 
-  --surface:#171a21;
+  --accent:#ff2d55;
+
+  --surface:#151822;
   --border:#2a2f3a;
-  --input-border:#2a2f3a;
+
+  --shadow: 0 18px 50px rgba(0,0,0,.35);
 }
 
-/* ---------- Base / Reset ---------- */
+/* -------------------- Base / Reset -------------------- */
 *{ box-sizing:border-box; }
-
-html,body{
-  height:100%;
+html,body{ height:100%; }
+body{
   margin:0;
-  font-family:Inter, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background:var(--bg);
+  color:var(--text);
 }
 
-/* Optional: sanfter Wechsel zwischen Themes */
-html{
-  transition: background-color .18s ease, color .18s ease;
-}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
 
 .container{
-  max-width:1000px;
+  max-width: var(--container);
   margin:0 auto;
   padding:1rem;
 }
 
-/* ---------- Header / Navigation ---------- */
+.hidden{ display:none; }
+
+.accent{ color:var(--accent); }
+
+/* -------------------- Header / Navigation -------------------- */
 .site-header{
-  background:var(--surface);
+  position:sticky;
+  top:0;
+  z-index:50;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(10px);
   border-bottom:1px solid var(--border);
 }
 
-/* Dein HTML nutzt: .site-header .container => flex */
 .site-header .container{
   display:flex;
   align-items:center;
@@ -64,105 +74,315 @@ html{
   gap:1rem;
 }
 
-/* Falls du (optional) .header-row nutzt */
-.header-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
+.logo{
+  font-weight:800;
+  letter-spacing:.2px;
+  text-decoration:none;
 }
 
-.logo{
-  font-weight:700;
-  text-decoration:none;
-  color:var(--text);
+.main-nav{
+  display:flex;
+  align-items:center;
+  gap:.9rem;
 }
 
 .main-nav a{
-  margin-left:1rem;
   text-decoration:none;
   color:var(--muted);
+  font-weight:600;
+  padding:.4rem .55rem;
+  border-radius:10px;
 }
 
 .main-nav a.active{
-  color:var(--accent);
-  font-weight:600;
+  color:var(--text);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
-/* ---------- Darkmode Toggle Button ---------- */
+/* Darkmode Toggle Button */
 .theme-toggle{
   background:transparent;
   color:var(--text);
   border:1px solid var(--border);
-  padding:.4rem .6rem;
-  border-radius:10px;
+  padding:.45rem .6rem;
+  border-radius:12px;
   cursor:pointer;
   line-height:1;
 }
-
 .theme-toggle:hover{
-  border-color:var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
 }
 
-/* ---------- Sections ---------- */
-.hero{ padding:2rem 0; }
-
-.hero .lead{
-  color:var(--muted);
-  margin-top:.5rem;
-}
-
-/* Quote Box */
-.quote-box{
-  margin-top:1rem;
-  background:var(--surface);
-  border:1px solid var(--border);
-  padding:1rem;
-  border-radius:var(--radius);
-  display:flex;
-  gap:1rem;
+/* -------------------- Buttons -------------------- */
+.btn{
+  display:inline-flex;
   align-items:center;
-}
-
-#quote{
-  flex:1;
-  margin:0;
-}
-
-/* Buttons (Standard) */
-button{
-  background:var(--accent);
-  color:#fff;
-  border:0;
-  padding:.5rem .75rem;
-  border-radius:6px;
+  justify-content:center;
+  gap:.5rem;
+  padding:.65rem 1rem;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  border:1px solid transparent;
   cursor:pointer;
 }
 
-/* Cards */
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.btn.ghost{
+  background:transparent;
+  border-color: var(--border);
+  color:var(--text);
+}
+
+button{
+  font-family:inherit;
+}
+
+/* -------------------- Hero (wie Beispiel) -------------------- */
+.hero{
+  padding: 2.5rem 0 1.5rem;
+}
+
+/* dunkler Hero-Hintergrund + pinke “Wave” */
+.hero-split{
+  position:relative;
+  border-radius: 22px;
+  overflow:hidden;
+  background:
+    radial-gradient(1200px 500px at 20% 20%, rgba(255,255,255,.08), transparent 55%),
+    linear-gradient(135deg, #0c0d12, #151826);
+  color:#fff;
+  box-shadow: var(--shadow);
+}
+
+/* wenn Darkmode aktiv, bleibt Hero trotzdem dunkel (wie im Beispiel) */
+:root[data-theme="dark"] .hero-split{
+  box-shadow: 0 18px 55px rgba(0,0,0,.55);
+}
+
+.hero-split .hero-inner{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:2rem;
+  align-items:center;
+  padding: 2.2rem;
+}
+
+/* pinke Blob/Wave unten rechts */
+.hero-split::after{
+  content:"";
+  position:absolute;
+  right:-180px;
+  bottom:-220px;
+  width:620px;
+  height:520px;
+  background: var(--accent);
+  border-radius: 55% 45% 55% 45% / 55% 45% 55% 45%;
+  transform: rotate(-8deg);
+  opacity: .95;
+}
+
+/* noch eine dunkle weiche Form */
+.hero-split::before{
+  content:"";
+  position:absolute;
+  left:-220px;
+  top:-260px;
+  width:520px;
+  height:520px;
+  background: rgba(255,255,255,.06);
+  border-radius: 55% 45% 55% 45% / 55% 45% 55% 45%;
+  filter: blur(1px);
+}
+
+.hero-left{ position:relative; z-index:2; }
+.hero-right{ position:relative; z-index:2; }
+
+.hero-kicker{
+  margin:0 0 .35rem 0;
+  opacity:.9;
+  font-weight:700;
+}
+
+.hero h1{
+  margin:.1rem 0 .75rem;
+  font-size: clamp(2rem, 3.2vw, 3.1rem);
+  line-height:1.05;
+  letter-spacing:-.5px;
+}
+
+.hero .lead{
+  margin:0 0 1.1rem 0;
+  color: rgba(255,255,255,.78);
+  max-width: 52ch;
+}
+
+.hero-actions{
+  display:flex;
+  gap:.75rem;
+  flex-wrap:wrap;
+  margin-bottom: 1.2rem;
+}
+
+/* Bild rechts: “clean” + leichtes Shadow */
+.hero-image{
+  width:min(320px, 100%);
+  margin-left:auto;
+  border-radius: 18px;
+  overflow:hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+}
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Quote-Box im Hero: passende Karte */
+.quote-box{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  padding: .95rem 1rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+#quote{
+  margin:0;
+  flex:1;
+  color: rgba(255,255,255,.85);
+}
+
+.quote-box button{
+  background: rgba(255,255,255,.14);
+  color:#fff;
+  border: 1px solid rgba(255,255,255,.18);
+  padding: .55rem .75rem;
+  border-radius: 12px;
+  cursor:pointer;
+}
+.quote-box button:hover{
+  border-color: rgba(255,255,255,.35);
+}
+
+/* -------------------- Sections -------------------- */
+.section-head{
+  text-align:center;
+  margin: 2.2rem auto 1.2rem;
+  max-width: 70ch;
+}
+.section-head h2{
+  margin:0;
+  color: var(--accent);
+  letter-spacing:.2px;
+}
+.section-head p{
+  margin:.45rem 0 0;
+  color: var(--muted);
+}
+
+/* About wie im Beispiel */
+.about-modern{
+  margin-top: 2.4rem;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap:2rem;
+  align-items:center;
+  padding: 1.2rem 0;
+}
+
+.about-photo{
+  width: min(320px, 100%);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: 999px;
+  padding: 18px;
+  background: conic-gradient(from 210deg, var(--accent), color-mix(in srgb, var(--accent) 20%, transparent));
+  box-shadow: var(--shadow);
+}
+
+.about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.about-text{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.25rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.about-text p{
+  margin:0 0 1rem 0;
+  color: var(--muted);
+  line-height:1.6;
+}
+
+.social{
+  display:flex;
+  gap:.6rem;
+  align-items:center;
+}
+
+.social a{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--border);
+  text-decoration:none;
+  color: var(--text);
+  font-weight:800;
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+}
+
+.social a:hover{
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+}
+
+/* Cards / Projekte */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap:1rem;
-  margin-top:1.5rem;
+  margin-top: 1.5rem;
 }
 
 .card{
-  background:var(--surface);
-  padding:1rem;
+  background: var(--surface);
   border:1px solid var(--border);
-  border-radius:var(--radius);
+  border-radius: 18px;
+  padding:1.1rem;
+  box-shadow: var(--shadow);
 }
 
-/* About Section */
-.about{ margin-top:1.5rem; }
+.card h3{ margin-top:0; }
+.card p{ color: var(--muted); }
 
-/* ---------- Footer ---------- */
+/* -------------------- Footer -------------------- */
 .site-footer{
   margin-top:3rem;
   padding:1rem 0;
   border-top:1px solid var(--border);
-  background:transparent;
 }
 
 .site-footer .container{
@@ -172,34 +392,44 @@ button{
   gap:1rem;
 }
 
-/* ---------- Form ---------- */
-label{
-  display:block;
-  margin-top:.75rem;
+.footer-nav a{
+  color: var(--muted);
+  text-decoration:none;
 }
+.footer-nav a:hover{ color: var(--text); }
 
-input, textarea{
+/* -------------------- Forms -------------------- */
+label{ display:block; margin-top:.75rem; }
+
+input,textarea{
   width:100%;
-  padding:.5rem;
-  border:1px solid var(--input-border);
-  border-radius:6px;
+  padding:.6rem .7rem;
+  border:1px solid var(--border);
+  border-radius: 12px;
   margin-top:.25rem;
-  background:var(--surface);
-  color:var(--text);
+  background: var(--surface);
+  color: var(--text);
 }
 
-/* Utility */
-.hidden{ display:none; }
+/* -------------------- Responsive -------------------- */
+@media (max-width: 860px){
+  .hero-split .hero-inner{
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  .hero-image{
+    margin: 0;
+    width: min(420px, 100%);
+  }
+  .about-grid{
+    grid-template-columns: 1fr;
+  }
+}
 
-/* ---------- Responsive ---------- */
-@media (max-width:600px){
+@media (max-width: 600px){
   .site-header .container{
     flex-direction:column;
     align-items:flex-start;
-    gap:.5rem;
-  }
-  .main-nav a{
-    margin-left:0;
-    margin-right:.75rem;
+    gap:.6rem;
   }
 }

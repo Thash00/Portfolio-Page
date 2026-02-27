@@ -1,57 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – Kontakt</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <a class="logo" href="index.html">Mein Portfolio</a>
+
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="karriere.html">Karriere</a>
         <a href="hobbies.html">Hobbies</a>
         <a href="kontakt.html" class="active">Kontakt</a>
       </nav>
+
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Darkmode umschalten"
+        aria-pressed="false"
+        title="Darkmode umschalten"
+      >🌙</button>
     </div>
-    <button
-      class="theme-toggle"
-      id="themeToggle"
-      type="button"
-      aria-label="Darkmode umschalten"
-      aria-pressed="false"
-      title="Darkmode umschalten"
-    >
-      🌙
-    </button>
   </header>
 
   <main class="container">
-    <h1>Kontakt</h1>
-    <section>
-      <p>Schreibe mir eine Nachricht oder nutze die Kontaktangaben:</p>
+    <header class="section-head">
+      <h2>Kontakt</h2>
+      <p>Schreib mir eine Nachricht.</p>
+    </header>
+
+    <section class="card">
       <form id="contactForm">
-        <label for="name">Name</label>
-        <input id="name" name="name" required>
+        <label>
+          Name
+          <input name="name" type="text" required />
+        </label>
 
-        <label for="email">E-Mail</label>
-        <input id="email" name="email" type="email" required>
+        <label>
+          E-Mail
+          <input name="email" type="email" required />
+        </label>
 
-        <label for="message">Nachricht</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label>
+          Nachricht
+          <textarea name="message" rows="5" required></textarea>
+        </label>
 
-        <button type="submit">Absenden</button>
+        <button type="submit" class="btn primary" style="margin-top: 1rem;">
+          Absenden
+        </button>
+
+        <p id="formSuccess" class="hidden" style="margin-top: 1rem;">
+          Danke! Deine Nachricht wurde (lokal) abgesendet.
+        </p>
       </form>
-      <div id="formSuccess" class="hidden">Danke! Die Nachricht wurde (lokal) empfangen.</div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small>&copy; <span id="year"></span> Mein Name</small>
+      <p>© <span id="year"></span> DEIN NAME</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+      </nav>
     </div>
   </footer>
 

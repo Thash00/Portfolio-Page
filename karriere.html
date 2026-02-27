@@ -1,56 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – Karriere</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <a class="logo" href="index.html">Mein Portfolio</a>
+
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="karriere.html" class="active">Karriere</a>
         <a href="hobbies.html">Hobbies</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-    <button
-      class="theme-toggle"
-      id="themeToggle"
-      type="button"
-      aria-label="Darkmode umschalten"
-      aria-pressed="false"
-      title="Darkmode umschalten"
-    >
-      🌙
-    </button>
+
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Darkmode umschalten"
+        aria-pressed="false"
+        title="Darkmode umschalten"
+      >🌙</button>
     </div>
   </header>
 
   <main class="container">
-    <h1>Karriere</h1>
-    <section>
-      <h2>Berufserfahrung</h2>
-      <ul>
-        <li><strong>Praktikum / Job:</strong> Kurze Beschreibung und Zeitraum.</li>
-        <li><strong>Projektarbeit:</strong> Relevante Aufgaben und Erfolge.</li>
-      </ul>
-    </section>
+    <header class="section-head">
+      <h2>Karriere</h2>
+      <p>Hier kannst du deinen beruflichen Werdegang / Ausbildung / Skills zeigen.</p>
+    </header>
 
-    <section>
-      <h2>Ausbildung</h2>
-      <ul>
-        <li><strong>Studium:</strong> Studiengang, Hochschule, Zeitraum.</li>
-        <li><strong>Weiterbildungen:</strong> Kurse & Zertifikate.</li>
-      </ul>
-    </section>
+    <div class="cards">
+      <article class="card">
+        <h3>2024 – Heute</h3>
+        <p>Job / Studium / Ausbildung – Beschreibung</p>
+      </article>
+
+      <article class="card">
+        <h3>2022 – 2024</h3>
+        <p>Job / Schule – Beschreibung</p>
+      </article>
+
+      <article class="card">
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript, …</p>
+      </article>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small>&copy; <span id="year"></span> Mein Name</small>
+      <p>© <span id="year"></span> DEIN NAME</p>
+      <nav class="footer-nav">
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
     </div>
   </footer>
 
