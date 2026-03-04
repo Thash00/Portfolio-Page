@@ -1,37 +1,53 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio | Kontakt</title>
+    <title>My Portfolio - Contact</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Main</a></li>
-            <li><a href="karriere.html">Karriere</a></li>
-            <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="kontakt.html" class="active">Kontakt</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="karriere.html">Career</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="kontakt.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="content">
-        <h1>Kontaktier mich!</h1>
-        <form id="contact-form">
-            <label>Name</label>
-            <input type="text" id="name" required>
-            
-            <label>E-Mail</label>
-            <input type="email" id="email" required>
-            
-            <label>Nachricht</label>
-            <address><textarea id="message" rows="5"></textarea></address>
-            
-            <button type="submit" class="btn">Absenden</button>
-        </form>
+    <main>
+        <section>
+            <h1>Get in Touch</h1>
+            <p>Feel free to reach out to me.</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h2>Other Ways to Connect</h2>
+                <p>Email: your.email@example.com</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn Profile</a></p>
+                <p>GitHub: <a href="https://github.com/yourusername" target="_blank">Your GitHub Profile</a></p>
+            </div>
+        </section>
     </main>
 
-    <script src="js/main.js"></script>
+    <footer>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

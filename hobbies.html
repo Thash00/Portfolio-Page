@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio | Hobbies</title>
+    <title>My Portfolio - Hobbies</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Main</a></li>
-            <li><a href="karriere.html">Karriere</a></li>
-            <li><a href="hobbies.html" class="active">Hobbies</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="karriere.html">Career</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="kontakt.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="content">
-        <h1>Meine Hobbies</h1>
-        
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="https://via.placeholder.com/800x400/333/fff?text=Hobby+1" style="width:100%">
-                <div class="caption">Reisen & Entdecken</div>
+    <main>
+        <section>
+            <h1>My Hobbies</h1>
+            <p>Beyond my professional life, I enjoy pursuing various interests.</p>
+            <div class="hobby-item">
+                <img src="images/hobby-photography.jpg" alt="Photography">
+                <h2>Photography</h2>
+                <p>Capturing moments and exploring the world through my lens.</p>
             </div>
-
-            <div class="mySlides fade">
-                <img src="https://via.placeholder.com/800x400/555/fff?text=Hobby+2" style="width:100%">
-                <div class="caption">Fotografie</div>
+            <div class="hobby-item">
+                <img src="images/hobby-reading.jpg" alt="Reading">
+                <h2>Reading</h2>
+                <p>Diving into different worlds and expanding my knowledge.</p>
             </div>
-
-            <div class="mySlides fade">
-                <img src="https://via.placeholder.com/800x400/777/fff?text=Hobby+3" style="width:100%">
-                <div class="caption">Programmieren</div>
+            <div class="hobby-item">
+                <img src="images/hobby-hiking.jpg" alt="Hiking">
+                <h2>Hiking</h2>
+                <p>Connecting with nature and enjoying the outdoors.</p>
             </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
+        </section>
     </main>
 
-    <script src="js/main.js"></script>
+    <footer>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
