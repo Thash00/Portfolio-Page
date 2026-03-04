@@ -1,78 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Kontakt</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio | Kontakt</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="index.html">Mein Portfolio</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="karriere.html">Karriere</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+    </nav>
 
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="karriere.html">Karriere</a>
-        <a href="hobbies.html">Hobbies</a>
-        <a href="kontakt.html" class="active">Kontakt</a>
-      </nav>
+    <main class="content">
+        <h1>Kontaktier mich!</h1>
+        <form id="contact-form">
+            <label>Name</label>
+            <input type="text" id="name" required>
+            
+            <label>E-Mail</label>
+            <input type="email" id="email" required>
+            
+            <label>Nachricht</label>
+            <address><textarea id="message" rows="5"></textarea></address>
+            
+            <button type="submit" class="btn">Absenden</button>
+        </form>
+    </main>
 
-      <button
-        id="themeToggle"
-        class="theme-toggle"
-        type="button"
-        aria-label="Darkmode umschalten"
-        aria-pressed="false"
-        title="Darkmode umschalten"
-      >🌙</button>
-    </div>
-  </header>
-
-  <main class="container">
-    <header class="section-head">
-      <h2>Kontakt</h2>
-      <p>Schreib mir eine Nachricht.</p>
-    </header>
-
-    <section class="card">
-      <form id="contactForm">
-        <label>
-          Name
-          <input name="name" type="text" required />
-        </label>
-
-        <label>
-          E-Mail
-          <input name="email" type="email" required />
-        </label>
-
-        <label>
-          Nachricht
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-
-        <button type="submit" class="btn primary" style="margin-top: 1rem;">
-          Absenden
-        </button>
-
-        <p id="formSuccess" class="hidden" style="margin-top: 1rem;">
-          Danke! Deine Nachricht wurde (lokal) abgesendet.
-        </p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> DEIN NAME</p>
-      <nav class="footer-nav">
-        <a href="index.html">Home</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

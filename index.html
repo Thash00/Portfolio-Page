@@ -1,132 +1,29 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Start</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="index.html">Mein Portfolio</a>
+    <nav>
+        <div class="logo">MeinPortfolio</div>
+        <ul>
+            <li><a href="index.html" class="active">Main</a></li>
+            <li><a href="karriere.html">Karriere</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
 
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="karriere.html">Karriere</a>
-        <a href="hobbies.html">Hobbies</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
+    <main class="content">
+        <section class="hero">
+            <h1>Willkommen auf meiner Webseite</h1>
+            <p>Ich freue mich, dass du hier bist. Schau dich gerne um, um mehr über meinen Werdegang und meine Interessen zu erfahren.</p>
+        </section>
+    </main>
 
-      <button
-        id="themeToggle"
-        class="theme-toggle"
-        type="button"
-        aria-label="Darkmode umschalten"
-        aria-pressed="false"
-        title="Darkmode umschalten"
-      >🌙</button>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero hero-split">
-      <div class="hero-inner">
-        <div class="hero-left">
-          <p class="hero-kicker">Ich bin <span class="accent">DEIN NAME</span></p>
-          <h1>Web Developer<br><span class="accent">UI & UX</span></h1>
-          <p class="lead">
-            Ich erstelle moderne, responsive Webseiten und Web-Apps. Hier findest du meine Projekte,
-            meinen Werdegang und wie du mich erreichen kannst.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#projekte">Portfolio</a>
-            <a class="btn ghost" href="kontakt.html">Kontakt</a>
-          </div>
-
-          <!-- ZITAT (API) -->
-          <div class="quote-box">
-            <blockquote id="quote">Lade Zitat…</blockquote>
-            <button id="newQuote" type="button">Neues Zitat</button>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="hero-image">
-            <img src="img/me.jpg" alt="Portrait" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about about-modern">
-      <header class="section-head">
-        <h2>About Me</h2>
-        <p>Kurzer Satz über dich (z. B. Fokus, Ziel, Spezialisierung).</p>
-      </header>
-
-      <div class="about-grid">
-        <div class="about-photo">
-          <img src="img/me2.jpg" alt="Portrait" />
-        </div>
-
-        <div class="about-text">
-          <p>
-            Hi! Ich bin DEIN NAME und interessiere mich für Webentwicklung, Design und moderne Technologien.
-            Hier kannst du kurz deine Story erzählen: Was du machst, was du lernst, was du anbietest.
-          </p>
-
-          <div class="social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="GitHub">gh</a>
-            <a href="#" aria-label="Twitter/X">x</a>
-            <a href="#" aria-label="Behance">be</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJEKTE -->
-    <section id="projekte">
-      <header class="section-head">
-        <h2>Projekte</h2>
-        <p>Ein paar ausgewählte Arbeiten / Übungen / Webseiten.</p>
-      </header>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Projekt 1</h3>
-          <p>Kurzbeschreibung: Was ist es, welche Technologien?</p>
-        </article>
-
-        <article class="card">
-          <h3>Projekt 2</h3>
-          <p>Kurzbeschreibung: Was ist es, welche Technologien?</p>
-        </article>
-
-        <article class="card">
-          <h3>Projekt 3</h3>
-          <p>Kurzbeschreibung: Was ist es, welche Technologien?</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> DEIN NAME</p>
-      <nav class="footer-nav">
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

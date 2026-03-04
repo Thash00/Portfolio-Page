@@ -1,68 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Hobbies</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio | Hobbies</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="index.html">Mein Portfolio</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="karriere.html">Karriere</a></li>
+            <li><a href="hobbies.html" class="active">Hobbies</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
 
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="karriere.html">Karriere</a>
-        <a href="hobbies.html" class="active">Hobbies</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
+    <main class="content">
+        <h1>Meine Hobbies</h1>
+        
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://via.placeholder.com/800x400/333/fff?text=Hobby+1" style="width:100%">
+                <div class="caption">Reisen & Entdecken</div>
+            </div>
 
-      <button
-        id="themeToggle"
-        class="theme-toggle"
-        type="button"
-        aria-label="Darkmode umschalten"
-        aria-pressed="false"
-        title="Darkmode umschalten"
-      >🌙</button>
-    </div>
-  </header>
+            <div class="mySlides fade">
+                <img src="https://via.placeholder.com/800x400/555/fff?text=Hobby+2" style="width:100%">
+                <div class="caption">Fotografie</div>
+            </div>
 
-  <main class="container">
-    <header class="section-head">
-      <h2>Hobbies</h2>
-      <p>Was machst du in deiner Freizeit? Zeig es modern in Cards.</p>
-    </header>
+            <div class="mySlides fade">
+                <img src="https://via.placeholder.com/800x400/777/fff?text=Hobby+3" style="width:100%">
+                <div class="caption">Programmieren</div>
+            </div>
 
-    <div class="cards">
-      <article class="card">
-        <h3>Hobby 1</h3>
-        <p>Kurzbeschreibung deines Hobbys.</p>
-      </article>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </main>
 
-      <article class="card">
-        <h3>Hobby 2</h3>
-        <p>Kurzbeschreibung deines Hobbys.</p>
-      </article>
-
-      <article class="card">
-        <h3>Hobby 3</h3>
-        <p>Kurzbeschreibung deines Hobbys.</p>
-      </article>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> DEIN NAME</p>
-      <nav class="footer-nav">
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
