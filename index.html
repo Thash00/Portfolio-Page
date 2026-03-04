@@ -1,52 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Emad | Web Designer Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+
+    <header class="main-header">
+        <div class="logo">Emadalmagedy</div>
+        <nav class="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="karriere.html">Career</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="kontakt.html">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Discover my skills, experiences, and passions.</p>
-        </section>
-
-        <section id="slideshow-container">
-            <h2>Featured Projects</h2>
-            <div class="slideshow">
-                <img src="images/slide1.jpg" alt="Project Image 1">
-                <img src="images/slide2.jpg" alt="Project Image 2">
-                <img src="images/slide3.jpg" alt="Project Image 3">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="greeting">Hi, I’m Emad,</h1>
+                <h2 class="role">I’M A WEB DESIGNER</h2>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+                </p>
+                <a href="#projects" class="btn-primary">View My Projects</a>
             </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </section>
-
-        <section id="api-section">
-            <h2>From the Web</h2>
-            <div id="api-data">
-                <p>Loading data...</p>
+            
+            <div class="hero-image-container">
+                <div class="decoration-shape"></div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-    </footer>
+    <footer class="main-footer">
+        <div class="social-links">
+            </div>
+    </footer >
 
     <script src="js/script.js"></script>
+
 </body>
 </html>
