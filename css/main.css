@@ -45,7 +45,7 @@ img {
 .page-bg {
   position: absolute;
   inset: 0;
-  background-image: url("./assets/images/v1_4.png");
+  background-image: url("assets/images/v1_4.png");
   background-repeat: no-repeat;
   background-position: center 32%;
   background-size: min(1400px, 130vw);
@@ -206,9 +206,9 @@ img {
 }
 
 .hero-image {
-  width: min(100%, 1060px);
+  width: min(100%, 1560px);
   height: auto;
-  max-height: min(78vh, 1220px);
+  max-height: min(78vh, 2220px);
   object-fit: contain;
   object-position: center bottom;
   filter: drop-shadow(0 18px 50px rgba(0, 0, 0, 0.55));
