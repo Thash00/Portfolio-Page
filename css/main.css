@@ -206,7 +206,7 @@ img {
 }
 
 .hero-image {
-  width: min(100%, 1560px);
+  width: min(150%, 1560px);
   height: auto;
   max-height: min(78vh, 2220px);
   object-fit: contain;
