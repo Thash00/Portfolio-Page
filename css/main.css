@@ -236,7 +236,7 @@ img {
 
   .hero-image {
     width: min(100%, 620px);
-    max-height: 70vh;
+    max-height: 90vh;
   }
 }
 
