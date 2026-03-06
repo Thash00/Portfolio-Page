@@ -206,9 +206,9 @@ img {
 }
 
 .hero-image {
-  width: min(100%, 760px);
+  width: min(100%, 960px);
   height: auto;
-  max-height: min(78vh, 920px);
+  max-height: min(78vh, 1020px);
   object-fit: contain;
   object-position: center bottom;
   filter: drop-shadow(0 18px 50px rgba(0, 0, 0, 0.55));
