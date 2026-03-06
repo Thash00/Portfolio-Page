@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('.header');
-  const button = document.querySelector('.menu-button');
-  const links = document.querySelectorAll('.navigation a');
+  const menuButton = document.querySelector('.menu-toggle');
+  const navigation = document.querySelector('.site-nav');
 
-  if (!header || !button) return;
+  if (!menuButton || !navigation) return;
 
-  button.addEventListener('click', () => {
-    const isOpen = header.classList.toggle('is-open');
-    button.setAttribute('aria-expanded', String(isOpen));
+  menuButton.addEventListener('click', () => {
+    const isOpen = navigation.classList.toggle('is-open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
   });
 
-  links.forEach((link) => {
+  navigation.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      header.classList.remove('is-open');
-      button.setAttribute('aria-expanded', 'false');
+      navigation.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
     });
   });
 });
