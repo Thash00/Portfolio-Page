@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lebenslauf von Alex Müller – Webentwickler" />
+  <title>Lebenslauf – Alex Müller</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="page-cv">
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AM<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lebenslauf.html" class="active">Lebenslauf</a></li>
+      <li><a href="freizeit.html">Freizeit</a></li>
+      <li><a href="index.html#chatbot" class="nav-cta">KI-Chat</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero small-hero">
+    <div class="container">
+      <span class="section-tag">Mein Weg</span>
+      <h1>Lebenslauf</h1>
+      <p>Ausbildung, Berufserfahrung und Kenntnisse auf einen Blick</p>
+      <a href="#" class="btn btn-primary" onclick="window.print()">📄 PDF herunterladen</a>
+    </div>
+  </div>
+
+  <main class="cv-main">
+    <div class="container">
+      <div class="cv-grid">
+
+        <!-- Sidebar -->
+        <aside class="cv-sidebar">
+          <div class="cv-profile-card">
+            <div class="cv-avatar">AM</div>
+            <h2>Alex Müller</h2>
+            <p class="cv-title">Webentwickler & Designer</p>
+            <div class="cv-contact-info">
+              <div class="cv-contact-item">
+                <span class="cv-icon">📍</span>
+                <span>Bern, Schweiz</span>
+              </div>
+              <div class="cv-contact-item">
+                <span class="cv-icon">✉️</span>
+                <span>alex.mueller@example.com</span>
+              </div>
+              <div class="cv-contact-item">
+                <span class="cv-icon">🌐</span>
+                <span>alexmüller.github.io</span>
+              </div>
+              <div class="cv-contact-item">
+                <span class="cv-icon">📱</span>
+                <span>+41 79 123 45 67</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-sidebar-section">
+            <h3>Sprachen</h3>
+            <div class="lang-item">
+              <span>Deutsch</span>
+              <div class="lang-bar"><div class="lang-fill" style="--w:100%"></div></div>
+              <span class="lang-level">Muttersprache</span>
+            </div>
+            <div class="lang-item">
+              <span>Englisch</span>
+              <div class="lang-bar"><div class="lang-fill" style="--w:90%"></div></div>
+              <span class="lang-level">C1</span>
+            </div>
+            <div class="lang-item">
+              <span>Französisch</span>
+              <div class="lang-bar"><div class="lang-fill" style="--w:60%"></div></div>
+              <span class="lang-level">B1</span>
+            </div>
+          </div>
+
+          <div class="cv-sidebar-section">
+            <h3>Hard Skills</h3>
+            <div class="tag-cloud">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">Git</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Docker</span>
+              <span class="tag">SQL</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="cv-sidebar-section">
+            <h3>Soft Skills</h3>
+            <div class="tag-cloud">
+              <span class="tag tag-soft">Teamarbeit</span>
+              <span class="tag tag-soft">Kommunikation</span>
+              <span class="tag tag-soft">Kreativität</span>
+              <span class="tag tag-soft">Problemlösung</span>
+              <span class="tag tag-soft">Selbstorganisation</span>
+              <span class="tag tag-soft">Lernbereitschaft</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="cv-content">
+
+          <!-- Berufserfahrung -->
+          <section class="cv-section">
+            <div class="cv-section-title">
+              <span class="cv-section-icon">💼</span>
+              <h2>Berufserfahrung</h2>
+            </div>
+            <div class="timeline">
+
+              <div class="timeline-item" style="--delay:0s">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <div>
+                      <h3>Junior Frontend Developer</h3>
+                      <span class="timeline-company">Digital Agency Bern AG</span>
+                    </div>
+                    <span class="timeline-date">2024 – Heute</span>
+                  </div>
+                  <ul class="timeline-list">
+                    <li>Entwicklung responsiver Webapplikationen mit React und TypeScript</li>
+                    <li>Enge Zusammenarbeit mit UX/UI-Design-Teams für optimale Benutzererfahrungen</li>
+                    <li>Integration von REST-APIs und Third-Party-Bibliotheken (Chart.js, Leaflet.js)</li>
+                    <li>Code Reviews und Mentoring für Praktikantinnen und Praktikanten</li>
+                  </ul>
+                  <div class="timeline-tech"><span>React</span><span>TypeScript</span><span>REST API</span></div>
+                </div>
+              </div>
+
+              <div class="timeline-item" style="--delay:0.1s">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <div>
+                      <h3>Web Developer Intern</h3>
+                      <span class="timeline-company">StartupHub Zürich</span>
+                    </div>
+                    <span class="timeline-date">2023</span>
+                  </div>
+                  <ul class="timeline-list">
+                    <li>Mitarbeit an einem E-Commerce-Projekt mit über 10'000 aktiven Nutzern</li>
+                    <li>Optimierung der Ladezeiten um 40% durch Code-Splitting und Lazy Loading</li>
+                    <li>Erstellung technischer Dokumentationen für interne APIs</li>
+                  </ul>
+                  <div class="timeline-tech"><span>Vue.js</span><span>Node.js</span><span>MongoDB</span></div>
+                </div>
+              </div>
+
+              <div class="timeline-item" style="--delay:0.2s">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <div>
+                      <h3>Freelance Webentwickler</h3>
+                      <span class="timeline-company">Selbstständig</span>
+                    </div>
+                    <span class="timeline-date">2022 – 2023</span>
+                  </div>
+                  <ul class="timeline-list">
+                    <li>Design und Entwicklung von Websites für lokale KMUs</li>
+                    <li>WordPress-Customization und SEO-Optimierung</li>
+                    <li>Beratung zu digitaler Präsenz und Online-Marketing</li>
+                  </ul>
+                  <div class="timeline-tech"><span>HTML/CSS</span><span>WordPress</span><span>SEO</span></div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Ausbildung -->
+          <section class="cv-section">
+            <div class="cv-section-title">
+              <span class="cv-section-icon">🎓</span>
+              <h2>Ausbildung</h2>
+            </div>
+            <div class="timeline">
+
+              <div class="timeline-item" style="--delay:0s">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <div>
+                      <h3>B.Sc. Business Information Technology</h3>
+                      <span class="timeline-company">Berner Fachhochschule (BFH)</span>
+                    </div>
+                    <span class="timeline-date">2022 – 2025</span>
+                  </div>
+                  <p>Schwerpunkte: Web Engineering, Data Engineering, Software Architecture</p>
+                  <p><strong>Abschlussarbeit:</strong> «Entwicklung einer Progressive Web App für nachhaltiges Konsumverhalten»</p>
+                  <div class="timeline-tech"><span>Note: 5.3</span></div>
+                </div>
+              </div>
+
+              <div class="timeline-item" style="--delay:0.1s">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <div>
+                      <h3>Berufsmaturität (BM2)</h3>
+                      <span class="timeline-company">Wirtschaftsschule KV Bern</span>
+                    </div>
+                    <span class="timeline-date">2021 – 2022</span>
+                  </div>
+                  <p>Fokus auf Wirtschaft und Informatik</p>
+                </div>
+              </div>
+
+              <div class="timeline-item" style="--delay:0.2s">
+                <div class="timeline-dot timeline-dot--edu"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <div>
+                      <h3>EFZ Informatiker Applikationsentwicklung</h3>
+                      <span class="timeline-company">Lehrbetrieb: Swisscom AG</span>
+                    </div>
+                    <span class="timeline-date">2017 – 2021</span>
+                  </div>
+                  <p>4-jährige Berufslehre mit Fokus auf Softwareentwicklung und Datenbankdesign</p>
+                  <div class="timeline-tech"><span>Java</span><span>SQL</span><span>C#</span></div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Zertifikate -->
+          <section class="cv-section">
+            <div class="cv-section-title">
+              <span class="cv-section-icon">🏅</span>
+              <h2>Zertifikate & Weiterbildung</h2>
+            </div>
+            <div class="certs-grid">
+              <div class="cert-card">
+                <div class="cert-icon">☁️</div>
+                <h4>AWS Cloud Practitioner</h4>
+                <span>Amazon Web Services · 2024</span>
+              </div>
+              <div class="cert-card">
+                <div class="cert-icon">⚛️</div>
+                <h4>React Developer Certificate</h4>
+                <span>Meta · 2023</span>
+              </div>
+              <div class="cert-card">
+                <div class="cert-icon">🔒</div>
+                <h4>Web Security Fundamentals</h4>
+                <span>Web.dev · 2023</span>
+              </div>
+              <div class="cert-card">
+                <div class="cert-icon">📊</div>
+                <h4>Google Analytics 4</h4>
+                <span>Google · 2022</span>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Alex Müller · Mit ❤️ gebaut in der Schweiz</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="lebenslauf.html">Lebenslauf</a>
+        <a href="freizeit.html">Freizeit</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

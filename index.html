@@ -3,56 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emadalmagedy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
+  <meta name="description" content="Portfolio von Alex Müller – Webentwickler & Designer" />
+  <title>Alex Müller – Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-<body>
-  <div class="page-shell">
-    <div class="page-bg" aria-hidden="true"></div>
-    <div class="page-overlay" aria-hidden="true"></div>
+<body class="page-home">
 
-    <header class="site-header">
-      <a class="brand" href="#home">Emad<span>almagedy</span></a>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">AM<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="lebenslauf.html">Lebenslauf</a></li>
+      <li><a href="freizeit.html">Freizeit</a></li>
+      <li><a href="#chatbot" class="nav-cta" id="chatLink">KI-Chat</a></li>
+    </ul>
+  </nav>
 
-      <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="site-nav" id="site-nav">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contacts</a>
-      </nav>
-
-      <div class="social-links" aria-label="Social Media">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="GitHub">GH</a>
-        <a href="#" aria-label="LinkedIn">IN</a>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse"></span> Verfügbar für neue Projekte
       </div>
-    </header>
+      <h1 class="hero-title">
+        Alex<br /><em>Müller</em>
+      </h1>
+      <p class="hero-subtitle">Webentwickler & Digital Enthusiast</p>
+      <p class="hero-desc">
+        Ich erschaffe digitale Erlebnisse, die Menschen begeistern – mit sauberem Code, durchdachtem Design und einer Prise Magie.
+      </p>
+      <div class="hero-actions">
+        <a href="lebenslauf.html" class="btn btn-primary">Lebenslauf ansehen</a>
+        <a href="#chatbot" class="btn btn-ghost" id="heroChat">Mit KI chatten</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="12">0</span>
+          <span class="stat-label">Projekte</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Jahre Erfahrung</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="8">0</span>
+          <span class="stat-label">Technologien</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
+            <circle cx="100" cy="80" r="45" fill="var(--accent)" opacity="0.2"/>
+            <circle cx="100" cy="80" r="35" fill="var(--accent)" opacity="0.3"/>
+            <ellipse cx="100" cy="75" rx="22" ry="25" fill="var(--accent)"/>
+            <path d="M58 160 Q100 130 142 160 Q142 185 100 185 Q58 185 58 160Z" fill="var(--accent)"/>
+          </svg>
+          <div class="avatar-initials">AM</div>
+        </div>
+        <div class="ring-orbit">
+          <div class="orbit-item" style="--i:0">🎯</div>
+          <div class="orbit-item" style="--i:1">💻</div>
+          <div class="orbit-item" style="--i:2">🚀</div>
+          <div class="orbit-item" style="--i:3">🎨</div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <main class="hero" id="home">
-      <section class="hero-content">
-        <p class="eyebrow">Hi, I’m Emad,</p>
-        <h1>I’M A WEB<br>DESIGNER</h1>
-        <p class="hero-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-        </p>
-        <a class="hero-cta" href="#projects">View My Projects</a>
-      </section>
+  <!-- Skills Section -->
+  <section class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kompetenzen</span>
+        <h2>Tech Stack & Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" style="--delay:0s">
+          <div class="skill-icon">🌐</div>
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+        </div>
+        <div class="skill-card" style="--delay:0.1s">
+          <div class="skill-icon">⚙️</div>
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span>Node.js</span><span>Python</span><span>REST APIs</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+        </div>
+        <div class="skill-card" style="--delay:0.2s">
+          <div class="skill-icon">🎨</div>
+          <h3>Design</h3>
+          <div class="skill-tags">
+            <span>Figma</span><span>UI/UX</span><span>Responsive</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+        </div>
+        <div class="skill-card" style="--delay:0.3s">
+          <div class="skill-icon">🔧</div>
+          <h3>Tools</h3>
+          <div class="skill-tags">
+            <span>Git</span><span>VS Code</span><span>Docker</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section class="hero-visual" aria-label="Illustration">
-        <img src="assets/images/v1_28.png" alt="Stylisierte Figur" class="hero-image" />
-      </section>
-    </main>
-  </div>
+  <!-- Projects Section -->
+  <section class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projekte</span>
+        <h2>Ausgewählte Arbeiten</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card featured">
+          <div class="project-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="project-preview">🛒</div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">E-Commerce</span>
+            <h3>ShopWave Platform</h3>
+            <p>Vollständige E-Commerce-Lösung mit React-Frontend, Node.js-Backend und Stripe-Integration.</p>
+            <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+            <a href="#" class="project-link">Ansehen →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <div class="project-preview">📊</div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Dashboard</span>
+            <h3>Analytics Pro</h3>
+            <p>Echtzeit-Dashboard mit D3.js-Visualisierungen und API-Anbindung.</p>
+            <div class="project-tech"><span>Vue.js</span><span>D3.js</span><span>Python</span></div>
+            <a href="#" class="project-link">Ansehen →</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <div class="project-preview">🌿</div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Mobile App</span>
+            <h3>GreenTrack</h3>
+            <p>PWA zur Verfolgung des persönlichen CO₂-Fussabdrucks mit Gamification.</p>
+            <div class="project-tech"><span>PWA</span><span>JavaScript</span><span>REST API</span></div>
+            <a href="#" class="project-link">Ansehen →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- AI Chatbot Section -->
+  <section class="section chatbot-section" id="chatbot">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">KI-Integration</span>
+        <h2>Chat mit meinem KI-Assistenten</h2>
+        <p class="section-desc">Stell mir Fragen über meinen Werdegang, Projekte oder Fähigkeiten. Der KI-Assistent beantwortet alles!</p>
+      </div>
+      <div class="chatbot-wrapper">
+        <div class="chatbot-header">
+          <div class="chatbot-avatar">🤖</div>
+          <div>
+            <strong>Portfolio-Assistent</strong>
+            <span class="chatbot-status"><span class="pulse"></span> Online</span>
+          </div>
+          <button class="chatbot-clear" id="clearChat" title="Chat leeren">🗑️</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+          <div class="msg bot-msg">
+            <div class="msg-avatar">🤖</div>
+            <div class="msg-bubble">
+              Hallo! Ich bin der KI-Assistent von Alex. Ich kann dir alles über seine Fähigkeiten, Projekte und Erfahrungen erzählen. Was möchtest du wissen? 😊
+            </div>
+          </div>
+          <div class="quick-replies" id="quickReplies">
+            <button class="quick-btn" data-msg="Was sind deine Hauptfähigkeiten?">💻 Fähigkeiten</button>
+            <button class="quick-btn" data-msg="Erzähl mir von deinen Projekten.">🚀 Projekte</button>
+            <button class="quick-btn" data-msg="Was machst du in deiner Freizeit?">🎯 Freizeit</button>
+            <button class="quick-btn" data-msg="Wie kann ich dich kontaktieren?">📬 Kontakt</button>
+          </div>
+        </div>
+        <div class="chatbot-input-area">
+          <input type="text" id="chatInput" placeholder="Deine Frage an den Assistenten..." maxlength="500" />
+          <button id="sendBtn" class="send-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <p class="chatbot-hint">Powered by Claude AI · Antworten können variieren</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Lass uns zusammenarbeiten</h2>
+        <p>Ich bin offen für spannende Projekte und neue Herausforderungen.</p>
+        <div class="contact-links">
+          <a href="mailto:alex.mueller@example.com" class="contact-link">
+            <span>✉️</span> alex.mueller@example.com
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-link">
+            <span>🐙</span> GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-link">
+            <span>💼</span> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Alex Müller · Mit ❤️ gebaut in der Schweiz</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="lebenslauf.html">Lebenslauf</a>
+        <a href="freizeit.html">Freizeit</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
