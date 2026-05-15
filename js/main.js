@@ -1,5 +1,3 @@
-// chatbot.js – KI-Chatbot powered by Claude API
-
 (function () {
   const chatMessages = document.getElementById('chatMessages');
   const chatInput = document.getElementById('chatInput');
@@ -9,175 +7,77 @@
 
   if (!chatMessages || !chatInput || !sendBtn) return;
 
-  // Conversation history for multi-turn context
-  const history = [];
+  const facts = {
+    kompetenzen: 'Thashaanths Schwerpunkte liegen in Windows- und Linux-Serveradministration, Microsoft 365, Application Management, Change- und Release-Management sowie agilen Arbeitsmethoden wie SAFe und Scrum.',
+    erfahrung: 'Aktuell arbeitet Thashaanth als ICT Application Manager bei RUAG AG. Davor war er im IT-Support beim BBZ Biel-Bienne sowie im Zivildienst im IT-Support und als Teamleitung Multimedia tätig.',
+    ausbildung: 'Er studiert Wirtschaftsinformatik / Digital Business & AI an der Berner Fachhochschule. Zuvor absolvierte er die Berufsmaturität und die Berufslehre als Informatiker EFZ Systemtechnik.',
+    zertifikate: 'Er besitzt unter anderem das Zertifikat Certified SAFe 6 Agilist, gültig bis 16. Oktober 2026. Zusätzlich sind sein EFZ-Fähigkeitszeugnis und das Berufsmaturitätszeugnis eingebunden.',
+    freizeit: 'In seiner Freizeit interessiert sich Thashaanth für Fitness, Fussball und Autos. Diese Interessen stehen für Disziplin, Teamgeist, Technikbegeisterung und Fokus.',
+    kontakt: 'Du erreichst Thashaanth per E-Mail unter thashaanth@hotmail.com oder telefonisch unter 078 630 70 09. Sein LinkedIn-Profil ist ebenfalls auf der Startseite verlinkt.'
+  };
 
-  const SYSTEM_PROMPT = `Du bist der persönliche Portfolio-Assistent von Alex Müller, einem Webentwickler aus Bern, Schweiz. Du sprichst Deutsch und bist freundlich, kompetent und kurz gefasst.
-
-Hier sind Fakten über Alex:
-- Name: Alex Müller, 25 Jahre alt, wohnhaft in Bern
-- Beruf: Junior Frontend Developer bei der Digital Agency Bern AG (seit 2024)
-- Ausbildung: B.Sc. Business Information Technology an der BFH (2022–2025), EFZ Informatiker (Swisscom, 2017–2021)
-- Fähigkeiten: HTML5, CSS3, JavaScript, React, Node.js, Python, Git, REST APIs, Figma, Docker
-- Projekte: ShopWave (E-Commerce mit React/Node.js), Analytics Pro (Dashboard mit D3.js), GreenTrack (PWA)
-- Freizeit: Klettern/Bouldern (3x/Woche, 7a-Niveau), Fotografie (Sony Alpha 7C II), Gaming (Indie Games, Retro), Lesen (Clean Code, Pragmatic Programmer), Kochen, Reisen (Japan, Portugal, Schweden)
-- Haustier: Golden Retriever "Pixel"
-- Sprachen: Deutsch (Muttersprache), Englisch (C1), Französisch (B1)
-- Kontakt: alex.mueller@example.com
-- GitHub: alexmüller.github.io
-
-Beantworte Fragen kurz und präzise (2–4 Sätze). Verwende gelegentlich Emojis. Wenn du etwas nicht weisst, sage es ehrlich. Leite bei passenden Fragen auf die Seiten "Lebenslauf" oder "Freizeit" weiter.`;
-
-  // Append message to chat
   function appendMessage(role, text) {
     const msg = document.createElement('div');
-    msg.classList.add('msg', role === 'user' ? 'user-msg' : 'bot-msg');
-
+    msg.className = `msg ${role === 'user' ? 'user-msg' : 'bot-msg'}`;
     const avatar = document.createElement('div');
-    avatar.classList.add('msg-avatar');
+    avatar.className = 'msg-avatar';
     avatar.textContent = role === 'user' ? 'Du' : '🤖';
-
     const bubble = document.createElement('div');
-    bubble.classList.add('msg-bubble');
+    bubble.className = 'msg-bubble';
     bubble.textContent = text;
-
-    msg.appendChild(avatar);
-    msg.appendChild(bubble);
-    chatMessages.appendChild(msg);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-    return bubble;
-  }
-
-  // Show typing indicator
-  function showTyping() {
-    const msg = document.createElement('div');
-    msg.classList.add('msg', 'bot-msg', 'typing-indicator');
-    msg.id = 'typingIndicator';
-
-    const avatar = document.createElement('div');
-    avatar.classList.add('msg-avatar');
-    avatar.textContent = '🤖';
-
-    const bubble = document.createElement('div');
-    bubble.classList.add('msg-bubble');
-    [0, 1, 2].forEach(i => {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      bubble.appendChild(dot);
-    });
-
-    msg.appendChild(avatar);
-    msg.appendChild(bubble);
+    msg.append(avatar, bubble);
     chatMessages.appendChild(msg);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-  function removeTyping() {
-    const indicator = document.getElementById('typingIndicator');
-    if (indicator) indicator.remove();
+  function answerFor(text) {
+    const q = text.toLowerCase();
+    if (q.includes('skill') || q.includes('kompetenz') || q.includes('fähigkeit') || q.includes('techn')) return facts.kompetenzen;
+    if (q.includes('beruf') || q.includes('erfahrung') || q.includes('ruag') || q.includes('arbeit')) return facts.erfahrung;
+    if (q.includes('ausbildung') || q.includes('studium') || q.includes('bachelor') || q.includes('efz')) return facts.ausbildung;
+    if (q.includes('zertifikat') || q.includes('safe') || q.includes('zeugnis')) return facts.zertifikate;
+    if (q.includes('freizeit') || q.includes('hobby') || q.includes('fitness') || q.includes('fussball') || q.includes('auto')) return facts.freizeit;
+    if (q.includes('kontakt') || q.includes('email') || q.includes('telefon') || q.includes('linkedin')) return facts.kontakt;
+    return 'Dazu habe ich keine spezifische Information im Portfolio. Relevant sind vor allem Lebenslauf, ICT-Kompetenzen, Zertifikate, Kontakt und Freizeit. Du kannst auch direkt nach RUAG, SAFe, EFZ, Fitness, Fussball oder Autos fragen.';
   }
 
-  // Hide quick replies after first use
-  function hideQuickReplies() {
-    if (quickReplies) {
-      quickReplies.style.display = 'none';
-    }
-  }
-
-  // Send message to Claude API
-  async function sendMessage(userText) {
-    if (!userText.trim()) return;
-
-    hideQuickReplies();
-    appendMessage('user', userText);
-    history.push({ role: 'user', content: userText });
-
+  function sendMessage(userText) {
+    const text = userText.trim();
+    if (!text) return;
+    if (quickReplies) quickReplies.style.display = 'none';
+    appendMessage('user', text);
     chatInput.value = '';
     sendBtn.disabled = true;
-    showTyping();
-
-    try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 1000,
-          system: SYSTEM_PROMPT,
-          messages: history,
-        }),
-      });
-
-      const data = await response.json();
-      removeTyping();
-
-      if (data.content && data.content[0] && data.content[0].text) {
-        const reply = data.content[0].text;
-        appendMessage('bot', reply);
-        history.push({ role: 'assistant', content: reply });
-      } else {
-        appendMessage('bot', 'Entschuldigung, ich konnte keine Antwort generieren. Bitte versuche es nochmal.');
-      }
-    } catch (error) {
-      removeTyping();
-      appendMessage('bot', 'Es gab einen Verbindungsfehler. Bitte überprüfe deine Internetverbindung und versuche es erneut. 🔌');
-      console.error('Chatbot error:', error);
-    }
-
-    sendBtn.disabled = false;
-    chatInput.focus();
+    window.setTimeout(() => {
+      appendMessage('bot', answerFor(text));
+      sendBtn.disabled = false;
+      chatInput.focus();
+    }, 250);
   }
 
-  // Event listeners
-  sendBtn.addEventListener('click', () => {
-    sendMessage(chatInput.value);
-  });
-
+  sendBtn.addEventListener('click', () => sendMessage(chatInput.value));
   chatInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       sendMessage(chatInput.value);
     }
   });
-
-  // Quick reply buttons
-  document.querySelectorAll('.quick-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      sendMessage(btn.getAttribute('data-msg'));
-    });
-  });
-
-  // Clear chat
+  document.querySelectorAll('.quick-btn').forEach((btn) => btn.addEventListener('click', () => sendMessage(btn.dataset.msg || '')));
   if (clearBtn) {
     clearBtn.addEventListener('click', () => {
-      // Keep only the first bot message
-      while (chatMessages.children.length > 1) {
-        chatMessages.removeChild(chatMessages.lastChild);
-      }
-      history.length = 0;
-      // Re-show quick replies
+      while (chatMessages.children.length > 1) chatMessages.removeChild(chatMessages.lastChild);
       if (quickReplies) {
         quickReplies.style.display = 'flex';
         chatMessages.appendChild(quickReplies);
       }
     });
   }
-
-  // Scroll to chatbot when nav link is clicked
-  const chatLink = document.getElementById('chatLink');
-  const heroChatLink = document.getElementById('heroChat');
-  [chatLink, heroChatLink].forEach(link => {
-    if (link) {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const chatSection = document.getElementById('chatbot');
-        if (chatSection) {
-          chatSection.scrollIntoView({ behavior: 'smooth' });
-          setTimeout(() => chatInput.focus(), 600);
-        }
-      });
-    }
+  [document.getElementById('chatLink'), document.getElementById('heroChat')].forEach((link) => {
+    if (!link) return;
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('chatbot')?.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => chatInput.focus(), 500);
+    });
   });
 })();
