@@ -2,7 +2,7 @@ name: Update Football Data
 
 on:
   schedule:
-    # Alle 6 Stunden aktualisieren. Zeitangabe ist UTC.
+    # Aktualisiert die Daten alle 6 Stunden. GitHub Actions verwendet UTC.
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
@@ -17,55 +17,120 @@ jobs:
       - name: Repository auschecken
         uses: actions/checkout@v4
 
-      - name: Football-Data JSON-Ordner erstellen
-        run: mkdir -p data/football
-
-      - name: Football-Data API abrufen
+      - name: Football-Data API abrufen und JSON-Dateien schreiben
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: |
-          if [ -z "$FOOTBALL_DATA_TOKEN" ]; then
-            echo "Secret FOOTBALL_DATA_TOKEN fehlt. Bitte in Settings > Secrets and variables > Actions anlegen."
-            exit 1
-          fi
-
-          fetch_json() {
-            local url="$1"
-            local output="$2"
-
-            echo "Lade: $url"
-            curl -fsS "$url" \
-              -H "X-Auth-Token: $FOOTBALL_DATA_TOKEN" \
-              -H "Accept: application/json" \
-              -o "$output"
-          }
-
-          fetch_json "https://api.football-data.org/v4/teams/81" \
-            "data/football/barcelona-team.json"
-
-          fetch_json "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5" \
-            "data/football/barcelona-next-matches.json"
-
-          fetch_json "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5" \
-            "data/football/barcelona-last-matches.json"
-
-          fetch_json "https://api.football-data.org/v4/competitions/PD/standings" \
-            "data/football/barcelona-standings.json"
-
-      - name: Aktualisierungszeitpunkt in JSON schreiben
-        run: |
           python3 - <<'PY'
-          import json
+          """
+          Lädt FC-Barcelona-Daten über Football-Data und speichert sie als lokale JSON-Dateien.
+
+          Warum Python statt mehrere einzelne curl-Schritte?
+          - Jede Antwort wird sauber als JSON-Datei gespeichert.
+          - Wenn ein Endpoint fehlschlägt, wird eine verständliche Fehlerdatei geschrieben.
+          - Die Webseite kann dadurch genau anzeigen, welcher Bereich nicht funktioniert.
+          - Zwischen den API-Calls wird kurz gewartet, um Rate-Limit-Probleme zu vermeiden.
+          """
+
           from datetime import datetime, timezone
           from pathlib import Path
+          from urllib import request, error
+          import json
+          import os
+          import time
 
-          generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+          TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
+          OUTPUT_DIR = Path("data/football")
+          GENERATED_AT = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
-          for path in Path("data/football").glob("*.json"):
-              data = json.loads(path.read_text(encoding="utf-8"))
-              if isinstance(data, dict):
-                  data["generatedAt"] = generated_at
-              path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          ENDPOINTS = [
+              {
+                  "name": "team",
+                  "url": "https://api.football-data.org/v4/teams/81",
+                  "file": "barcelona-team.json",
+                  "fallback": {"id": 81, "name": "FC Barcelona", "area": {"name": "Spain"}, "matches": []},
+              },
+              {
+                  "name": "next-matches",
+                  "url": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
+                  "file": "barcelona-next-matches.json",
+                  "fallback": {"matches": []},
+              },
+              {
+                  "name": "last-matches",
+                  "url": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
+                  "file": "barcelona-last-matches.json",
+                  "fallback": {"matches": []},
+              },
+              {
+                  "name": "standings",
+                  "url": "https://api.football-data.org/v4/competitions/PD/standings",
+                  "file": "barcelona-standings.json",
+                  "fallback": {"standings": []},
+              },
+          ]
+
+          def write_json(filename, payload):
+              OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+              path = OUTPUT_DIR / filename
+              payload["generatedAt"] = GENERATED_AT
+              path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+              print(f"Geschrieben: {path}")
+
+          def build_error_payload(endpoint, exc, status=None, body=None):
+              fallback = dict(endpoint.get("fallback", {}))
+              fallback.update({
+                  "ok": False,
+                  "endpoint": endpoint["name"],
+                  "status": status,
+                  "error": str(exc),
+                  "message": body[:1200] if isinstance(body, str) else None,
+                  "sourceUrl": endpoint["url"],
+              })
+              return fallback
+
+          if not TOKEN:
+              raise SystemExit("Secret FOOTBALL_DATA_TOKEN fehlt. Bitte in GitHub unter Settings > Secrets and variables > Actions anlegen.")
+
+          had_error = False
+
+          for index, endpoint in enumerate(ENDPOINTS):
+              print(f"Lade {endpoint['name']}: {endpoint['url']}")
+
+              req = request.Request(
+                  endpoint["url"],
+                  headers={
+                      "X-Auth-Token": TOKEN,
+                      "Accept": "application/json",
+                      "User-Agent": "github-pages-portfolio-football-data",
+                  },
+              )
+
+              try:
+                  with request.urlopen(req, timeout=30) as response:
+                      raw = response.read().decode("utf-8")
+                      payload = json.loads(raw)
+                      if isinstance(payload, dict):
+                          payload["ok"] = True
+                          payload["endpoint"] = endpoint["name"]
+                          payload["sourceUrl"] = endpoint["url"]
+                      write_json(endpoint["file"], payload)
+              except error.HTTPError as exc:
+                  had_error = True
+                  body = exc.read().decode("utf-8", errors="replace")
+                  print(f"HTTP-Fehler bei {endpoint['name']}: {exc.code}")
+                  write_json(endpoint["file"], build_error_payload(endpoint, exc, exc.code, body))
+              except Exception as exc:
+                  had_error = True
+                  print(f"Fehler bei {endpoint['name']}: {exc}")
+                  write_json(endpoint["file"], build_error_payload(endpoint, exc))
+
+              # Free-Tier ist limitiert. Kurze Pause verhindert unnötige 429-Fehler.
+              if index < len(ENDPOINTS) - 1:
+                  time.sleep(7)
+
+          if had_error:
+              print("Mindestens ein Endpoint hatte einen Fehler. Die Fehlerdetails stehen in den jeweiligen JSON-Dateien.")
           PY
 
       - name: Änderungen ins Repository committen
@@ -73,5 +138,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/football/*.json
-          git commit -m "Update FC Barcelona football data" || echo "Keine Änderungen vorhanden"
+          git diff --cached --quiet && echo "Keine Änderungen vorhanden" || git commit -m "Update FC Barcelona football data"
           git push
