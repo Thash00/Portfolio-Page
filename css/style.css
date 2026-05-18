@@ -2403,3 +2403,353 @@ button {
     flex-direction: column;
   }
 }
+
+/* ============================================
+   FINALER RESPONSIVE-FIX v8 – STARTSEITE UND FREIZEIT
+   ============================================ */
+/*
+   Ziel dieser Korrektur:
+   - Der lange Name darf nicht mehr von der TG-Animation überdeckt werden.
+   - Auf kleineren Geräten muss der komplette Name sichtbar bleiben.
+   - Die Hobby-Karten auf der Freizeitseite werden in der Handyansicht kompakter.
+*/
+
+/* Startseite: Name und Animation erhalten klar getrennte Layout-Flächen. */
+.page-home .hero {
+  width: min(100%, 1280px);
+  min-height: auto;
+  grid-template-columns: minmax(0, 1.75fr) minmax(180px, 260px);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  padding: calc(var(--nav-h) + 64px) clamp(20px, 5vw, 64px) 88px;
+  overflow: visible;
+}
+
+/* Der Textbereich darf im Grid schrumpfen, ohne horizontal überzulaufen. */
+.page-home .hero-content {
+  min-width: 0;
+  max-width: 820px;
+}
+
+/* Der Name wurde bewusst kleiner gesetzt, damit der Nachname sauber Platz hat. */
+.page-home .hero-title {
+  max-width: 100%;
+  font-size: clamp(2.75rem, 5vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.page-home .hero-title em {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Die TG-Animation ist kleiner und steht in einer festen, eigenen Spalte. */
+.page-home .hero-visual {
+  justify-self: center;
+  width: 100%;
+  max-width: 260px;
+  padding: 8px;
+  overflow: visible;
+}
+
+.page-home .avatar-ring {
+  --avatar-size: clamp(170px, 18vw, 240px);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+
+.page-home .ring-orbit {
+  inset: 14px;
+}
+
+.page-home .avatar-inner {
+  width: 56%;
+  height: 56%;
+}
+
+.page-home .orbit-item {
+  width: clamp(30px, 14%, 40px);
+  height: clamp(30px, 14%, 40px);
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+}
+
+/*
+   Laptops und mittlere Fenster:
+   Die Animation wird oberhalb des Namens platziert.
+   Dadurch gibt es keine Kollision zwischen Nachname und Orbit-Elementen.
+*/
+@media (max-width: 1400px) {
+  .page-home .hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    text-align: center;
+    padding: calc(var(--nav-h) + 36px) clamp(20px, 5vw, 44px) 76px;
+  }
+
+  .page-home .hero-content {
+    max-width: 860px;
+    margin-inline: auto;
+  }
+
+  .page-home .hero-visual {
+    order: -1;
+    justify-self: center;
+    max-width: 240px;
+    margin-inline: auto;
+  }
+
+  .page-home .avatar-ring {
+    --avatar-size: clamp(170px, 30vw, 225px);
+  }
+
+  .page-home .hero-title {
+    font-size: clamp(2.55rem, 7vw, 4.8rem);
+  }
+
+  .page-home .hero-desc {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .page-home .hero-actions,
+  .page-home .hero-stats {
+    justify-content: center;
+  }
+
+  .page-home .stat {
+    text-align: center;
+  }
+}
+
+/* Handyansicht: vollständiger Name, kompakte Animation und keine horizontale Überbreite. */
+@media (max-width: 620px) {
+  .page-home .hero {
+    gap: 18px;
+    padding: calc(var(--nav-h) + 24px) 16px 56px;
+  }
+
+  .page-home .hero-badge {
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .page-home .hero-title {
+    font-size: clamp(2.05rem, 10vw, 3.15rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
+  .page-home .hero-title em {
+    white-space: normal;
+  }
+
+  .page-home .hero-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .page-home .hero-desc {
+    font-size: 0.96rem;
+  }
+
+  .page-home .hero-visual {
+    max-width: 200px;
+    padding: 4px;
+  }
+
+  .page-home .avatar-ring {
+    --avatar-size: min(58vw, 178px);
+  }
+
+  .page-home .ring-orbit {
+    inset: 12px;
+  }
+
+  .page-home .avatar-inner {
+    width: 56%;
+    height: 56%;
+  }
+
+  .page-home .orbit-item {
+    width: 28px;
+    height: 28px;
+    font-size: 0.82rem;
+  }
+
+  .page-home .hero-actions {
+    width: min(100%, 320px);
+    margin-inline: auto;
+  }
+
+  .page-home .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-home .hero-stats {
+    width: min(100%, 340px);
+    margin-inline: auto;
+  }
+
+  .page-home .stat-num {
+    font-size: 2rem;
+  }
+}
+
+/* Sehr schmale Geräte: zusätzliche Sicherheitsreserve für den Nachnamen. */
+@media (max-width: 380px) {
+  .page-home .hero-title {
+    font-size: clamp(1.85rem, 9.4vw, 2.25rem);
+    letter-spacing: -0.02em;
+  }
+
+  .page-home .hero-visual {
+    max-width: 178px;
+  }
+
+  .page-home .avatar-ring {
+    --avatar-size: min(55vw, 158px);
+  }
+
+  .page-home .ring-orbit {
+    inset: 10px;
+  }
+
+  .page-home .orbit-item {
+    width: 26px;
+    height: 26px;
+    font-size: 0.76rem;
+  }
+}
+
+/* Freizeitseite: Hobby-Karten in der Handyansicht kompakter darstellen. */
+@media (max-width: 768px) {
+  .page-hobbies .hobbies-grid {
+    gap: 18px;
+  }
+
+  .page-hobbies .hobby-card:not(.hobby-main) .hobby-visual {
+    height: clamp(105px, 24vw, 135px);
+  }
+
+  .page-hobbies .hobby-card:not(.hobby-main) .hobby-emoji-big {
+    font-size: 3rem;
+  }
+}
+
+/* Speziell für kleine Handys: den grossen Bild-/Farbblock bei Autos verkleinern. */
+@media (max-width: 560px) {
+  .page-hobbies .hobbies-main {
+    padding-top: 28px;
+  }
+
+  .page-hobbies .hobby-body {
+    padding: 22px;
+  }
+
+  .page-hobbies .hobby-card.hobby-main .hobby-visual {
+    height: 118px;
+    min-height: 118px;
+  }
+
+  .page-hobbies .hobby-card:not(.hobby-main) .hobby-visual {
+    height: 96px;
+  }
+
+  .page-hobbies .hobby-card:not(.hobby-main) .hobby-emoji-big {
+    font-size: 2.65rem;
+  }
+
+  .page-hobbies .hobby-body h2 {
+    font-size: 1.22rem;
+    line-height: 1.25;
+  }
+
+  .page-hobbies .hobby-body p {
+    margin-bottom: 14px;
+  }
+}
+
+/* ============================================
+   ABSCHLIESSENDE HERO-PLATZIERUNG v8
+   ============================================ */
+/*
+   Die Animation wird endgültig aus der Textspalte herausgenommen und immer
+   oberhalb des Namens angezeigt. Dadurch kann sie den Nachnamen weder auf
+   grossen Bildschirmen noch auf Handygrössen überdecken.
+*/
+.page-home .hero {
+  grid-template-columns: 1fr;
+  max-width: 1180px;
+  gap: clamp(18px, 3vw, 30px);
+  text-align: center;
+  padding-top: calc(var(--nav-h) + 34px);
+}
+
+.page-home .hero-visual {
+  order: -1;
+  justify-self: center;
+  max-width: 230px;
+  margin-inline: auto;
+}
+
+.page-home .avatar-ring {
+  --avatar-size: clamp(170px, 18vw, 220px);
+}
+
+.page-home .hero-content {
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.page-home .hero-title {
+  font-size: clamp(2.55rem, 6.2vw, 4.9rem);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+.page-home .hero-desc {
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.page-home .hero-actions,
+.page-home .hero-stats {
+  justify-content: center;
+}
+
+.page-home .stat {
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .page-home .hero {
+    padding-top: calc(var(--nav-h) + 22px);
+  }
+
+  .page-home .hero-title {
+    font-size: clamp(1.95rem, 9.2vw, 2.95rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .page-home .hero-visual {
+    max-width: 175px;
+  }
+
+  .page-home .avatar-ring {
+    --avatar-size: min(52vw, 165px);
+  }
+}
+
+@media (max-width: 360px) {
+  .page-home .hero-title {
+    font-size: clamp(1.72rem, 8.7vw, 2.1rem);
+  }
+}
