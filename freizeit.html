@@ -1,28 +1,338 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Freizeitaktivitäten von Thashaanth Gnaneswaran" />
-  <title>Freizeit – Thashaanth Gnaneswaran</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
-<body class="page-hobbies">
-  <nav class="nav" id="nav"><a href="index.html" class="nav-logo">TG<span class="dot">.</span></a><button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="lebenslauf.html">Lebenslauf</a></li><li><a href="freizeit.html" class="active">Freizeit</a></li><li><a href="index.html#chatbot" class="nav-cta">KI-Chat</a></li></ul></nav>
-  <div class="page-hero small-hero"><div class="container"><span class="section-tag">Über mich</span><h1>Freizeit & Interessen</h1><p>Fitness, Fussball und Autos – mein Ausgleich neben der ICT-Welt</p></div></div>
-  <main class="hobbies-main"><div class="container">
-    <section class="hobbies-intro"><div class="intro-text"><p>In meiner Freizeit suche ich bewusst den Ausgleich zum Arbeitsalltag. Sport gibt mir Energie und Disziplin, Fussball stärkt Teamgeist und Übersicht, und Autos verbinden Technik, Design und Präzision.</p></div><div class="intro-quote"><blockquote>«Stabilität entsteht durch Routine – Fortschritt durch Leidenschaft.»</blockquote></div></section>
-    <section class="hobbies-grid">
-      <article class="hobby-card hobby-main" style="--delay:0s"><div class="hobby-visual hobby-photo-style-1"><div class="hobby-emoji-big">🏋️</div></div><div class="hobby-body"><span class="hobby-tag">Fitness</span><h2>Krafttraining & Disziplin</h2><p>Fitness ist für mich mehr als Training. Es steht für Struktur, Ausdauer und konsequentes Arbeiten an Zielen. Genau diese Haltung übertrage ich auch auf Projekte: sauber planen, dranbleiben und messbare Fortschritte erzielen.</p><div class="hobby-details"><div class="hobby-detail-item"><span class="detail-icon">🎯</span><span>Fokus auf Kraft, Stabilität und Routine</span></div><div class="hobby-detail-item"><span class="detail-icon">⏱️</span><span>Regelmässiger Ausgleich zum Arbeitsalltag</span></div><div class="hobby-detail-item"><span class="detail-icon">💡</span><span>Training als Grundlage für Belastbarkeit und Konzentration</span></div></div></div></article>
-      <article class="hobby-card" style="--delay:0.1s"><div class="hobby-visual hobby-photo-style-2"><div class="hobby-emoji-big">⚽</div></div><div class="hobby-body"><span class="hobby-tag">Fussball</span><h2>Teamgeist & Spielverständnis</h2><p>Fussball bedeutet für mich Dynamik, Kommunikation und Verantwortung im Team. Auf dem Platz zählen schnelle Entscheidungen, Übersicht und gegenseitiges Vertrauen.</p><div class="hobby-details"><div class="hobby-detail-item"><span class="detail-icon">🤝</span><span>Teamorientierung und klare Kommunikation</span></div><div class="hobby-detail-item"><span class="detail-icon">⚡</span><span>Schnelle Reaktion und taktisches Denken</span></div></div></div></article>
-      <article class="hobby-card" style="--delay:0.2s"><div class="hobby-visual hobby-photo-style-3"><div class="hobby-emoji-big">🏎️</div></div><div class="hobby-body"><span class="hobby-tag">Autos</span><h2>Technik, Design & Performance</h2><p>Autos faszinieren mich durch die Verbindung aus Technik, Präzision und Design. Mich interessiert, wie viele Komponenten zusammenspielen müssen, damit Leistung, Sicherheit und Fahrgefühl entstehen.</p><div class="hobby-details"><div class="hobby-detail-item"><span class="detail-icon">⚙️</span><span>Interesse an Technik und Performance</span></div><div class="hobby-detail-item"><span class="detail-icon">🎨</span><span>Blick für Design, Details und Qualität</span></div></div></div></article>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Freizeitaktivit&auml;ten von Thashaanth Gnaneswaran" name="description"/>
+  <title>
+   Freizeit &ndash; Thashaanth Gnaneswaran
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="page-hobbies">
+  <!-- Hauptnavigation: einheitlich auf allen Unterseiten -->
+  <nav class="nav" id="nav">
+   <a class="nav-logo" href="index.html">
+    TG
+    <span class="dot">
+     .
+    </span>
+   </a>
+   <button aria-label="Men&uuml; &ouml;ffnen" class="nav-toggle" id="navToggle">
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+    </span>
+   </button>
+   <ul class="nav-links" id="navLinks">
+    <li>
+     <a href="index.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="lebenslauf.html">
+      Lebenslauf
+     </a>
+    </li>
+    <li>
+     <a class="active" href="freizeit.html">
+      Freizeit
+     </a>
+    </li>
+    <li>
+     <a class="nav-cta" href="index.html#chatbot">
+      KI-Chat
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <!-- Seitenkopf: Einordnung der Freizeitseite -->
+  <div class="page-hero small-hero">
+   <div class="container">
+    <span class="section-tag">
+     &Uuml;ber mich
+    </span>
+    <h1>
+     Freizeit &amp; Interessen
+    </h1>
+    <p>
+     Fitness, Fussball und Autos &ndash; mein Ausgleich neben der ICT-Welt
+    </p>
+   </div>
+  </div>
+  <main class="hobbies-main">
+   <div class="container">
+    <!-- Intro: Verbindung zwischen Freizeit, Haltung und Beruf -->
+    <section class="hobbies-intro">
+     <div class="intro-text">
+      <p>
+       In meiner Freizeit suche ich bewusst den Ausgleich zum Arbeitsalltag. Sport gibt mir Energie und Disziplin, Fussball st&auml;rkt Teamgeist und &Uuml;bersicht, und Autos verbinden Technik, Design und Pr&auml;zision.
+      </p>
+     </div>
+     <div class="intro-quote">
+      <blockquote>
+       &laquo;Stabilit&auml;t entsteht durch Routine &ndash; Fortschritt durch Leidenschaft.&raquo;
+      </blockquote>
+     </div>
     </section>
-    <section class="fun-facts"><div class="fun-facts-header"><span class="section-tag">Was mich prägt</span><h2>Werte aus meiner Freizeit</h2></div><div class="facts-grid"><div class="fact-item"><span class="fact-num">🏋️</span><span class="fact-text">Disziplin durch Training</span></div><div class="fact-item"><span class="fact-num">⚽</span><span class="fact-text">Teamgeist durch Fussball</span></div><div class="fact-item"><span class="fact-num">🏎️</span><span class="fact-text">Technikbegeisterung durch Autos</span></div><div class="fact-item"><span class="fact-num">🎯</span><span class="fact-text">Fokus auf Fortschritt</span></div></div></section>
-    <section class="currently-section"><div class="section-header"><span class="section-tag">Aktuell</span><h2>Was ich gerne mache</h2></div><div class="currently-grid"><div class="currently-item"><span class="currently-icon">🏋️</span><div><strong>Training:</strong><span>Kraft, Ausdauer und körperliche Stabilität</span></div></div><div class="currently-item"><span class="currently-icon">⚽</span><div><strong>Sport:</strong><span>Fussball schauen und spielen</span></div></div><div class="currently-item"><span class="currently-icon">🏎️</span><div><strong>Interesse:</strong><span>Autos, Technik, Design und Performance</span></div></div><div class="currently-item"><span class="currently-icon">🧠</span><div><strong>Transfer:</strong><span>Disziplin, Teamarbeit und analytisches Denken</span></div></div></div></section>
-  </div></main>
-  <footer class="footer"><div class="container"><p>© 2026 Thashaanth Gnaneswaran</p><nav class="footer-nav"><a href="index.html">Home</a><a href="lebenslauf.html">Lebenslauf</a><a href="freizeit.html">Freizeit</a></nav></div></footer>
-  <script src="js/nav.js"></script><script src="js/animations.js"></script>
-</body>
+    <!-- Hobby-Karten: Fitness, Fussball und Autos -->
+    <section class="hobbies-grid">
+     <article class="hobby-card hobby-main" style="--delay:0s">
+      <div class="hobby-visual hobby-photo-style-1">
+       <div class="hobby-emoji-big">
+        🏋️
+       </div>
+      </div>
+      <div class="hobby-body">
+       <span class="hobby-tag">
+        Fitness
+       </span>
+       <h2>
+        Krafttraining &amp; Disziplin
+       </h2>
+       <p>
+        Fitness ist f&uuml;r mich mehr als Training. Es steht f&uuml;r Struktur, Ausdauer und konsequentes Arbeiten an Zielen. Genau diese Haltung &uuml;bertrage ich auch auf Projekte: sauber planen, dranbleiben und messbare Fortschritte erzielen.
+       </p>
+       <div class="hobby-details">
+        <div class="hobby-detail-item">
+         <span class="detail-icon">
+          🎯
+         </span>
+         <span>
+          Fokus auf Kraft, Stabilit&auml;t und Routine
+         </span>
+        </div>
+        <div class="hobby-detail-item">
+         <span class="detail-icon">
+          ⏱️
+         </span>
+         <span>
+          Regelm&auml;ssiger Ausgleich zum Arbeitsalltag
+         </span>
+        </div>
+        <div class="hobby-detail-item">
+         <span class="detail-icon">
+          💡
+         </span>
+         <span>
+          Training als Grundlage f&uuml;r Belastbarkeit und Konzentration
+         </span>
+        </div>
+       </div>
+      </div>
+     </article>
+     <article class="hobby-card" style="--delay:0.1s">
+      <div class="hobby-visual hobby-photo-style-2">
+       <div class="hobby-emoji-big">
+        ⚽
+       </div>
+      </div>
+      <div class="hobby-body">
+       <span class="hobby-tag">
+        Fussball
+       </span>
+       <h2>
+        Teamgeist &amp; Spielverst&auml;ndnis
+       </h2>
+       <p>
+        Fussball bedeutet f&uuml;r mich Dynamik, Kommunikation und Verantwortung im Team. Auf dem Platz z&auml;hlen schnelle Entscheidungen, &Uuml;bersicht und gegenseitiges Vertrauen.
+       </p>
+       <div class="hobby-details">
+        <div class="hobby-detail-item">
+         <span class="detail-icon">
+          🤝
+         </span>
+         <span>
+          Teamorientierung und klare Kommunikation
+         </span>
+        </div>
+        <div class="hobby-detail-item">
+         <span class="detail-icon">
+          ⚡
+         </span>
+         <span>
+          Schnelle Reaktion und taktisches Denken
+         </span>
+        </div>
+       </div>
+      </div>
+     </article>
+     <article class="hobby-card" style="--delay:0.2s">
+      <div class="hobby-visual hobby-photo-style-3">
+       <div class="hobby-emoji-big">
+        🏎️
+       </div>
+      </div>
+      <div class="hobby-body">
+       <span class="hobby-tag">
+        Autos
+       </span>
+       <h2>
+        Technik, Design &amp; Performance
+       </h2>
+       <p>
+        Autos faszinieren mich durch die Verbindung aus Technik, Pr&auml;zision und Design. Mich interessiert, wie viele Komponenten zusammenspielen m&uuml;ssen, damit Leistung, Sicherheit und Fahrgef&uuml;hl entstehen.
+       </p>
+       <div class="hobby-details">
+        <div class="hobby-detail-item">
+         <span class="detail-icon">
+          ⚙️
+         </span>
+         <span>
+          Interesse an Technik und Performance
+         </span>
+        </div>
+        <div class="hobby-detail-item">
+         <span class="detail-icon">
+          🎨
+         </span>
+         <span>
+          Blick f&uuml;r Design, Details und Qualit&auml;t
+         </span>
+        </div>
+       </div>
+      </div>
+     </article>
+    </section>
+    <!-- Werte: Was die Freizeitaktivitäten beruflich widerspiegeln -->
+    <section class="fun-facts">
+     <div class="fun-facts-header">
+      <span class="section-tag">
+       Was mich pr&auml;gt
+      </span>
+      <h2>
+       Werte aus meiner Freizeit
+      </h2>
+     </div>
+     <div class="facts-grid">
+      <div class="fact-item">
+       <span class="fact-num">
+        🏋️
+       </span>
+       <span class="fact-text">
+        Disziplin durch Training
+       </span>
+      </div>
+      <div class="fact-item">
+       <span class="fact-num">
+        ⚽
+       </span>
+       <span class="fact-text">
+        Teamgeist durch Fussball
+       </span>
+      </div>
+      <div class="fact-item">
+       <span class="fact-num">
+        🏎️
+       </span>
+       <span class="fact-text">
+        Technikbegeisterung durch Autos
+       </span>
+      </div>
+      <div class="fact-item">
+       <span class="fact-num">
+        🎯
+       </span>
+       <span class="fact-text">
+        Fokus auf Fortschritt
+       </span>
+      </div>
+     </div>
+    </section>
+    <!-- Aktuell: kurze Übersicht der Interessen -->
+    <section class="currently-section">
+     <div class="section-header">
+      <span class="section-tag">
+       Aktuell
+      </span>
+      <h2>
+       Was ich gerne mache
+      </h2>
+     </div>
+     <div class="currently-grid">
+      <div class="currently-item">
+       <span class="currently-icon">
+        🏋️
+       </span>
+       <div>
+        <strong>
+         Training:
+        </strong>
+        <span>
+         Kraft, Ausdauer und k&ouml;rperliche Stabilit&auml;t
+        </span>
+       </div>
+      </div>
+      <div class="currently-item">
+       <span class="currently-icon">
+        ⚽
+       </span>
+       <div>
+        <strong>
+         Sport:
+        </strong>
+        <span>
+         Fussball schauen und spielen
+        </span>
+       </div>
+      </div>
+      <div class="currently-item">
+       <span class="currently-icon">
+        🏎️
+       </span>
+       <div>
+        <strong>
+         Interesse:
+        </strong>
+        <span>
+         Autos, Technik, Design und Performance
+        </span>
+       </div>
+      </div>
+      <div class="currently-item">
+       <span class="currently-icon">
+        🧠
+       </span>
+       <div>
+        <strong>
+         Transfer:
+        </strong>
+        <span>
+         Disziplin, Teamarbeit und analytisches Denken
+        </span>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+  </main>
+  <!-- Footer: Basisnavigation und Copyright -->
+  <footer class="footer">
+   <div class="container">
+    <p>
+     &copy; 2026 Thashaanth Gnaneswaran
+    </p>
+    <nav class="footer-nav">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="lebenslauf.html">
+      Lebenslauf
+     </a>
+     <a href="freizeit.html">
+      Freizeit
+     </a>
+    </nav>
+   </div>
+  </footer>
+  <script src="js/nav.js">
+  </script>
+  <script src="js/animations.js">
+  </script>
+ </body>
 </html>

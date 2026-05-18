@@ -1,85 +1,515 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio von Thashaanth Gnaneswaran – ICT Application Manager" />
-  <title>Thashaanth Gnaneswaran – Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
-<body class="page-home">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Portfolio von Thashaanth Gnaneswaran &ndash; ICT Application Manager" name="description"/>
+  <title>
+   Thashaanth Gnaneswaran &ndash; Portfolio
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="page-home">
+  <!-- Hauptnavigation: Logo, Seitenlinks und mobiler Menü-Button -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo">TG<span class="dot">.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="lebenslauf.html">Lebenslauf</a></li>
-      <li><a href="freizeit.html">Freizeit</a></li>
-      <li><a href="#chatbot" class="nav-cta" id="chatLink">KI-Chat</a></li>
-    </ul>
+   <a class="nav-logo" href="index.html">
+    TG
+    <span class="dot">
+     .
+    </span>
+   </a>
+   <button aria-label="Men&uuml; &ouml;ffnen" class="nav-toggle" id="navToggle">
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+    </span>
+   </button>
+   <ul class="nav-links" id="navLinks">
+    <li>
+     <a class="active" href="index.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="lebenslauf.html">
+      Lebenslauf
+     </a>
+    </li>
+    <li>
+     <a href="freizeit.html">
+      Freizeit
+     </a>
+    </li>
+    <li>
+     <a class="nav-cta" href="#chatbot" id="chatLink">
+      KI-Chat
+     </a>
+    </li>
+   </ul>
   </nav>
-
+  <!-- Hero-Bereich: Kurzprofil, Kennzahlen und responsive TG-Animation -->
   <header class="hero">
-    <div class="hero-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="grid-overlay"></div></div>
-    <div class="hero-content">
-      <div class="hero-badge"><span class="pulse"></span> ICT Application Management · Digital Business & AI</div>
-      <h1 class="hero-title">Thashaanth<br /><em>Gnaneswaran</em></h1>
-      <p class="hero-subtitle">ICT Application Manager bei RUAG AG</p>
-      <p class="hero-desc">Ich verbinde stabilen Applikationsbetrieb mit strukturiertem Release- und Change-Management. Mein Fokus liegt auf geschäftskritischen ICT-Applikationen, sauberer Dokumentation und praxisnaher Zusammenarbeit mit Fachbereichen, IT-Teams und externen Partnern.</p>
-      <div class="hero-actions">
-        <a href="lebenslauf.html" class="btn btn-primary">Lebenslauf ansehen</a>
-        <a href="#chatbot" class="btn btn-ghost" id="heroChat">Mit KI chatten</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Berufsstationen</span></div>
-        <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Jahre ICT-Erfahrung</span></div>
-        <div class="stat"><span class="stat-num" data-target="1">0</span><span class="stat-label">SAFe-Zertifikat</span></div>
-      </div>
+   <div class="hero-bg">
+    <div class="orb orb-1">
     </div>
-    <div class="hero-visual">
-      <div class="avatar-ring"><div class="avatar-inner"><svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="avatar-svg"><circle cx="100" cy="80" r="45" fill="var(--accent)" opacity="0.2"/><circle cx="100" cy="80" r="35" fill="var(--accent)" opacity="0.3"/><ellipse cx="100" cy="75" rx="22" ry="25" fill="var(--accent)"/><path d="M58 160 Q100 130 142 160 Q142 185 100 185 Q58 185 58 160Z" fill="var(--accent)"/></svg><div class="avatar-initials">TG</div></div><div class="ring-orbit"><div class="orbit-item">🖥️</div><div class="orbit-item">🔁</div><div class="orbit-item">⚙️</div><div class="orbit-item">🏎️</div></div></div>
+    <div class="orb orb-2">
     </div>
+    <div class="grid-overlay">
+    </div>
+   </div>
+   <div class="hero-content">
+    <div class="hero-badge">
+     <span class="pulse">
+     </span>
+     ICT Application Management &middot; Digital Business &amp; AI
+    </div>
+    <h1 class="hero-title">
+     Thashaanth
+     <br/>
+     <em>
+      Gnaneswaran
+     </em>
+    </h1>
+    <p class="hero-subtitle">
+     ICT Application Manager bei RUAG AG
+    </p>
+    <p class="hero-desc">
+     Ich verbinde stabilen Applikationsbetrieb mit strukturiertem Release- und Change-Management. Mein Fokus liegt auf gesch&auml;ftskritischen ICT-Applikationen, sauberer Dokumentation und praxisnaher Zusammenarbeit mit Fachbereichen, IT-Teams und externen Partnern.
+    </p>
+    <div class="hero-actions">
+     <a class="btn btn-primary" href="lebenslauf.html">
+      Lebenslauf ansehen
+     </a>
+     <a class="btn btn-ghost" href="#chatbot" id="heroChat">
+      Mit KI chatten
+     </a>
+    </div>
+    <div class="hero-stats">
+     <div class="stat">
+      <span class="stat-num" data-target="4">
+       0
+      </span>
+      <span class="stat-label">
+       Berufsstationen
+      </span>
+     </div>
+     <div class="stat">
+      <span class="stat-num" data-target="5">
+       0
+      </span>
+      <span class="stat-label">
+       Jahre ICT-Erfahrung
+      </span>
+     </div>
+     <div class="stat">
+      <span class="stat-num" data-target="1">
+       0
+      </span>
+      <span class="stat-label">
+       SAFe-Zertifikat
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="hero-visual">
+    <div class="avatar-ring">
+     <div class="avatar-inner">
+      <svg class="avatar-svg" fill="none" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+       <circle cx="100" cy="80" fill="var(--accent)" opacity="0.2" r="45">
+       </circle>
+       <circle cx="100" cy="80" fill="var(--accent)" opacity="0.3" r="35">
+       </circle>
+       <ellipse cx="100" cy="75" fill="var(--accent)" rx="22" ry="25">
+       </ellipse>
+       <path d="M58 160 Q100 130 142 160 Q142 185 100 185 Q58 185 58 160Z" fill="var(--accent)">
+       </path>
+      </svg>
+      <div class="avatar-initials">
+       TG
+      </div>
+     </div>
+     <div class="ring-orbit">
+      <div class="orbit-item">
+       🖥️
+      </div>
+      <div class="orbit-item">
+       🔁
+      </div>
+      <div class="orbit-item">
+       ⚙️
+      </div>
+      <div class="orbit-item">
+       🏎️
+      </div>
+     </div>
+    </div>
+   </div>
   </header>
-
+  <!-- Kompetenzen: zentrale ICT-Skills aus Lebenslauf und Berufspraxis -->
   <section class="section skills-section">
-    <div class="container">
-      <div class="section-header"><span class="section-tag">Kompetenzen</span><h2>ICT Skills & Arbeitsweise</h2></div>
-      <div class="skills-grid">
-        <div class="skill-card" style="--delay:0s"><div class="skill-icon">🖥️</div><h3>Systeme</h3><div class="skill-tags"><span>Windows Server</span><span>Linux</span><span>VMware</span><span>VDI</span></div><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
-        <div class="skill-card" style="--delay:0.1s"><div class="skill-icon">📦</div><h3>Application Management</h3><div class="skill-tags"><span>Betrieb</span><span>Releases</span><span>Tests</span><span>Migrationen</span></div><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div></div>
-        <div class="skill-card" style="--delay:0.2s"><div class="skill-icon">☁️</div><h3>Microsoft & Tools</h3><div class="skill-tags"><span>Microsoft 365</span><span>SCCM</span><span>Reports</span><span>Dokumentation</span></div><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
-        <div class="skill-card" style="--delay:0.3s"><div class="skill-icon">🔄</div><h3>Agile Methoden</h3><div class="skill-tags"><span>SAFe</span><span>Scrum</span><span>Change</span><span>Release</span></div><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
-      </div>
+   <div class="container">
+    <div class="section-header">
+     <span class="section-tag">
+      Kompetenzen
+     </span>
+     <h2>
+      ICT Skills &amp; Arbeitsweise
+     </h2>
     </div>
+    <div class="skills-grid">
+     <div class="skill-card" style="--delay:0s">
+      <div class="skill-icon">
+       🖥️
+      </div>
+      <h3>
+       Systeme
+      </h3>
+      <div class="skill-tags">
+       <span>
+        Windows Server
+       </span>
+       <span>
+        Linux
+       </span>
+       <span>
+        VMware
+       </span>
+       <span>
+        VDI
+       </span>
+      </div>
+      <div class="skill-bar">
+       <div class="skill-fill" style="--w:90%">
+       </div>
+      </div>
+     </div>
+     <div class="skill-card" style="--delay:0.1s">
+      <div class="skill-icon">
+       📦
+      </div>
+      <h3>
+       Application Management
+      </h3>
+      <div class="skill-tags">
+       <span>
+        Betrieb
+       </span>
+       <span>
+        Releases
+       </span>
+       <span>
+        Tests
+       </span>
+       <span>
+        Migrationen
+       </span>
+      </div>
+      <div class="skill-bar">
+       <div class="skill-fill" style="--w:88%">
+       </div>
+      </div>
+     </div>
+     <div class="skill-card" style="--delay:0.2s">
+      <div class="skill-icon">
+       ☁️
+      </div>
+      <h3>
+       Microsoft &amp; Tools
+      </h3>
+      <div class="skill-tags">
+       <span>
+        Microsoft 365
+       </span>
+       <span>
+        SCCM
+       </span>
+       <span>
+        Reports
+       </span>
+       <span>
+        Dokumentation
+       </span>
+      </div>
+      <div class="skill-bar">
+       <div class="skill-fill" style="--w:85%">
+       </div>
+      </div>
+     </div>
+     <div class="skill-card" style="--delay:0.3s">
+      <div class="skill-icon">
+       🔄
+      </div>
+      <h3>
+       Agile Methoden
+      </h3>
+      <div class="skill-tags">
+       <span>
+        SAFe
+       </span>
+       <span>
+        Scrum
+       </span>
+       <span>
+        Change
+       </span>
+       <span>
+        Release
+       </span>
+      </div>
+      <div class="skill-bar">
+       <div class="skill-fill" style="--w:82%">
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
   </section>
-
+  <!-- Praxis-Schwerpunkte: ausgewählte Aufgaben und Projekte -->
   <section class="section projects-section">
-    <div class="container">
-      <div class="section-header"><span class="section-tag">Praxis</span><h2>Ausgewählte Schwerpunkte</h2></div>
-      <div class="projects-grid">
-        <article class="project-card featured"><div class="project-img" style="background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%);"><div class="project-preview">📄</div></div><div class="project-info"><span class="project-tag">RUAG AG</span><h3>Dokumentenmanagement-Applikation</h3><p>Technischer Lead bei Entwicklung und Einführung einer internen Dokumentenmanagement-Lösung.</p><div class="project-tech"><span>Application Management</span><span>Stakeholder</span><span>Dokumentation</span></div><a href="lebenslauf.html" class="project-link">Mehr im Lebenslauf →</a></div></article>
-        <article class="project-card"><div class="project-img" style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);"><div class="project-preview">💻</div></div><div class="project-info"><span class="project-tag">Gewa Schönbühl</span><h3>Laptop-Staging-Prozess</h3><p>Automatisierung eines Staging-Prozesses zur effizienteren Produktion und Vorbereitung von Endgeräten.</p><div class="project-tech"><span>Automation</span><span>Testing</span><span>Prozessoptimierung</span></div><a href="lebenslauf.html" class="project-link">Mehr im Lebenslauf →</a></div></article>
-        <article class="project-card"><div class="project-img" style="background: linear-gradient(135deg, #334155 0%, #0f172a 100%);"><div class="project-preview">🛠️</div></div><div class="project-info"><span class="project-tag">BBZ Biel-Bienne</span><h3>IT-Infrastruktur & Support</h3><p>Standortverantwortung, Server- und Netzwerkadministration sowie Einführung von Microsoft SCCM.</p><div class="project-tech"><span>Server</span><span>Netzwerk</span><span>SCCM</span></div><a href="lebenslauf.html" class="project-link">Mehr im Lebenslauf →</a></div></article>
-      </div>
+   <div class="container">
+    <div class="section-header">
+     <span class="section-tag">
+      Praxis
+     </span>
+     <h2>
+      Ausgew&auml;hlte Schwerpunkte
+     </h2>
     </div>
+    <div class="projects-grid">
+     <article class="project-card featured">
+      <div class="project-img" style="background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%);">
+       <div class="project-preview">
+        📄
+       </div>
+      </div>
+      <div class="project-info">
+       <span class="project-tag">
+        RUAG AG
+       </span>
+       <h3>
+        Dokumentenmanagement-Applikation
+       </h3>
+       <p>
+        Technischer Lead bei Entwicklung und Einf&uuml;hrung einer internen Dokumentenmanagement-L&ouml;sung.
+       </p>
+       <div class="project-tech">
+        <span>
+         Application Management
+        </span>
+        <span>
+         Stakeholder
+        </span>
+        <span>
+         Dokumentation
+        </span>
+       </div>
+       <a class="project-link" href="lebenslauf.html">
+        Mehr im Lebenslauf &rarr;
+       </a>
+      </div>
+     </article>
+     <article class="project-card">
+      <div class="project-img" style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);">
+       <div class="project-preview">
+        💻
+       </div>
+      </div>
+      <div class="project-info">
+       <span class="project-tag">
+        Gewa Sch&ouml;nb&uuml;hl
+       </span>
+       <h3>
+        Laptop-Staging-Prozess
+       </h3>
+       <p>
+        Automatisierung eines Staging-Prozesses zur effizienteren Produktion und Vorbereitung von Endger&auml;ten.
+       </p>
+       <div class="project-tech">
+        <span>
+         Automation
+        </span>
+        <span>
+         Testing
+        </span>
+        <span>
+         Prozessoptimierung
+        </span>
+       </div>
+       <a class="project-link" href="lebenslauf.html">
+        Mehr im Lebenslauf &rarr;
+       </a>
+      </div>
+     </article>
+     <article class="project-card">
+      <div class="project-img" style="background: linear-gradient(135deg, #334155 0%, #0f172a 100%);">
+       <div class="project-preview">
+        🛠️
+       </div>
+      </div>
+      <div class="project-info">
+       <span class="project-tag">
+        BBZ Biel-Bienne
+       </span>
+       <h3>
+        IT-Infrastruktur &amp; Support
+       </h3>
+       <p>
+        Standortverantwortung, Server- und Netzwerkadministration sowie Einf&uuml;hrung von Microsoft SCCM.
+       </p>
+       <div class="project-tech">
+        <span>
+         Server
+        </span>
+        <span>
+         Netzwerk
+        </span>
+        <span>
+         SCCM
+        </span>
+       </div>
+       <a class="project-link" href="lebenslauf.html">
+        Mehr im Lebenslauf &rarr;
+       </a>
+      </div>
+     </article>
+    </div>
+   </div>
   </section>
-
+  <!-- Chatbot-Demo: lokaler Portfolio-Assistent ohne externe API-Abhängigkeit -->
   <section class="section chatbot-section" id="chatbot">
-    <div class="container">
-      <div class="section-header"><span class="section-tag">KI-Integration</span><h2>Chat mit meinem Portfolio-Assistenten</h2><p class="section-desc">Stell Fragen zu meinem Werdegang, meinen ICT-Kompetenzen, Zertifikaten oder Freizeitaktivitäten.</p></div>
-      <div class="chatbot-wrapper">
-        <div class="chatbot-header"><div class="chatbot-avatar">🤖</div><div><strong>Portfolio-Assistent</strong><span class="chatbot-status"><span class="pulse"></span> Online</span></div><button class="chatbot-clear" id="clearChat" title="Chat leeren">🗑️</button></div>
-        <div class="chatbot-messages" id="chatMessages"><div class="msg bot-msg"><div class="msg-avatar">🤖</div><div class="msg-bubble">Hallo. Ich bin der Portfolio-Assistent von Thashaanth. Ich beantworte Fragen zu Berufserfahrung, Ausbildung, Skills, Zertifikaten und Freizeit.</div></div><div class="quick-replies" id="quickReplies"><button class="quick-btn" data-msg="Was sind deine wichtigsten ICT-Kompetenzen?">💻 Kompetenzen</button><button class="quick-btn" data-msg="Erzähl mir von deiner Berufserfahrung.">💼 Erfahrung</button><button class="quick-btn" data-msg="Welche Zertifikate hast du?">🏅 Zertifikate</button><button class="quick-btn" data-msg="Was machst du in deiner Freizeit?">⚽ Freizeit</button></div></div>
-        <div class="chatbot-input-area"><input type="text" id="chatInput" placeholder="Deine Frage an den Assistenten..." maxlength="500" /><button id="sendBtn" class="send-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button></div>
-        <p class="chatbot-hint">Demo-Chat · Antworten basieren auf den Portfolio-Informationen</p>
-      </div>
+   <div class="container">
+    <div class="section-header">
+     <span class="section-tag">
+      KI-Integration
+     </span>
+     <h2>
+      Chat mit meinem Portfolio-Assistenten
+     </h2>
+     <p class="section-desc">
+      Stell Fragen zu meinem Werdegang, meinen ICT-Kompetenzen, Zertifikaten oder Freizeitaktivit&auml;ten.
+     </p>
     </div>
+    <div class="chatbot-wrapper">
+     <div class="chatbot-header">
+      <div class="chatbot-avatar">
+       🤖
+      </div>
+      <div>
+       <strong>
+        Portfolio-Assistent
+       </strong>
+       <span class="chatbot-status">
+        <span class="pulse">
+        </span>
+        Online
+       </span>
+      </div>
+      <button class="chatbot-clear" id="clearChat" title="Chat leeren">
+       🗑️
+      </button>
+     </div>
+     <div class="chatbot-messages" id="chatMessages">
+      <div class="msg bot-msg">
+       <div class="msg-avatar">
+        🤖
+       </div>
+       <div class="msg-bubble">
+        Hallo. Ich bin der Portfolio-Assistent von Thashaanth. Ich beantworte Fragen zu Berufserfahrung, Ausbildung, Skills, Zertifikaten und Freizeit.
+       </div>
+      </div>
+      <div class="quick-replies" id="quickReplies">
+       <button class="quick-btn" data-msg="Was sind deine wichtigsten ICT-Kompetenzen?">
+        💻 Kompetenzen
+       </button>
+       <button class="quick-btn" data-msg="Erz&auml;hl mir von deiner Berufserfahrung.">
+        💼 Erfahrung
+       </button>
+       <button class="quick-btn" data-msg="Welche Zertifikate hast du?">
+        🏅 Zertifikate
+       </button>
+       <button class="quick-btn" data-msg="Was machst du in deiner Freizeit?">
+        ⚽ Freizeit
+       </button>
+      </div>
+     </div>
+     <div class="chatbot-input-area">
+      <input id="chatInput" maxlength="500" placeholder="Deine Frage an den Assistenten..." type="text"/>
+      <button class="send-btn" id="sendBtn">
+       <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+        <line x1="22" x2="11" y1="2" y2="13">
+        </line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2">
+        </polygon>
+       </svg>
+      </button>
+     </div>
+     <p class="chatbot-hint">
+      Demo-Chat &middot; Antworten basieren auf den Portfolio-Informationen
+     </p>
+    </div>
+   </div>
   </section>
-
-  <section class="section contact-section"><div class="container"><div class="contact-card"><h2>Kontakt</h2><p>Offen für fachlichen Austausch, Projekte und neue Herausforderungen im ICT-Umfeld.</p><div class="contact-links"><a href="mailto:thashaanth@hotmail.com" class="contact-link"><span>✉️</span> thashaanth@hotmail.com</a><a href="tel:+41786307009" class="contact-link"><span>📱</span> 078 630 70 09</a><a href="https://ch.linkedin.com/in/thashaanth-gnaneswaran-6838481a6" target="_blank" class="contact-link"><span>💼</span> LinkedIn</a></div></div></div></section>
-  <footer class="footer"><div class="container"><p>Thashaanth Gnaneswaran</p><nav class="footer-nav"><a href="index.html">Home</a><a href="lebenslauf.html">Lebenslauf</a><a href="freizeit.html">Freizeit</a></nav></div></footer>
-  <script src="js/nav.js"></script><script src="js/animations.js"></script><script src="js/main.js"></script>
-</body>
+  <!-- Kontaktbereich: E-Mail, Telefon und LinkedIn -->
+  <section class="section contact-section">
+   <div class="container">
+    <div class="contact-card">
+     <h2>
+      Kontakt
+     </h2>
+     <p>
+      Offen f&uuml;r fachlichen Austausch, Projekte und neue Herausforderungen im ICT-Umfeld.
+     </p>
+     <div class="contact-links">
+      <a class="contact-link" href="mailto:thashaanth@hotmail.com">
+       <span>
+        ✉️
+       </span>
+       thashaanth@hotmail.com
+      </a>
+      <a class="contact-link" href="tel:+41786307009">
+       <span>
+        📱
+       </span>
+       078 630 70 09
+      </a>
+      <a class="contact-link" href="https://ch.linkedin.com/in/thashaanth-gnaneswaran-6838481a6" target="_blank">
+       <span>
+        💼
+       </span>
+       LinkedIn
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer: Basisnavigation und Name -->
+  <footer class="footer">
+   <div class="container">
+    <p>
+     &copy; 2026 Thashaanth Gnaneswaran
+    </p>
+    <nav class="footer-nav">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="lebenslauf.html">
+      Lebenslauf
+     </a>
+     <a href="freizeit.html">
+      Freizeit
+     </a>
+    </nav>
+   </div>
+  </footer>
+  <script src="js/nav.js">
+  </script>
+  <script src="js/animations.js">
+  </script>
+  <script src="js/main.js">
+  </script>
+ </body>
 </html>

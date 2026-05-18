@@ -1,49 +1,592 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lebenslauf von Thashaanth Gnaneswaran – ICT Application Manager" />
-  <title>Lebenslauf – Thashaanth Gnaneswaran</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
-<body class="page-cv">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Lebenslauf von Thashaanth Gnaneswaran &ndash; ICT Application Manager" name="description"/>
+  <title>
+   Lebenslauf &ndash; Thashaanth Gnaneswaran
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="page-cv">
+  <!-- Hauptnavigation: einheitlich auf allen Unterseiten -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo">TG<span class="dot">.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lebenslauf.html" class="active">Lebenslauf</a></li>
-      <li><a href="freizeit.html">Freizeit</a></li>
-      <li><a href="index.html#chatbot" class="nav-cta">KI-Chat</a></li>
-    </ul>
+   <a class="nav-logo" href="index.html">
+    TG
+    <span class="dot">
+     .
+    </span>
+   </a>
+   <button aria-label="Men&uuml; &ouml;ffnen" class="nav-toggle" id="navToggle">
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+    </span>
+   </button>
+   <ul class="nav-links" id="navLinks">
+    <li>
+     <a href="index.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a class="active" href="lebenslauf.html">
+      Lebenslauf
+     </a>
+    </li>
+    <li>
+     <a href="freizeit.html">
+      Freizeit
+     </a>
+    </li>
+    <li>
+     <a class="nav-cta" href="index.html#chatbot">
+      KI-Chat
+     </a>
+    </li>
+   </ul>
   </nav>
-  <div class="page-hero small-hero"><div class="container"><span class="section-tag">Mein Weg</span><h1>Lebenslauf</h1><p>Ausbildung, Berufserfahrung, Kompetenzen und Zertifikate</p><a href="assets/pdfs/CV_Thashaanth_Gnaneswaran.pdf" class="btn btn-primary" target="_blank">📄 Original-CV öffnen</a></div></div>
-  <main class="cv-main"><div class="container"><div class="cv-grid">
-    <aside class="cv-sidebar">
-      <div class="cv-profile-card"><div class="cv-avatar">TG</div><h2>Thashaanth Gnaneswaran</h2><p class="cv-title">ICT Application Manager</p><div class="cv-contact-info"><div class="cv-contact-item"><span class="cv-icon">📍</span><span>3414 Oberburg</span></div><div class="cv-contact-item"><span class="cv-icon">✉️</span><span>thashaanth@hotmail.com</span></div><div class="cv-contact-item"><span class="cv-icon">📱</span><span>078 630 70 09</span></div><div class="cv-contact-item"><span class="cv-icon">💼</span><span>RUAG AG</span></div></div></div>
-      <div class="cv-sidebar-section"><h3>Sprachen</h3><div class="lang-item"><span>Tamilisch</span><div class="lang-bar"><div class="lang-fill" style="--w:100%"></div></div><span class="lang-level">Muttersprache</span></div><div class="lang-item"><span>Deutsch</span><div class="lang-bar"><div class="lang-fill" style="--w:100%"></div></div><span class="lang-level">Muttersprache</span></div><div class="lang-item"><span>Englisch</span><div class="lang-bar"><div class="lang-fill" style="--w:80%"></div></div><span class="lang-level">B2</span></div><div class="lang-item"><span>Französisch</span><div class="lang-bar"><div class="lang-fill" style="--w:60%"></div></div><span class="lang-level">B1</span></div></div>
-      <div class="cv-sidebar-section"><h3>Hard Skills</h3><div class="tag-cloud"><span class="tag">Windows Server</span><span class="tag">Linux</span><span class="tag">Microsoft 365</span><span class="tag">VMware</span><span class="tag">VDI</span><span class="tag">SCCM</span><span class="tag">Application Management</span><span class="tag">Release Management</span><span class="tag">Change Management</span><span class="tag">SAFe</span><span class="tag">Scrum</span></div></div>
-      <div class="cv-sidebar-section"><h3>Stärken</h3><div class="tag-cloud"><span class="tag tag-soft">Strukturiert</span><span class="tag tag-soft">Selbstständig</span><span class="tag tag-soft">Teamorientiert</span><span class="tag tag-soft">Belastbar</span><span class="tag tag-soft">Analytisch</span></div></div>
-    </aside>
-    <div class="cv-content">
-      <section class="cv-section"><div class="cv-section-title"><span class="cv-section-icon">💼</span><h2>Berufserfahrung</h2></div><div class="timeline">
-        <div class="timeline-item" style="--delay:0s"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-header"><div><h3>ICT Application Manager</h3><span class="timeline-company">RUAG AG</span></div><span class="timeline-date">Seit Sep. 2023</span></div><ul class="timeline-list"><li>Sicherstellung des stabilen Betriebs und der Weiterentwicklung geschäftskritischer ICT-Applikationen</li><li>Planung und Durchführung von Releases, Tests und Migrationen</li><li>Technischer Lead bei Entwicklung und Einführung einer internen Dokumentenmanagement-Applikation</li><li>Beratung der Fachabteilungen sowie Zusammenarbeit mit IT-Teams und externen Partnern</li><li>Erstellung von Reports, Systemauswertungen und Service-Level-Kriterien</li></ul><div class="timeline-tech"><span>Application Management</span><span>Release</span><span>Reporting</span></div></div></div>
-        <div class="timeline-item" style="--delay:0.1s"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-header"><div><h3>Zivildienst – Teamleitung Multimedia</h3><span class="timeline-company">Gewa Schönbühl</span></div><span class="timeline-date">Jan. 2023 – Jul. 2023</span></div><ul class="timeline-list"><li>Leitung eines Teams mit bis zu 6 Mitarbeitenden in der PC- und Laptop-Produktion</li><li>Technische Verantwortung für Installation, Reparatur und Testing von Endgeräten</li><li>Entwicklung eines automatisierten Laptop-Staging-Prozesses</li><li>Beratung von Kunden und Optimierung interner Abläufe</li></ul><div class="timeline-tech"><span>Teamleitung</span><span>Testing</span><span>Automation</span></div></div></div>
-        <div class="timeline-item" style="--delay:0.2s"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-header"><div><h3>Zivildienst – IT-Support</h3><span class="timeline-company">SRO AG Spitalzentrum Oberaargau</span></div><span class="timeline-date">Sep. 2022 – Nov. 2022</span></div><ul class="timeline-list"><li>1st-Level-Support für medizinisches Fachpersonal</li><li>Fehleranalyse und Störungsbehebung in komplexer Spital-IT-Umgebung</li><li>Erstellung von Dokumentationen und Prozessoptimierung im IT-Support</li></ul><div class="timeline-tech"><span>Support</span><span>Dokumentation</span><span>Fehleranalyse</span></div></div></div>
-        <div class="timeline-item" style="--delay:0.3s"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-header"><div><h3>IT-Support</h3><span class="timeline-company">Berufsbildungszentrum Biel-Bienne (BBZ)</span></div><span class="timeline-date">Aug. 2020 – Jul. 2022</span></div><ul class="timeline-list"><li>Standortverantwortung für IT-Infrastruktur und Benutzerbetreuung auf Deutsch und Französisch</li><li>Administration von Servern, Netzwerken und VMware-Umgebungen</li><li>Einführung von Microsoft SCCM und Betreuung der VDI-Umgebung</li></ul><div class="timeline-tech"><span>Server</span><span>Netzwerk</span><span>VMware</span><span>SCCM</span></div></div></div>
-      </div></section>
-      <section class="cv-section"><div class="cv-section-title"><span class="cv-section-icon">🎓</span><h2>Ausbildung</h2></div><div class="timeline">
-        <div class="timeline-item" style="--delay:0s"><div class="timeline-dot timeline-dot--edu"></div><div class="timeline-content"><div class="timeline-header"><div><h3>Bachelor of Science – Wirtschaftsinformatik / Digital Business & AI</h3><span class="timeline-company">Berner Fachhochschule BFH</span></div><span class="timeline-date">2023 – jetzt</span></div></div></div>
-        <div class="timeline-item" style="--delay:0.1s"><div class="timeline-dot timeline-dot--edu"></div><div class="timeline-content"><div class="timeline-header"><div><h3>Berufsmaturität</h3><span class="timeline-company">gibb Berufsfachschule Bern · Technik, Architektur, Life Sciences</span></div><span class="timeline-date">2020 – 2022</span></div><p>Gesamtnote 4.9 gemäss Berufsmaturitätszeugnis.</p></div></div>
-        <div class="timeline-item" style="--delay:0.2s"><div class="timeline-dot timeline-dot--edu"></div><div class="timeline-content"><div class="timeline-header"><div><h3>Berufslehre Informatiker EFZ Systemtechnik</h3><span class="timeline-company">BiCT AG Ostermundigen / Berufs- und Weiterbildungszentrum Lyss</span></div><span class="timeline-date">2016 – 2020</span></div><p>Abschluss als Informatiker EFZ Systemtechnik mit Gesamtnote 5.1.</p><div class="timeline-tech"><span>Systemtechnik</span><span>Informatik EFZ</span></div></div></div>
-      </div></section>
-      <section class="cv-section"><div class="cv-section-title"><span class="cv-section-icon">🏅</span><h2>Zertifikate & Nachweise</h2></div><div class="certs-grid"><a class="cert-card" href="assets/pdfs/SAFe_Zertifikat.pdf" target="_blank"><div class="cert-icon">🔄</div><div><h4>Certified SAFe 6 Agilist</h4><span>Gültig bis 16. Oktober 2026</span></div></a><a class="cert-card" href="assets/pdfs/Fähigkeitszeugnis.pdf" target="_blank"><div class="cert-icon">🧾</div><div><h4>Informatiker EFZ Systemtechnik</h4><span>Fähigkeitszeugnis · 2020</span></div></a><a class="cert-card" href="assets/pdfs/Berufsmaturitätszeugnis.pdf" target="_blank"><div class="cert-icon">🎓</div><div><h4>Berufsmaturitätszeugnis</h4><span>Technik, Architektur, Life Sciences · 2022</span></div></a></div></section>
+  <!-- Seitenkopf: Titel und Link zum Original-CV -->
+  <div class="page-hero small-hero">
+   <div class="container">
+    <span class="section-tag">
+     Mein Weg
+    </span>
+    <h1>
+     Lebenslauf
+    </h1>
+    <p>
+     Ausbildung, Berufserfahrung, Kompetenzen und Zertifikate
+    </p>
+    <a class="btn btn-primary" href="assets/pdfs/CV_Thashaanth_Gnaneswaran.pdf" target="_blank">
+     📄 Original-CV &ouml;ffnen
+    </a>
+   </div>
+  </div>
+  <main class="cv-main">
+   <div class="container">
+    <div class="cv-grid">
+     <!-- Sidebar: Kontakt, Sprachen, Hard Skills und persönliche Stärken -->
+     <aside class="cv-sidebar">
+      <div class="cv-profile-card">
+       <div class="cv-avatar">
+        TG
+       </div>
+       <h2>
+        Thashaanth Gnaneswaran
+       </h2>
+       <p class="cv-title">
+        ICT Application Manager
+       </p>
+       <div class="cv-contact-info">
+        <div class="cv-contact-item">
+         <span class="cv-icon">
+          📍
+         </span>
+         <span>
+          3414 Oberburg
+         </span>
+        </div>
+        <div class="cv-contact-item">
+         <span class="cv-icon">
+          ✉️
+         </span>
+         <span>
+          thashaanth@hotmail.com
+         </span>
+        </div>
+        <div class="cv-contact-item">
+         <span class="cv-icon">
+          📱
+         </span>
+         <span>
+          078 630 70 09
+         </span>
+        </div>
+        <div class="cv-contact-item">
+         <span class="cv-icon">
+          💼
+         </span>
+         <span>
+          RUAG AG
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="cv-sidebar-section">
+       <h3>
+        Sprachen
+       </h3>
+       <div class="lang-item">
+        <span>
+         Tamilisch
+        </span>
+        <div class="lang-bar">
+         <div class="lang-fill" style="--w:100%">
+         </div>
+        </div>
+        <span class="lang-level">
+         Muttersprache
+        </span>
+       </div>
+       <div class="lang-item">
+        <span>
+         Deutsch
+        </span>
+        <div class="lang-bar">
+         <div class="lang-fill" style="--w:100%">
+         </div>
+        </div>
+        <span class="lang-level">
+         Muttersprache
+        </span>
+       </div>
+       <div class="lang-item">
+        <span>
+         Englisch
+        </span>
+        <div class="lang-bar">
+         <div class="lang-fill" style="--w:80%">
+         </div>
+        </div>
+        <span class="lang-level">
+         B2
+        </span>
+       </div>
+       <div class="lang-item">
+        <span>
+         Franz&ouml;sisch
+        </span>
+        <div class="lang-bar">
+         <div class="lang-fill" style="--w:60%">
+         </div>
+        </div>
+        <span class="lang-level">
+         B1
+        </span>
+       </div>
+      </div>
+      <div class="cv-sidebar-section">
+       <h3>
+        Hard Skills
+       </h3>
+       <div class="tag-cloud">
+        <span class="tag">
+         Windows Server
+        </span>
+        <span class="tag">
+         Linux
+        </span>
+        <span class="tag">
+         Microsoft 365
+        </span>
+        <span class="tag">
+         VMware
+        </span>
+        <span class="tag">
+         VDI
+        </span>
+        <span class="tag">
+         SCCM
+        </span>
+        <span class="tag">
+         Application Management
+        </span>
+        <span class="tag">
+         Release Management
+        </span>
+        <span class="tag">
+         Change Management
+        </span>
+        <span class="tag">
+         SAFe
+        </span>
+        <span class="tag">
+         Scrum
+        </span>
+       </div>
+      </div>
+      <div class="cv-sidebar-section">
+       <h3>
+        St&auml;rken
+       </h3>
+       <div class="tag-cloud">
+        <span class="tag tag-soft">
+         Strukturiert
+        </span>
+        <span class="tag tag-soft">
+         Selbstst&auml;ndig
+        </span>
+        <span class="tag tag-soft">
+         Teamorientiert
+        </span>
+        <span class="tag tag-soft">
+         Belastbar
+        </span>
+        <span class="tag tag-soft">
+         Analytisch
+        </span>
+       </div>
+      </div>
+     </aside>
+     <!-- Hauptinhalt: Berufserfahrung, Ausbildung und Zertifikate -->
+     <div class="cv-content">
+      <!-- Abschnitt Berufserfahrung -->
+      <section class="cv-section">
+       <div class="cv-section-title">
+        <span class="cv-section-icon">
+         💼
+        </span>
+        <h2>
+         Berufserfahrung
+        </h2>
+       </div>
+       <div class="timeline">
+        <div class="timeline-item" style="--delay:0s">
+         <div class="timeline-dot">
+         </div>
+         <div class="timeline-content">
+          <div class="timeline-header">
+           <div>
+            <h3>
+             ICT Application Manager
+            </h3>
+            <span class="timeline-company">
+             RUAG AG
+            </span>
+           </div>
+           <span class="timeline-date">
+            Seit Sep. 2023
+           </span>
+          </div>
+          <ul class="timeline-list">
+           <li>
+            Sicherstellung des stabilen Betriebs und der Weiterentwicklung gesch&auml;ftskritischer ICT-Applikationen
+           </li>
+           <li>
+            Planung und Durchf&uuml;hrung von Releases, Tests und Migrationen
+           </li>
+           <li>
+            Technischer Lead bei Entwicklung und Einf&uuml;hrung einer internen Dokumentenmanagement-Applikation
+           </li>
+           <li>
+            Beratung der Fachabteilungen sowie Zusammenarbeit mit IT-Teams und externen Partnern
+           </li>
+           <li>
+            Erstellung von Reports, Systemauswertungen und Service-Level-Kriterien
+           </li>
+          </ul>
+          <div class="timeline-tech">
+           <span>
+            Application Management
+           </span>
+           <span>
+            Release
+           </span>
+           <span>
+            Reporting
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="timeline-item" style="--delay:0.1s">
+         <div class="timeline-dot">
+         </div>
+         <div class="timeline-content">
+          <div class="timeline-header">
+           <div>
+            <h3>
+             Zivildienst &ndash; Teamleitung Multimedia
+            </h3>
+            <span class="timeline-company">
+             Gewa Sch&ouml;nb&uuml;hl
+            </span>
+           </div>
+           <span class="timeline-date">
+            Jan. 2023 &ndash; Jul. 2023
+           </span>
+          </div>
+          <ul class="timeline-list">
+           <li>
+            Leitung eines Teams mit bis zu 6 Mitarbeitenden in der PC- und Laptop-Produktion
+           </li>
+           <li>
+            Technische Verantwortung f&uuml;r Installation, Reparatur und Testing von Endger&auml;ten
+           </li>
+           <li>
+            Entwicklung eines automatisierten Laptop-Staging-Prozesses
+           </li>
+           <li>
+            Beratung von Kunden und Optimierung interner Abl&auml;ufe
+           </li>
+          </ul>
+          <div class="timeline-tech">
+           <span>
+            Teamleitung
+           </span>
+           <span>
+            Testing
+           </span>
+           <span>
+            Automation
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="timeline-item" style="--delay:0.2s">
+         <div class="timeline-dot">
+         </div>
+         <div class="timeline-content">
+          <div class="timeline-header">
+           <div>
+            <h3>
+             Zivildienst &ndash; IT-Support
+            </h3>
+            <span class="timeline-company">
+             SRO AG Spitalzentrum Oberaargau
+            </span>
+           </div>
+           <span class="timeline-date">
+            Sep. 2022 &ndash; Nov. 2022
+           </span>
+          </div>
+          <ul class="timeline-list">
+           <li>
+            1st-Level-Support f&uuml;r medizinisches Fachpersonal
+           </li>
+           <li>
+            Fehleranalyse und St&ouml;rungsbehebung in komplexer Spital-IT-Umgebung
+           </li>
+           <li>
+            Erstellung von Dokumentationen und Prozessoptimierung im IT-Support
+           </li>
+          </ul>
+          <div class="timeline-tech">
+           <span>
+            Support
+           </span>
+           <span>
+            Dokumentation
+           </span>
+           <span>
+            Fehleranalyse
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="timeline-item" style="--delay:0.3s">
+         <div class="timeline-dot">
+         </div>
+         <div class="timeline-content">
+          <div class="timeline-header">
+           <div>
+            <h3>
+             IT-Support
+            </h3>
+            <span class="timeline-company">
+             Berufsbildungszentrum Biel-Bienne (BBZ)
+            </span>
+           </div>
+           <span class="timeline-date">
+            Aug. 2020 &ndash; Jul. 2022
+           </span>
+          </div>
+          <ul class="timeline-list">
+           <li>
+            Standortverantwortung f&uuml;r IT-Infrastruktur und Benutzerbetreuung auf Deutsch und Franz&ouml;sisch
+           </li>
+           <li>
+            Administration von Servern, Netzwerken und VMware-Umgebungen
+           </li>
+           <li>
+            Einf&uuml;hrung von Microsoft SCCM und Betreuung der VDI-Umgebung
+           </li>
+          </ul>
+          <div class="timeline-tech">
+           <span>
+            Server
+           </span>
+           <span>
+            Netzwerk
+           </span>
+           <span>
+            VMware
+           </span>
+           <span>
+            SCCM
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+      <!-- Abschnitt Ausbildung -->
+      <section class="cv-section">
+       <div class="cv-section-title">
+        <span class="cv-section-icon">
+         🎓
+        </span>
+        <h2>
+         Ausbildung
+        </h2>
+       </div>
+       <div class="timeline">
+        <div class="timeline-item" style="--delay:0s">
+         <div class="timeline-dot timeline-dot--edu">
+         </div>
+         <div class="timeline-content">
+          <div class="timeline-header">
+           <div>
+            <h3>
+             Bachelor of Science &ndash; Wirtschaftsinformatik / Digital Business &amp; AI
+            </h3>
+            <span class="timeline-company">
+             Berner Fachhochschule BFH
+            </span>
+           </div>
+           <span class="timeline-date">
+            2023 &ndash; jetzt
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="timeline-item" style="--delay:0.1s">
+         <div class="timeline-dot timeline-dot--edu">
+         </div>
+         <div class="timeline-content">
+          <div class="timeline-header">
+           <div>
+            <h3>
+             Berufsmaturit&auml;t
+            </h3>
+            <span class="timeline-company">
+             gibb Berufsfachschule Bern &middot; Technik, Architektur, Life Sciences
+            </span>
+           </div>
+           <span class="timeline-date">
+            2020 &ndash; 2022
+           </span>
+          </div>
+          <p>
+           Gesamtnote 4.9 gem&auml;ss Berufsmaturit&auml;tszeugnis.
+          </p>
+         </div>
+        </div>
+        <div class="timeline-item" style="--delay:0.2s">
+         <div class="timeline-dot timeline-dot--edu">
+         </div>
+         <div class="timeline-content">
+          <div class="timeline-header">
+           <div>
+            <h3>
+             Berufslehre Informatiker EFZ Systemtechnik
+            </h3>
+            <span class="timeline-company">
+             BiCT AG Ostermundigen / Berufs- und Weiterbildungszentrum Lyss
+            </span>
+           </div>
+           <span class="timeline-date">
+            2016 &ndash; 2020
+           </span>
+          </div>
+          <p>
+           Abschluss als Informatiker EFZ Systemtechnik mit Gesamtnote 5.1.
+          </p>
+          <div class="timeline-tech">
+           <span>
+            Systemtechnik
+           </span>
+           <span>
+            Informatik EFZ
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+      <!-- Abschnitt Zertifikate und Nachweise -->
+      <section class="cv-section">
+       <div class="cv-section-title">
+        <span class="cv-section-icon">
+         🏅
+        </span>
+        <h2>
+         Zertifikate &amp; Nachweise
+        </h2>
+       </div>
+       <div class="certs-grid">
+        <a class="cert-card" href="assets/pdfs/SAFe_Zertifikat.pdf" target="_blank">
+         <div class="cert-icon">
+          🔄
+         </div>
+         <div>
+          <h4>
+           Certified SAFe 6 Agilist
+          </h4>
+          <span>
+           G&uuml;ltig bis 16. Oktober 2026
+          </span>
+         </div>
+        </a>
+        <a class="cert-card" href="assets/pdfs/F&auml;higkeitszeugnis.pdf" target="_blank">
+         <div class="cert-icon">
+          🧾
+         </div>
+         <div>
+          <h4>
+           Informatiker EFZ Systemtechnik
+          </h4>
+          <span>
+           F&auml;higkeitszeugnis &middot; 2020
+          </span>
+         </div>
+        </a>
+        <a class="cert-card" href="assets/pdfs/Berufsmaturit&auml;tszeugnis.pdf" target="_blank">
+         <div class="cert-icon">
+          🎓
+         </div>
+         <div>
+          <h4>
+           Berufsmaturit&auml;tszeugnis
+          </h4>
+          <span>
+           Technik, Architektur, Life Sciences &middot; 2022
+          </span>
+         </div>
+        </a>
+       </div>
+      </section>
+     </div>
     </div>
-  </div></div></main>
-  <footer class="footer"><div class="container"><p>© 2026 Thashaanth Gnaneswaran</p><nav class="footer-nav"><a href="index.html">Home</a><a href="lebenslauf.html">Lebenslauf</a><a href="freizeit.html">Freizeit</a></nav></div></footer>
-  <script src="js/nav.js"></script><script src="js/animations.js"></script>
-</body>
+   </div>
+  </main>
+  <!-- Footer: Basisnavigation und Copyright -->
+  <footer class="footer">
+   <div class="container">
+    <p>
+     &copy; 2026 Thashaanth Gnaneswaran
+    </p>
+    <nav class="footer-nav">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="lebenslauf.html">
+      Lebenslauf
+     </a>
+     <a href="freizeit.html">
+      Freizeit
+     </a>
+    </nav>
+   </div>
+  </footer>
+  <script src="js/nav.js">
+  </script>
+  <script src="js/animations.js">
+  </script>
+ </body>
 </html>
