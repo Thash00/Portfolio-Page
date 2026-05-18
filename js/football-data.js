@@ -18,7 +18,7 @@
   const API_BASE_URL = 'https://api.football-data.org/v4';
 
   // Optionaler Demo-Wert. Aus Sicherheitsgründen leer lassen und den Token im Formular eingeben.
-  const DEFAULT_API_TOKEN = '';
+  const DEFAULT_API_TOKEN = 'bb478bb6708546dea6a801a8e149191b';
 
   const tokenInput = document.getElementById('footballApiToken');
   const loadButton = document.getElementById('loadFootballData');
