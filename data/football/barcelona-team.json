@@ -1,11 +1,19 @@
 {
-  "generatedAt": null,
+  "area": {
+    "id": 2224,
+    "name": "Spain",
+    "code": "ESP",
+    "flag": "https://crests.football-data.org/760.svg"
+  },
   "id": 81,
   "name": "FC Barcelona",
-  "area": {
-    "name": "Spain"
-  },
+  "shortName": "Barça",
+  "tla": "FCB",
+  "crest": "https://crests.football-data.org/81.png",
+  "address": "Avenida Arístides Maillol s/n Barcelona 08028",
+  "website": "http://www.fcbarcelona.com",
   "founded": 1899,
+  "clubColors": "Red / Navy Blue / Orange",
   "venue": "Camp Nou",
   "runningCompetitions": [
     {
@@ -270,5 +278,8 @@
   ],
   "staff": [],
   "lastUpdated": "2024-07-29T17:09:22Z",
-  "generatedAt": "2026-05-18T11:59:15Z"
+  "ok": true,
+  "endpoint": "team",
+  "sourceUrl": "https://api.football-data.org/v4/teams/81",
+  "generatedAt": "2026-05-18T13:26:38Z"
 }
