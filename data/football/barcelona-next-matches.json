@@ -78,5 +78,8 @@
       "referees": []
     }
   ],
-  "generatedAt": "2026-05-18T11:59:15Z"
+  "ok": true,
+  "endpoint": "next-matches",
+  "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
+  "generatedAt": "2026-05-18T12:06:13Z"
 }
