@@ -1,0 +1,11 @@
+{
+  "generatedAt": null,
+  "id": 81,
+  "name": "FC Barcelona",
+  "area": {
+    "name": "Spain"
+  },
+  "founded": 1899,
+  "venue": "Camp Nou",
+  "crest": "https://crests.football-data.org/81.png"
+}

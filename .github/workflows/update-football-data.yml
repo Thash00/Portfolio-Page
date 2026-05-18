@@ -1,0 +1,77 @@
+name: Update Football Data
+
+on:
+  schedule:
+    # Alle 6 Stunden aktualisieren. Zeitangabe ist UTC.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-football-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Football-Data JSON-Ordner erstellen
+        run: mkdir -p data/football
+
+      - name: Football-Data API abrufen
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: |
+          if [ -z "$FOOTBALL_DATA_TOKEN" ]; then
+            echo "Secret FOOTBALL_DATA_TOKEN fehlt. Bitte in Settings > Secrets and variables > Actions anlegen."
+            exit 1
+          fi
+
+          fetch_json() {
+            local url="$1"
+            local output="$2"
+
+            echo "Lade: $url"
+            curl -fsS "$url" \
+              -H "X-Auth-Token: $FOOTBALL_DATA_TOKEN" \
+              -H "Accept: application/json" \
+              -o "$output"
+          }
+
+          fetch_json "https://api.football-data.org/v4/teams/81" \
+            "data/football/barcelona-team.json"
+
+          fetch_json "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5" \
+            "data/football/barcelona-next-matches.json"
+
+          fetch_json "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5" \
+            "data/football/barcelona-last-matches.json"
+
+          fetch_json "https://api.football-data.org/v4/competitions/PD/standings" \
+            "data/football/barcelona-standings.json"
+
+      - name: Aktualisierungszeitpunkt in JSON schreiben
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+          for path in Path("data/football").glob("*.json"):
+              data = json.loads(path.read_text(encoding="utf-8"))
+              if isinstance(data, dict):
+                  data["generatedAt"] = generated_at
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+
+      - name: Änderungen ins Repository committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/football/*.json
+          git commit -m "Update FC Barcelona football data" || echo "Keine Änderungen vorhanden"
+          git push

@@ -255,8 +255,7 @@
        FC Barcelona Live-Daten
       </h2>
       <p class="section-desc">
-       Dieser Bereich ist für Live-Daten über meinen Lieblingsverein vorbereitet.
-      Mit einem Football-Data-API-Token können aktuelle Spiele und Tabelleninformationen geladen werden.
+       Dieser Bereich zeigt Daten zu meinem Lieblingsverein. Die Daten werden über GitHub Actions aktualisiert und als lokale JSON-Dateien geladen.
       </p>
      </div>
      <div class="football-dashboard">
@@ -269,27 +268,23 @@
          FC Barcelona
         </h3>
         <p>
-         Die Integration nutzt Team- und Match-Endpunkte der Football-Data API.
-          Ohne Token bleibt die Demo-Ansicht sichtbar.
+         Die Integration nutzt Football-Data über einen GitHub-Workflow. Der API-Token bleibt als GitHub Secret geschützt und wird nicht im Frontend gespeichert.
         </p>
        </div>
-       <div class="football-token-panel">
-        <label for="footballApiToken">
-         Football-Data API Token
-        </label>
-        <div class="football-token-row">
-         <input autocomplete="off" id="footballApiToken" placeholder="API Token einfügen" type="password"/>
-         <button class="btn btn-primary" id="loadFootballData" type="button">
-          Live-Daten laden
-         </button>
-        </div>
+       <div class="football-token-panel football-static-panel">
+        <span class="football-panel-label">
+         GitHub Pages Integration
+        </span>
+        <button class="btn btn-primary" id="loadFootballData" type="button">
+         FC-Barcelona-Daten laden
+        </button>
         <p class="football-note">
-         Hinweis: Für eine echte Veröffentlichung sollte der Token über ein Backend oder einen Proxy geschützt werden.
+         Hinweis: Die Webseite lädt nur lokale JSON-Dateien. Der API-Token liegt ausschliesslich als GitHub Secret im Repository.
         </p>
        </div>
       </div>
       <div class="football-status" id="footballStatus">
-       Demo-Ansicht aktiv. Füge einen Football-Data-API-Token ein, um Live-Daten zu laden.
+       Lokale Datenansicht aktiv. Klicke auf „FC-Barcelona-Daten laden“, um die JSON-Dateien zu lesen.
       </div>
       <div class="football-grid">
        <article class="football-card football-team-card">
@@ -317,10 +312,10 @@
         <ul class="football-list" id="footballNextMatches">
          <li>
           <span>
-           Live-Daten noch nicht geladen
+           Lokale Daten noch nicht geladen
           </span>
           <strong>
-           API-Token einfügen und laden
+           Daten laden
           </strong>
          </li>
         </ul>
@@ -332,10 +327,10 @@
         <ul class="football-list" id="footballLastMatches">
          <li>
           <span>
-           Live-Daten noch nicht geladen
+           Lokale Daten noch nicht geladen
           </span>
           <strong>
-           API-Token einfügen und laden
+           Daten laden
           </strong>
          </li>
         </ul>
@@ -349,7 +344,7 @@
           Tabellenplatz noch nicht geladen
          </strong>
          <span>
-          Die Live-Tabelle wird nach erfolgreicher API-Abfrage angezeigt.
+          Die Tabelle wird angezeigt, sobald die GitHub Action die JSON-Dateien aktualisiert hat.
          </span>
         </div>
        </article>

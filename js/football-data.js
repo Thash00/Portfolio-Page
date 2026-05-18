@@ -1,40 +1,36 @@
 /*
- * Football-Data API Integration
+ * FC Barcelona Daten für GitHub Pages
  *
  * Zweck:
- * - Lädt Live-Daten zum Lieblingsverein FC Barcelona.
- * - Verwendet die Football-Data API v4.
- * - Zeigt Clubdaten, kommende Spiele, letzte Resultate und – falls verfügbar – die Tabelle.
+ * - Lädt lokale JSON-Dateien aus dem Ordner `data/football`.
+ * - Die JSON-Dateien werden durch GitHub Actions mit der Football-Data API aktualisiert.
+ * - Der Football-Data API-Token bleibt als GitHub Secret geschützt und steht nicht im Frontend-Code.
  *
- * Wichtiger Hinweis:
- * Ein API-Token sollte in produktiven Projekten nicht dauerhaft im Frontend gespeichert
- * oder im öffentlichen Repository veröffentlicht werden. Für ein echtes Deployment ist ein
- * kleines Backend oder eine Serverless Function als Proxy sicherer.
+ * Wichtig:
+ * - Diese Datei funktioniert ohne Node.js und ohne direkten API-Call aus dem Browser.
+ * - Dadurch werden typische CORS-Probleme vermieden.
  */
 (function () {
   'use strict';
 
   /* ------------------------------------------------------------
-     Grundkonfiguration
+     Konfiguration
      ------------------------------------------------------------ */
 
-  // FC Barcelona ist in der Football-Data API als Team-ID 81 hinterlegt.
   const TEAM_ID = 81;
+  const DATA_BASE_PATH = 'data/football';
 
-  // PD = Primera División / La Liga.
-  const LA_LIGA_CODE = 'PD';
-
-  // Basis-URL der Football-Data API v4.
-  const API_BASE_URL = 'https://api.football-data.org/v4';
-
-  // Optionaler Demo-Wert. Aus Sicherheitsgründen leer lassen.
-  const DEFAULT_API_TOKEN = '';
+  const DATA_FILES = {
+    team: `${DATA_BASE_PATH}/barcelona-team.json`,
+    next: `${DATA_BASE_PATH}/barcelona-next-matches.json`,
+    last: `${DATA_BASE_PATH}/barcelona-last-matches.json`,
+    standing: `${DATA_BASE_PATH}/barcelona-standings.json`,
+  };
 
   /* ------------------------------------------------------------
      DOM-Elemente aus der Freizeitseite
      ------------------------------------------------------------ */
 
-  const tokenInput = document.getElementById('footballApiToken');
   const loadButton = document.getElementById('loadFootballData');
   const statusBox = document.getElementById('footballStatus');
   const crestBox = document.getElementById('footballCrest');
@@ -44,184 +40,78 @@
   const lastMatches = document.getElementById('footballLastMatches');
   const standingBox = document.getElementById('footballStanding');
 
-  // Auf Seiten ohne Football-Bereich wird das Skript sofort beendet.
+  // Falls die aktuelle Seite keinen Football-Bereich hat, wird das Skript beendet.
   if (!loadButton || !statusBox) return;
 
-  restoreTokenFromSession();
   loadButton.addEventListener('click', loadFootballData);
 
+  // Daten direkt beim Öffnen der Freizeitseite laden.
+  loadFootballData();
+
   /* ------------------------------------------------------------
-     Hauptfunktion: Daten laden und einzeln auswerten
+     Daten laden
      ------------------------------------------------------------ */
 
   /**
-   * Lädt die Football-Daten.
-   *
-   * Diese Version ist robuster als eine einzelne Promise.all-Abfrage:
-   * Wenn z. B. die Tabelle wegen Berechtigung oder Limit fehlschlägt,
-   * werden Clubdaten und Spiele trotzdem angezeigt.
+   * Lädt alle lokalen Football-JSON-Dateien und rendert die Karten.
    */
   async function loadFootballData() {
-    const token = getApiToken();
-
-    if (!token) {
-      showStatus('Bitte zuerst einen Football-Data-API-Token einfügen.', 'warning');
-      return;
-    }
-
-    window.sessionStorage.setItem('footballDataToken', token);
     setLoadingState(true);
-    showStatus('Live-Daten werden geladen ...', 'loading');
+    showStatus('FC-Barcelona-Daten werden aus lokalen JSON-Dateien geladen ...', 'loading');
 
-    const requests = {
-      team: requestFootballData(`/teams/${TEAM_ID}`, token),
-      next: requestFootballData(`/teams/${TEAM_ID}/matches?status=SCHEDULED&limit=3`, token),
-      last: requestFootballData(`/teams/${TEAM_ID}/matches?status=FINISHED&limit=3`, token),
-      standing: requestFootballData(`/competitions/${LA_LIGA_CODE}/standings`, token),
-    };
-
-    const results = await settleNamedRequests(requests);
-
-    renderResult('team', results.team, renderTeam, () => {
-      renderTeamFallback();
-    });
-
-    renderResult('next', results.next, (data) => {
-      renderMatches(nextMatches, data.matches, 'Keine kommenden Spiele gefunden.');
-    }, () => {
-      renderListError(nextMatches, 'Kommende Spiele konnten nicht geladen werden.');
-    });
-
-    renderResult('last', results.last, (data) => {
-      renderMatches(lastMatches, data.matches, 'Keine abgeschlossenen Spiele gefunden.');
-    }, () => {
-      renderListError(lastMatches, 'Letzte Resultate konnten nicht geladen werden.');
-    });
-
-    renderResult('standing', results.standing, renderStanding, () => {
-      renderStandingError('Tabelle konnte nicht geladen werden.');
-    });
-
-    showSummaryStatus(results);
-    setLoadingState(false);
-  }
-
-  /**
-   * Wartet auf mehrere benannte Requests und gibt zu jedem Request den Status zurück.
-   * @param {Record<string, Promise<object>>} requestMap Benannte API-Requests
-   * @returns {Promise<Record<string, object>>} Ergebnisse mit status/value/reason
-   */
-  async function settleNamedRequests(requestMap) {
-    const entries = Object.entries(requestMap);
-    const settled = await Promise.allSettled(entries.map(([, request]) => request));
-
-    return entries.reduce((accumulator, [name], index) => {
-      accumulator[name] = settled[index];
-      return accumulator;
-    }, {});
-  }
-
-  /**
-   * Rendert ein einzelnes Ergebnis, falls der Request erfolgreich war.
-   * @param {string} name Name des Requests für Debugging
-   * @param {PromiseSettledResult<object>} result Ergebnis von Promise.allSettled
-   * @param {(value: object) => void} onSuccess Funktion bei Erfolg
-   * @param {(reason: Error) => void} onError Funktion bei Fehler
-   */
-  function renderResult(name, result, onSuccess, onError) {
-    if (result.status === 'fulfilled') {
-      onSuccess(result.value);
-      return;
-    }
-
-    console.warn(`Football-Data Request fehlgeschlagen: ${name}`, result.reason);
-    onError(result.reason);
-  }
-
-  /* ------------------------------------------------------------
-     API-Zugriff
-     ------------------------------------------------------------ */
-
-  /**
-   * Führt eine GET-Anfrage an die Football-Data API aus.
-   * @param {string} path API-Pfad nach der Basis-URL
-   * @param {string} token Football-Data API Token
-   * @returns {Promise<object>} JSON-Antwort der API
-   */
-  async function requestFootballData(path, token) {
     try {
-      const response = await fetch(`${API_BASE_URL}${path}`, {
-        method: 'GET',
-        headers: {
-          // Football-Data erwartet exakt diesen Headernamen.
-          'X-Auth-Token': token,
-        },
-      });
+      const [team, scheduledMatches, finishedMatches, standings] = await Promise.all([
+        fetchJson(DATA_FILES.team),
+        fetchJson(DATA_FILES.next),
+        fetchJson(DATA_FILES.last),
+        fetchJson(DATA_FILES.standing),
+      ]);
 
-      if (!response.ok) {
-        throw new Error(await extractApiError(response));
-      }
-
-      return response.json();
+      renderTeam(team);
+      renderMatches(nextMatches, scheduledMatches.matches, 'Keine kommenden Spiele in den lokalen Daten gefunden.');
+      renderMatches(lastMatches, finishedMatches.matches, 'Keine letzten Resultate in den lokalen Daten gefunden.');
+      renderStanding(standings);
+      showLastUpdated(team, scheduledMatches, finishedMatches, standings);
     } catch (error) {
-      // TypeError entsteht häufig bei Netzwerk-, CORS- oder Adblocker-Problemen.
-      if (error instanceof TypeError) {
-        throw new Error('Netzwerk- oder Browserfehler. Prüfe Internetverbindung, Adblocker und ob die Seite über einen lokalen Server läuft.');
-      }
-
-      throw error;
+      console.error('Fehler beim Laden der lokalen Football-Daten:', error);
+      showStatus(
+        `Daten konnten nicht geladen werden: ${error.message}. Prüfe, ob die GitHub Action bereits gelaufen ist und die JSON-Dateien im Ordner data/football vorhanden sind.`,
+        'error'
+      );
+      renderFallbackState();
+    } finally {
+      setLoadingState(false);
     }
   }
 
   /**
-   * Versucht, eine aussagekräftige Fehlermeldung aus der API-Antwort zu lesen.
-   * @param {Response} response Fetch-Response
-   * @returns {Promise<string>} Fehlermeldung
+   * Lädt eine einzelne lokale JSON-Datei.
+   * @param {string} path Relativer Pfad zur JSON-Datei
+   * @returns {Promise<object>} Geparste JSON-Daten
    */
-  async function extractApiError(response) {
-    try {
-      const data = await response.json();
-      const apiMessage = data.message || data.error || response.statusText;
-      return `${response.status} ${apiMessage}`;
-    } catch {
-      return `${response.status} ${response.statusText}`;
+  async function fetchJson(path) {
+    const response = await fetch(path, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+      cache: 'no-cache',
+    });
+
+    if (!response.ok) {
+      throw new Error(`${path} konnte nicht geladen werden (${response.status})`);
     }
+
+    return response.json();
   }
 
   /* ------------------------------------------------------------
-     Token-Verwaltung
-     ------------------------------------------------------------ */
-
-  /**
-   * Holt den Token aus dem Eingabefeld, aus der Session oder aus der optionalen Konstante.
-   * @returns {string} API-Token oder leerer String
-   */
-  function getApiToken() {
-    return (
-      tokenInput?.value.trim() ||
-      window.sessionStorage.getItem('footballDataToken') ||
-      DEFAULT_API_TOKEN
-    );
-  }
-
-  /**
-   * Setzt einen vorhandenen Session-Token wieder ins Eingabefeld.
-   */
-  function restoreTokenFromSession() {
-    const savedToken = window.sessionStorage.getItem('footballDataToken');
-
-    if (tokenInput && savedToken) {
-      tokenInput.value = savedToken;
-    }
-  }
-
-  /* ------------------------------------------------------------
-     Rendering: Clubdaten, Spiele, Tabelle
+     Rendering: Clubdaten, Spiele und Tabelle
      ------------------------------------------------------------ */
 
   /**
    * Zeigt Basisinformationen zum Verein an.
-   * @param {object} team Team-Antwort der API
+   * @param {object} team Teamdaten
    */
   function renderTeam(team) {
     if (teamName) {
@@ -229,9 +119,10 @@
     }
 
     if (teamMeta) {
+      const country = team.area?.name || 'Spanien';
       const founded = team.founded ? ` · gegründet ${team.founded}` : '';
       const venue = team.venue ? ` · ${team.venue}` : '';
-      teamMeta.textContent = `${team.area?.name || 'Spanien'}${founded}${venue}`;
+      teamMeta.textContent = `${country}${founded}${venue}`;
     }
 
     if (crestBox && team.crest) {
@@ -241,24 +132,16 @@
   }
 
   /**
-   * Fallback, falls die Clubdaten nicht geladen werden konnten.
-   */
-  function renderTeamFallback() {
-    if (teamName) teamName.textContent = 'FC Barcelona';
-    if (teamMeta) teamMeta.textContent = 'Clubdaten konnten nicht geladen werden.';
-  }
-
-  /**
    * Rendert eine Liste von Spielen.
-   * @param {HTMLElement} target Ziel-Liste im HTML
-   * @param {Array<object>} matches Spiele aus der API
+   * @param {HTMLElement} target Ziel-Liste
+   * @param {Array<object>} matches Match-Liste
    * @param {string} emptyText Text, falls keine Spiele vorhanden sind
    */
   function renderMatches(target, matches = [], emptyText) {
     if (!target) return;
 
     if (!matches.length) {
-      target.innerHTML = `<li><span>${emptyText}</span></li>`;
+      target.innerHTML = `<li><span>${escapeHtml(emptyText)}</span></li>`;
       return;
     }
 
@@ -272,9 +155,9 @@
 
         return `
           <li>
-            <span>${escapeHtml(competition)} · ${date}</span>
-            <strong>${escapeHtml(homeTeam)} ${score} ${escapeHtml(awayTeam)}</strong>
-            <small>${translateStatus(match.status)}</small>
+            <span>${escapeHtml(competition)} · ${escapeHtml(date)}</span>
+            <strong>${escapeHtml(homeTeam)} ${escapeHtml(score)} ${escapeHtml(awayTeam)}</strong>
+            <small>${escapeHtml(translateStatus(match.status))}</small>
           </li>
         `;
       })
@@ -282,18 +165,8 @@
   }
 
   /**
-   * Zeigt eine Fehlermeldung in einer Match-Liste.
-   * @param {HTMLElement} target Ziel-Liste im HTML
-   * @param {string} message Fehlermeldung
-   */
-  function renderListError(target, message) {
-    if (!target) return;
-    target.innerHTML = `<li><span>${escapeHtml(message)}</span></li>`;
-  }
-
-  /**
-   * Zeigt den aktuellen Tabellenplatz von FC Barcelona in La Liga.
-   * @param {object} standings Tabellen-Antwort der API
+   * Zeigt den aktuellen Tabellenplatz von FC Barcelona.
+   * @param {object} standings Tabellen-Antwort aus Football-Data
    */
   function renderStanding(standings) {
     if (!standingBox) return;
@@ -302,7 +175,10 @@
     const barcaStanding = totalStanding?.table?.find((row) => row.team?.id === TEAM_ID);
 
     if (!barcaStanding) {
-      renderStandingError('Die API-Antwort enthält aktuell keinen Tabellenplatz für FC Barcelona.');
+      standingBox.innerHTML = `
+        <strong>Nicht verfügbar</strong>
+        <span>Die lokalen Daten enthalten aktuell keinen Tabellenplatz für FC Barcelona.</span>
+      `;
       return;
     }
 
@@ -315,79 +191,47 @@
   }
 
   /**
-   * Zeigt eine Fehlermeldung im Tabellenbereich.
-   * @param {string} message Fehlermeldung
+   * Zeigt den Zeitstempel der letzten Datenaktualisierung an.
+   * @param {...object} payloads JSON-Datenblöcke
    */
-  function renderStandingError(message) {
-    if (!standingBox) return;
+  function showLastUpdated(...payloads) {
+    const updatedAt = payloads
+      .map((payload) => payload.generatedAt || payload.lastUpdated)
+      .find(Boolean);
 
-    standingBox.innerHTML = `
-      <strong>Nicht verfügbar</strong>
-      <span>${escapeHtml(message)}</span>
-    `;
-  }
-
-  /* ------------------------------------------------------------
-     Status- und Hilfsfunktionen
-     ------------------------------------------------------------ */
-
-  /**
-   * Zeigt eine Zusammenfassung der erfolgreichen und fehlgeschlagenen Requests.
-   * @param {Record<string, PromiseSettledResult<object>>} results API-Ergebnisse
-   */
-  function showSummaryStatus(results) {
-    const failed = Object.entries(results).filter(([, result]) => result.status === 'rejected');
-
-    if (!failed.length) {
-      showStatus('Live-Daten erfolgreich geladen.', 'success');
+    if (!updatedAt) {
+      showStatus('Daten geladen. Noch kein Aktualisierungszeitpunkt vorhanden.', 'success');
       return;
     }
 
-    const details = failed
-      .map(([name, result]) => `${translateRequestName(name)}: ${result.reason.message}`)
-      .join(' · ');
-
-    showStatus(`Ein Teil der Live-Daten konnte nicht geladen werden. ${details}`, 'warning');
+    showStatus(`Daten geladen. Letzte Aktualisierung: ${formatMatchDate(updatedAt)}.`, 'success');
   }
 
   /**
-   * Aktualisiert den Statushinweis oberhalb der Datenkarten.
-   * @param {string} message Hinweistext
-   * @param {'loading'|'success'|'warning'|'error'} type Statusart
+   * Setzt die Karten in einen verständlichen Fallback-Zustand.
    */
-  function showStatus(message, type = 'loading') {
-    statusBox.textContent = message;
-    statusBox.dataset.status = type;
+  function renderFallbackState() {
+    if (teamName) teamName.textContent = 'FC Barcelona';
+    if (teamMeta) teamMeta.textContent = 'Daten werden nach dem ersten GitHub-Action-Lauf angezeigt.';
+
+    renderMatches(nextMatches, [], 'Noch keine lokalen Spieldaten vorhanden.');
+    renderMatches(lastMatches, [], 'Noch keine lokalen Resultate vorhanden.');
+
+    if (standingBox) {
+      standingBox.innerHTML = `
+        <strong>Noch keine Daten</strong>
+        <span>Starte den GitHub Workflow manuell oder warte auf den geplanten Lauf.</span>
+      `;
+    }
   }
 
-  /**
-   * Verhindert Mehrfachklicks während des Ladens.
-   * @param {boolean} isLoading Ob gerade Daten geladen werden
-   */
-  function setLoadingState(isLoading) {
-    loadButton.disabled = isLoading;
-    loadButton.textContent = isLoading ? 'Lädt ...' : 'Live-Daten laden';
-  }
-
-  /**
-   * Übersetzt interne Request-Namen in lesbare Bezeichnungen.
-   * @param {string} name Interner Request-Name
-   * @returns {string} Lesbare Bezeichnung
-   */
-  function translateRequestName(name) {
-    const labels = {
-      team: 'Clubdaten',
-      next: 'kommende Spiele',
-      last: 'letzte Resultate',
-      standing: 'Tabelle',
-    };
-
-    return labels[name] || name;
-  }
+  /* ------------------------------------------------------------
+     Hilfsfunktionen
+     ------------------------------------------------------------ */
 
   /**
    * Formatiert den Spielstand. Bei geplanten Spielen wird ein Trennzeichen angezeigt.
-   * @param {object} match Match-Objekt der API
+   * @param {object} match Match-Objekt
    * @returns {string} Formatierter Spielstand
    */
   function formatScore(match) {
@@ -402,8 +246,8 @@
   }
 
   /**
-   * Formatiert das UTC-Datum in eine deutsch-schweizerische Anzeige.
-   * @param {string} utcDate UTC-Datum aus der API
+   * Formatiert ein UTC-Datum in eine deutsch-schweizerische Anzeige.
+   * @param {string} utcDate UTC-Datum
    * @returns {string} Lesbares Datum
    */
   function formatMatchDate(utcDate) {
@@ -436,16 +280,35 @@
   }
 
   /**
-   * Einfache HTML-Escaping-Funktion für Daten aus externen Quellen.
-   * @param {string} value Zu bereinigender Wert
-   * @returns {string} HTML-sicherer Text
+   * Aktiviert oder deaktiviert den Ladezustand des Buttons.
+   * @param {boolean} isLoading Ladezustand
+   */
+  function setLoadingState(isLoading) {
+    loadButton.disabled = isLoading;
+    loadButton.textContent = isLoading ? 'Daten werden geladen ...' : 'FC-Barcelona-Daten laden';
+  }
+
+  /**
+   * Zeigt eine Statusmeldung im Football-Bereich an.
+   * @param {string} message Nachricht
+   * @param {string} type Status-Typ
+   */
+  function showStatus(message, type = 'info') {
+    statusBox.textContent = message;
+    statusBox.dataset.status = type;
+  }
+
+  /**
+   * Schützt dynamische Inhalte vor HTML-Injection.
+   * @param {unknown} value Eingabewert
+   * @returns {string} Escaped HTML-Text
    */
   function escapeHtml(value) {
-    return String(value)
-      .replaceAll('&', '&amp;')
-      .replaceAll('<', '&lt;')
-      .replaceAll('>', '&gt;')
-      .replaceAll('"', '&quot;')
-      .replaceAll("'", '&#039;');
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 })();
