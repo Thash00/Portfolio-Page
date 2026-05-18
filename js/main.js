@@ -27,7 +27,9 @@
     zertifikate:
       'Er besitzt unter anderem das Zertifikat Certified SAFe 6 Agilist, gültig bis 16. Oktober 2026. Zusätzlich sind sein EFZ-Fähigkeitszeugnis und das Berufsmaturitätszeugnis eingebunden.',
     freizeit:
-      'In seiner Freizeit interessiert sich Thashaanth für Fitness, Fussball und Autos. Diese Interessen stehen für Disziplin, Teamgeist, Technikbegeisterung und Fokus.',
+      'In seiner Freizeit interessiert sich Thashaanth für Fitness, Fussball und Autos. Sein Lieblingsverein ist der FC Barcelona. Diese Interessen stehen für Disziplin, Teamgeist, Technikbegeisterung und Fokus.',
+    fussball:
+      'Thashaanths Lieblingsverein ist der FC Barcelona. Auf der Freizeitseite ist eine Football-Data-API-Integration vorbereitet, über die mit einem API-Token aktuelle Spiele und Tabelleninformationen geladen werden können.',
     kontakt:
       'Du erreichst Thashaanth per E-Mail unter thashaanth@hotmail.com oder telefonisch unter 078 630 70 09. Sein LinkedIn-Profil ist ebenfalls auf der Startseite verlinkt.',
   };
@@ -78,6 +80,10 @@
       return facts.zertifikate;
     }
 
+    if (matchesAny(question, ['barcelona', 'barça', 'barca', 'lieblingsverein', 'la liga'])) {
+      return facts.fussball;
+    }
+
     if (matchesAny(question, ['freizeit', 'hobby', 'fitness', 'fussball', 'auto'])) {
       return facts.freizeit;
     }
@@ -86,7 +92,7 @@
       return facts.kontakt;
     }
 
-    return 'Dazu habe ich keine spezifische Information im Portfolio. Relevant sind vor allem Lebenslauf, ICT-Kompetenzen, Zertifikate, Kontakt und Freizeit. Du kannst auch direkt nach RUAG, SAFe, EFZ, Fitness, Fussball oder Autos fragen.';
+    return 'Dazu habe ich keine spezifische Information im Portfolio. Relevant sind vor allem Lebenslauf, ICT-Kompetenzen, Zertifikate, Kontakt und Freizeit. Du kannst auch direkt nach RUAG, SAFe, EFZ, Fitness, Fussball, FC Barcelona oder Autos fragen.';
   }
 
   /**

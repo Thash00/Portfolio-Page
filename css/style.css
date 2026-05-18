@@ -1922,34 +1922,54 @@ button {
 
 }
 
+
 /* ============================================
-   RESPONSIVE FEINSCHLIFF – HERO/TG-ANIMATION
+   RESPONSIVE FEINSCHLIFF – STARTSEITE / HERO
    ============================================ */
 /*
-   Ziel: Die TG-Animation darf bei Zwischenbreiten nicht abgeschnitten werden.
-   Deshalb wird die Größe über clamp() gesteuert und der Bereich bekommt bewusst Platz.
+   Der Name und die TG-Animation erhalten getrennte Layout-Zonen.
+   Dadurch schneiden sich Text und Animation nicht mehr, auch nicht bei Zwischenbreiten.
 */
 .hero {
-  width: min(100%, 1200px);
+  width: min(100%, 1240px);
+  min-height: min(100svh, 980px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: clamp(40px, 6vw, 88px);
+  padding-inline: clamp(24px, 5vw, 64px);
   overflow: visible;
-  grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
 }
 
-.hero-content,
-.hero-visual {
+.hero-content {
+  position: relative;
+  z-index: 2;
   min-width: 0;
+  max-width: 760px;
+}
+
+.hero-title {
+  max-width: 100%;
+  font-size: clamp(3.4rem, 5.4vw, 6.35rem);
+  line-height: 0.98;
+  overflow-wrap: normal;
+}
+
+.hero-title em {
+  display: inline-block;
+  max-width: 100%;
 }
 
 .hero-visual {
-  width: 100%;
-  max-width: 440px;
-  margin-inline: auto;
-  padding: 12px;
+  justify-self: end;
+  width: min(100%, 360px);
+  max-width: 360px;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(16px, 2vw, 24px);
   overflow: visible;
 }
 
 .avatar-ring {
-  --avatar-size: clamp(240px, 28vw, 360px);
+  --avatar-size: clamp(240px, 24vw, 310px);
   width: var(--avatar-size);
   height: var(--avatar-size);
   max-width: 100%;
@@ -1958,101 +1978,158 @@ button {
 }
 
 .avatar-inner {
-  width: clamp(145px, 56%, 200px);
-  height: clamp(145px, 56%, 200px);
+  width: 58%;
+  height: 58%;
+}
+
+/*
+   Die Orbit-Symbole laufen innerhalb des Rings.
+   So ragen sie nicht mehr aus dem sichtbaren Bereich heraus.
+*/
+.ring-orbit {
+  inset: 18px;
 }
 
 .orbit-item {
-  width: clamp(38px, 13%, 48px);
-  height: clamp(38px, 13%, 48px);
-  font-size: clamp(1rem, 3vw, 1.4rem);
+  width: clamp(34px, 13%, 44px);
+  height: clamp(34px, 13%, 44px);
+  font-size: clamp(0.95rem, 2.4vw, 1.25rem);
 }
 
-.hero-stats {
-  flex-wrap: wrap;
-}
-
-/* Tablet: Animation über dem Text, aber kleiner und mit weniger vertikalem Abstand. */
-@media (max-width: 1024px) {
+/*
+   Zwischenbreiten: Die Animation wandert über den Text.
+   Das verhindert, dass der lange Nachname mit der Animation kollidiert.
+*/
+@media (max-width: 1180px) {
   .hero {
     min-height: auto;
-    gap: 36px;
-    padding-top: calc(var(--nav-h) + 32px);
-    padding-bottom: 64px;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    text-align: center;
+    padding: calc(var(--nav-h) + 38px) clamp(20px, 5vw, 40px) 72px;
+  }
+
+  .hero-content {
+    max-width: 820px;
+    margin-inline: auto;
   }
 
   .hero-visual {
     order: -1;
-    max-width: 360px;
+    justify-self: center;
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+    padding: 12px;
   }
 
   .avatar-ring {
-    --avatar-size: min(54vw, 300px);
-  }
-
-}
-
-/* Mobile: Animation kompakt halten, damit kein horizontales Abschneiden entsteht. */
-@media (max-width: 768px) {
-  .hero {
-    gap: 28px;
-    padding-inline: 20px;
+    --avatar-size: clamp(220px, 38vw, 290px);
   }
 
   .hero-title {
-    font-size: clamp(3rem, 13vw, 5rem);
+    font-size: clamp(3.2rem, 9vw, 5.2rem);
   }
 
-  .hero-visual {
-    max-width: 300px;
-    padding: 8px;
+  .hero-desc {
+    max-width: 700px;
+    margin-inline: auto;
   }
 
-  .avatar-ring {
-    --avatar-size: min(70vw, 260px);
-  }
-
-  .avatar-inner {
-    width: 54%;
-    height: 54%;
-  }
-
+  .hero-actions,
   .hero-stats {
-    gap: 20px;
-  }
-
-}
-
-/* Sehr kleine Geräte: Buttons, Kennzahlen und Animation untereinander stabil darstellen. */
-@media (max-width: 480px) {
-  .hero {
-    padding-inline: 16px;
-  }
-
-  .hero-visual {
-    max-width: 250px;
-  }
-
-  .avatar-ring {
-    --avatar-size: min(76vw, 230px);
-  }
-
-  .orbit-item {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-  }
-
-  .hero-stats {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
   }
 
   .stat {
     text-align: center;
   }
+}
 
+/* Mobile: Name, Kennzahlen und Animation werden kompakter dargestellt. */
+@media (max-width: 620px) {
+  .hero {
+    gap: 24px;
+    padding-inline: 16px;
+  }
+
+  .hero-badge {
+    align-items: flex-start;
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .hero-title {
+    font-size: clamp(2.45rem, 11.5vw, 3.8rem);
+    letter-spacing: -0.03em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .hero-visual {
+    max-width: 245px;
+    padding: 8px;
+  }
+
+  .avatar-ring {
+    --avatar-size: min(72vw, 220px);
+  }
+
+  .ring-orbit {
+    inset: 14px;
+  }
+
+  .avatar-inner {
+    width: 56%;
+    height: 56%;
+  }
+
+  .orbit-item {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+}
+
+/* Sehr kleine Geräte: keine horizontale Überbreite durch Buttons oder den Namen. */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: clamp(2.15rem, 10.8vw, 2.7rem);
+  }
+
+  .hero-visual {
+    max-width: 210px;
+  }
+
+  .avatar-ring {
+    --avatar-size: min(74vw, 195px);
+  }
+
+  .ring-orbit {
+    inset: 12px;
+  }
+
+  .orbit-item {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Barrierefreiheit: Bei reduzierter Bewegung werden Dauerschleifen deaktiviert. */
@@ -2064,4 +2141,258 @@ button {
     transition-duration: 0.01ms !important;
   }
 
+}
+
+
+/* ============================================
+   FOOTBALL-DATA API – FC BARCELONA
+   ============================================ */
+/*
+   Dieser Bereich gehört zur Freizeitseite.
+   Er zeigt den Lieblingsverein FC Barcelona und kann Live-Daten
+   aus der Football-Data API darstellen.
+*/
+.football-api-section {
+  margin-bottom: 80px;
+}
+
+.football-dashboard {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: var(--shadow);
+}
+
+.football-dashboard-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.football-club-intro h3 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 10px 0 12px;
+}
+
+.football-club-intro p,
+.football-note {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.football-badge,
+.football-card-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  background: rgba(124,110,247,0.1);
+  border: 1px solid rgba(124,110,247,0.2);
+  border-radius: 100px;
+  padding: 3px 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.football-token-panel {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.football-token-panel label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.football-token-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.football-token-row input {
+  flex: 1;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  outline: none;
+  padding: 12px 18px;
+}
+
+.football-token-row input:focus {
+  border-color: var(--accent);
+}
+
+.football-token-row .btn {
+  white-space: nowrap;
+  padding-inline: 22px;
+}
+
+.football-status {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+}
+
+.football-status[data-status="loading"] {
+  color: var(--accent2);
+  border-color: rgba(124,110,247,0.35);
+}
+
+.football-status[data-status="success"] {
+  color: #22c55e;
+  border-color: rgba(34,197,94,0.35);
+}
+
+.football-status[data-status="warning"],
+.football-status[data-status="error"] {
+  color: var(--gold);
+  border-color: rgba(240,165,0,0.35);
+}
+
+.football-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.football-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.football-team-card {
+  grid-column: span 2;
+}
+
+.football-team-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.football-team-header h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.football-team-header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.football-crest-placeholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1d4ed8, #7c2d12, #991b1b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.football-crest-placeholder.has-crest {
+  background: var(--surface2);
+  padding: 8px;
+}
+
+.football-crest-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.football-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.football-list li {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.football-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.football-list span,
+.football-list small,
+.football-standing span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.football-list strong,
+.football-standing strong {
+  display: block;
+  font-size: 0.98rem;
+  margin: 4px 0;
+}
+
+.football-standing {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+/* Responsive Darstellung für den API-Bereich */
+@media (max-width: 900px) {
+  .football-dashboard-header,
+  .football-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .football-team-card {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .football-token-row {
+    flex-direction: column;
+  }
+
+  .football-token-row .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .football-team-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
