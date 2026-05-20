@@ -36,7 +36,7 @@
         "id": 2429,
         "startDate": "2025-08-17",
         "endDate": "2026-05-24",
-        "currentMatchday": 37,
+        "currentMatchday": 38,
         "winner": null
       },
       "id": 544527,
@@ -45,7 +45,7 @@
       "matchday": 32,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-05-20T05:20:56Z",
+      "lastUpdated": "2026-05-20T10:20:59Z",
       "homeTeam": {
         "id": 82,
         "name": "Getafe CF",
@@ -102,7 +102,7 @@
         "id": 2429,
         "startDate": "2025-08-17",
         "endDate": "2026-05-24",
-        "currentMatchday": 37,
+        "currentMatchday": 38,
         "winner": null
       },
       "id": 544548,
@@ -111,7 +111,7 @@
       "matchday": 34,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-05-20T05:20:56Z",
+      "lastUpdated": "2026-05-20T10:20:59Z",
       "homeTeam": {
         "id": 79,
         "name": "CA Osasuna",
@@ -168,7 +168,7 @@
         "id": 2429,
         "startDate": "2025-08-17",
         "endDate": "2026-05-24",
-        "currentMatchday": 37,
+        "currentMatchday": 38,
         "winner": null
       },
       "id": 544553,
@@ -177,7 +177,7 @@
       "matchday": 35,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-05-20T05:20:56Z",
+      "lastUpdated": "2026-05-20T10:20:59Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -234,7 +234,7 @@
         "id": 2429,
         "startDate": "2025-08-17",
         "endDate": "2026-05-24",
-        "currentMatchday": 37,
+        "currentMatchday": 38,
         "winner": null
       },
       "id": 544561,
@@ -243,7 +243,7 @@
       "matchday": 36,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-05-20T05:20:56Z",
+      "lastUpdated": "2026-05-20T10:20:59Z",
       "homeTeam": {
         "id": 263,
         "name": "Deportivo Alavés",
@@ -300,7 +300,7 @@
         "id": 2429,
         "startDate": "2025-08-17",
         "endDate": "2026-05-24",
-        "currentMatchday": 37,
+        "currentMatchday": 38,
         "winner": null
       },
       "id": 544573,
@@ -309,7 +309,7 @@
       "matchday": 37,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-05-20T05:20:56Z",
+      "lastUpdated": "2026-05-20T10:20:59Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -352,5 +352,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-05-20T03:31:19Z"
+  "generatedAt": "2026-05-20T09:32:44Z"
 }
