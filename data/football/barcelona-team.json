@@ -73,6 +73,41 @@
       "nationality": "Spain"
     },
     {
+      "id": 2000,
+      "name": "João Cancelo",
+      "position": "Defence",
+      "dateOfBirth": "1994-05-27",
+      "nationality": "Portugal"
+    },
+    {
+      "id": 8499,
+      "name": "Jules Koundé",
+      "position": "Defence",
+      "dateOfBirth": "1998-11-12",
+      "nationality": "France"
+    },
+    {
+      "id": 28292,
+      "name": "Ronald Araújo",
+      "position": "Defence",
+      "dateOfBirth": "1999-03-07",
+      "nationality": "Uruguay"
+    },
+    {
+      "id": 101345,
+      "name": "Eric García",
+      "position": "Defence",
+      "dateOfBirth": "2001-01-09",
+      "nationality": "Spain"
+    },
+    {
+      "id": 217540,
+      "name": "Pau Cubarsí",
+      "position": "Defence",
+      "dateOfBirth": "2007-01-22",
+      "nationality": "Spain"
+    },
+    {
       "id": 272984,
       "name": "Álvaro Cortés",
       "position": "Defence",
@@ -84,6 +119,34 @@
       "name": "Jofre Torrents",
       "position": "Defence",
       "dateOfBirth": "2007-01-28",
+      "nationality": "Spain"
+    },
+    {
+      "id": 7559,
+      "name": "Frenkie de Jong",
+      "position": "Midfield",
+      "dateOfBirth": "1997-05-12",
+      "nationality": "Netherlands"
+    },
+    {
+      "id": 23132,
+      "name": "Dani Olmo",
+      "position": "Midfield",
+      "dateOfBirth": "1998-05-07",
+      "nationality": "Spain"
+    },
+    {
+      "id": 33154,
+      "name": "Ferrán Torres",
+      "position": "Midfield",
+      "dateOfBirth": "2000-02-29",
+      "nationality": "Spain"
+    },
+    {
+      "id": 133860,
+      "name": "Pedri",
+      "position": "Midfield",
+      "dateOfBirth": "2002-11-25",
       "nationality": "Spain"
     },
     {
@@ -105,6 +168,27 @@
       "name": "Tomy Marqués",
       "position": "Midfield",
       "dateOfBirth": "2006-10-30",
+      "nationality": "Spain"
+    },
+    {
+      "id": 3331,
+      "name": "Marcus Rashford",
+      "position": "Offence",
+      "dateOfBirth": "1997-10-31",
+      "nationality": "England"
+    },
+    {
+      "id": 37428,
+      "name": "Raphinha",
+      "position": "Offence",
+      "dateOfBirth": "1996-12-14",
+      "nationality": "Brazil"
+    },
+    {
+      "id": 202283,
+      "name": "Lamine Yamal",
+      "position": "Offence",
+      "dateOfBirth": "2007-07-13",
       "nationality": "Spain"
     },
     {
@@ -150,81 +234,11 @@
       "nationality": "Spain"
     },
     {
-      "id": 133860,
-      "name": "Pedri",
-      "position": "Central Midfield",
-      "dateOfBirth": "2002-11-25",
-      "nationality": "Spain"
-    },
-    {
-      "id": 101345,
-      "name": "Eric García",
-      "position": "Centre-Back",
-      "dateOfBirth": "2001-01-09",
-      "nationality": "Spain"
-    },
-    {
-      "id": 37428,
-      "name": "Raphinha",
-      "position": "Left Winger",
-      "dateOfBirth": "1996-12-14",
-      "nationality": "Brazil"
-    },
-    {
-      "id": 33154,
-      "name": "Ferrán Torres",
-      "position": "Right Winger",
-      "dateOfBirth": "2000-02-29",
-      "nationality": "Spain"
-    },
-    {
-      "id": 28292,
-      "name": "Ronald Araújo",
-      "position": "Centre-Back",
-      "dateOfBirth": "1999-03-07",
-      "nationality": "Uruguay"
-    },
-    {
-      "id": 23132,
-      "name": "Dani Olmo",
-      "position": "Attacking Midfield",
-      "dateOfBirth": "1998-05-07",
-      "nationality": "Spain"
-    },
-    {
-      "id": 8499,
-      "name": "Jules Koundé",
-      "position": "Right-Back",
-      "dateOfBirth": "1998-11-12",
-      "nationality": "France"
-    },
-    {
-      "id": 7559,
-      "name": "Frenkie de Jong",
-      "position": "Central Midfield",
-      "dateOfBirth": "1997-05-12",
-      "nationality": "Netherlands"
-    },
-    {
       "id": 3455,
       "name": "Andreas Christensen",
       "position": "Centre-Back",
       "dateOfBirth": "1996-04-10",
       "nationality": "Denmark"
-    },
-    {
-      "id": 3331,
-      "name": "Marcus Rashford",
-      "position": "Left Winger",
-      "dateOfBirth": "1997-10-31",
-      "nationality": "England"
-    },
-    {
-      "id": 2000,
-      "name": "João Cancelo",
-      "position": "Right-Back",
-      "dateOfBirth": "1994-05-27",
-      "nationality": "Portugal"
     },
     {
       "id": 371,
@@ -248,24 +262,10 @@
       "nationality": "Spain"
     },
     {
-      "id": 217540,
-      "name": "Pau Cubarsí",
-      "position": "Centre-Back",
-      "dateOfBirth": "2007-01-22",
-      "nationality": "Spain"
-    },
-    {
       "id": 214533,
       "name": "Fermín López",
       "position": "Central Midfield",
       "dateOfBirth": "2003-05-11",
-      "nationality": "Spain"
-    },
-    {
-      "id": 202283,
-      "name": "Lamine Yamal",
-      "position": "Right Winger",
-      "dateOfBirth": "2007-07-13",
       "nationality": "Spain"
     },
     {
@@ -281,5 +281,5 @@
   "ok": true,
   "endpoint": "team",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-06-01T03:59:59Z"
+  "generatedAt": "2026-06-01T11:32:36Z"
 }
