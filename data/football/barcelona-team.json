@@ -150,6 +150,13 @@
       "nationality": "Spain"
     },
     {
+      "id": 171992,
+      "name": "Pablo Gavira",
+      "position": "Midfield",
+      "dateOfBirth": "2004-08-05",
+      "nationality": "Spain"
+    },
+    {
       "id": 270320,
       "name": "Guille Fernández",
       "position": "Midfield",
@@ -227,13 +234,6 @@
       "nationality": "Spain"
     },
     {
-      "id": 171992,
-      "name": "Pablo Gavira",
-      "position": "Central Midfield",
-      "dateOfBirth": "2004-08-05",
-      "nationality": "Spain"
-    },
-    {
       "id": 3455,
       "name": "Andreas Christensen",
       "position": "Centre-Back",
@@ -281,5 +281,5 @@
   "ok": true,
   "endpoint": "team",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-06-03T04:01:49Z"
+  "generatedAt": "2026-06-03T10:57:55Z"
 }
