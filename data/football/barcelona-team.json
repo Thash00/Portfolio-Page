@@ -17,13 +17,6 @@
   "venue": "Camp Nou",
   "runningCompetitions": [
     {
-      "id": 2014,
-      "name": "Primera Division",
-      "code": "PD",
-      "type": "LEAGUE",
-      "emblem": "https://crests.football-data.org/laliga.png"
-    },
-    {
       "id": 2001,
       "name": "UEFA Champions League",
       "code": "CL",
@@ -281,5 +274,5 @@
   "ok": true,
   "endpoint": "team",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-06-07T19:21:27Z"
+  "generatedAt": "2026-06-08T03:57:16Z"
 }

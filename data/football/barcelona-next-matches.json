@@ -1,6 +1,6 @@
 {
   "filters": {
-    "competitions": "PD,CL",
+    "competitions": "CL",
     "permission": "TIER_ONE",
     "status": [
       "SCHEDULED"
@@ -14,5 +14,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-06-07T19:21:27Z"
+  "generatedAt": "2026-06-08T03:57:16Z"
 }
