@@ -45,7 +45,7 @@
       "matchday": 8,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-06-11T05:20:18Z",
+      "lastUpdated": "2026-06-11T10:20:22Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -111,7 +111,7 @@
       "matchday": 1,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-11T05:20:18Z",
+      "lastUpdated": "2026-06-11T10:20:22Z",
       "homeTeam": {
         "id": 67,
         "name": "Newcastle United FC",
@@ -177,7 +177,7 @@
       "matchday": 2,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-11T05:20:18Z",
+      "lastUpdated": "2026-06-11T10:20:22Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -243,7 +243,7 @@
       "matchday": 1,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-11T05:20:18Z",
+      "lastUpdated": "2026-06-11T10:20:22Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -309,7 +309,7 @@
       "matchday": 2,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-11T05:20:18Z",
+      "lastUpdated": "2026-06-11T10:20:22Z",
       "homeTeam": {
         "id": 78,
         "name": "Club Atlético de Madrid",
@@ -352,5 +352,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-06-11T03:55:13Z"
+  "generatedAt": "2026-06-11T10:22:47Z"
 }
