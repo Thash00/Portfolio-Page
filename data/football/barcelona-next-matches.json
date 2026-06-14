@@ -1,18 +1,10 @@
 {
-  "filters": {
-    "competitions": "CL",
-    "permission": "TIER_ONE",
-    "status": [
-      "SCHEDULED"
-    ],
-    "limit": 5
-  },
-  "resultSet": {
-    "count": 0
-  },
   "matches": [],
-  "ok": true,
+  "ok": false,
   "endpoint": "next-matches",
+  "status": 403,
+  "error": "HTTP Error 403: ",
+  "message": "{\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-06-13T19:24:14Z"
+  "generatedAt": "2026-06-14T04:00:13Z"
 }
