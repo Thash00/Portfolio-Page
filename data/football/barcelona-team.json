@@ -11,5 +11,5 @@
   "error": "HTTP Error 403: ",
   "message": "{\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-06-16T16:50:24Z"
+  "generatedAt": "2026-06-16T20:49:29Z"
 }
