@@ -2,9 +2,9 @@
   "matches": [],
   "ok": false,
   "endpoint": "last-matches",
-  "status": null,
-  "error": "Remote end closed connection without response",
-  "message": null,
+  "status": 403,
+  "error": "HTTP Error 403: ",
+  "message": "{\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-06-17T20:11:42Z"
+  "generatedAt": "2026-06-18T03:54:27Z"
 }
