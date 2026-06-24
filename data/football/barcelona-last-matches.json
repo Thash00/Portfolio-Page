@@ -6,5 +6,5 @@
   "error": "HTTP Error 403: ",
   "message": "{\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-06-24T14:27:22Z"
+  "generatedAt": "2026-06-24T19:44:32Z"
 }
