@@ -1,15 +1,46 @@
 {
+  "area": {
+    "id": 2224,
+    "name": "Spain",
+    "code": "ESP",
+    "flag": "https://crests.football-data.org/760.svg"
+  },
   "id": 81,
   "name": "FC Barcelona",
-  "area": {
-    "name": "Spain"
+  "shortName": "Barça",
+  "tla": "FCB",
+  "crest": "https://crests.football-data.org/81.png",
+  "address": "Avenida Arístides Maillol s/n Barcelona 08028",
+  "website": "http://www.fcbarcelona.com",
+  "founded": 1899,
+  "clubColors": "Red / Navy Blue / Orange",
+  "venue": "Camp Nou",
+  "runningCompetitions": [
+    {
+      "id": 2014,
+      "name": "Primera Division",
+      "code": "PD",
+      "type": "LEAGUE",
+      "emblem": "https://crests.football-data.org/laliga.png"
+    }
+  ],
+  "coach": {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "name": null,
+    "dateOfBirth": null,
+    "nationality": null,
+    "contract": {
+      "start": null,
+      "until": null
+    }
   },
-  "matches": [],
-  "ok": false,
+  "squad": [],
+  "staff": [],
+  "lastUpdated": "2024-07-29T17:09:22Z",
+  "ok": true,
   "endpoint": "team",
-  "status": 403,
-  "error": "HTTP Error 403: ",
-  "message": "{\"message\":\"The resource you are looking for is restricted and apparently not within your permissions. Please check your subscription.\",\"errorCode\":403}",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-07-01T09:43:18Z"
+  "generatedAt": "2026-07-01T14:33:02Z"
 }
