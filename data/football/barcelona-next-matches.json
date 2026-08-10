@@ -41,11 +41,11 @@
       },
       "id": 564642,
       "utcDate": "2026-08-23T19:30:00Z",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "matchday": 2,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-07-21T20:42:36Z",
+      "lastUpdated": "2026-08-10T10:20:29Z",
       "homeTeam": {
         "id": 285,
         "name": "Elche CF",
@@ -100,11 +100,11 @@
       },
       "id": 564630,
       "utcDate": "2026-08-27T19:00:00Z",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "matchday": 1,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-07-21T20:42:36Z",
+      "lastUpdated": "2026-08-10T10:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -159,11 +159,11 @@
       },
       "id": 564650,
       "utcDate": "2026-08-31T19:30:00Z",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "matchday": 3,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-07-21T20:42:36Z",
+      "lastUpdated": "2026-08-10T10:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -217,12 +217,12 @@
         "winner": null
       },
       "id": 564659,
-      "utcDate": "2026-09-06T15:00:00Z",
-      "status": "SCHEDULED",
+      "utcDate": "2026-09-06T14:15:00Z",
+      "status": "TIMED",
       "matchday": 4,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-07-21T20:42:36Z",
+      "lastUpdated": "2026-08-10T10:20:29Z",
       "homeTeam": {
         "id": 95,
         "name": "Valencia CF",
@@ -276,12 +276,12 @@
         "winner": null
       },
       "id": 564675,
-      "utcDate": "2026-09-13T15:00:00Z",
+      "utcDate": "2026-09-13T00:00:00Z",
       "status": "SCHEDULED",
       "matchday": 5,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-07-21T20:42:37Z",
+      "lastUpdated": "2026-08-10T10:20:29Z",
       "homeTeam": {
         "id": 88,
         "name": "Levante UD",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-08-10T07:38:08Z"
+  "generatedAt": "2026-08-10T13:04:11Z"
 }
