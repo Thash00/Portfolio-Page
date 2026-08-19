@@ -136,6 +136,13 @@
       "nationality": "Spain"
     },
     {
+      "id": 3199,
+      "name": "Rodri",
+      "position": "Midfield",
+      "dateOfBirth": "1996-06-22",
+      "nationality": "Spain"
+    },
+    {
       "id": 7559,
       "name": "Frenkie de Jong",
       "position": "Midfield",
@@ -182,6 +189,13 @@
       "name": "Marc Bernal",
       "position": "Midfield",
       "dateOfBirth": "2007-05-26",
+      "nationality": "Spain"
+    },
+    {
+      "id": 270320,
+      "name": "Guille Fernández",
+      "position": "Midfield",
+      "dateOfBirth": "2008-06-18",
       "nationality": "Spain"
     },
     {
@@ -260,5 +274,5 @@
   "ok": true,
   "endpoint": "team",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-08-19T01:09:06Z"
+  "generatedAt": "2026-08-19T06:40:21Z"
 }
