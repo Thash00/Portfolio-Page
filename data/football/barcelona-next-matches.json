@@ -36,7 +36,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 1,
+        "currentMatchday": 2,
         "winner": null
       },
       "id": 564642,
@@ -45,7 +45,7 @@
       "matchday": 2,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-19T15:20:27Z",
+      "lastUpdated": "2026-08-20T01:32:04Z",
       "homeTeam": {
         "id": 285,
         "name": "Elche CF",
@@ -95,7 +95,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 1,
+        "currentMatchday": 2,
         "winner": null
       },
       "id": 564630,
@@ -104,7 +104,7 @@
       "matchday": 1,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-19T15:20:27Z",
+      "lastUpdated": "2026-08-20T00:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -154,7 +154,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 1,
+        "currentMatchday": 2,
         "winner": null
       },
       "id": 564650,
@@ -163,7 +163,7 @@
       "matchday": 3,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-19T15:20:27Z",
+      "lastUpdated": "2026-08-20T00:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -213,7 +213,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 1,
+        "currentMatchday": 2,
         "winner": null
       },
       "id": 564659,
@@ -222,7 +222,7 @@
       "matchday": 4,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-19T15:20:27Z",
+      "lastUpdated": "2026-08-20T00:20:29Z",
       "homeTeam": {
         "id": 95,
         "name": "Valencia CF",
@@ -272,7 +272,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 1,
+        "currentMatchday": 2,
         "winner": null
       },
       "id": 564675,
@@ -281,7 +281,7 @@
       "matchday": 5,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-19T15:20:27Z",
+      "lastUpdated": "2026-08-20T00:20:29Z",
       "homeTeam": {
         "id": 88,
         "name": "Levante UD",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-08-19T18:32:46Z"
+  "generatedAt": "2026-08-20T01:08:40Z"
 }
