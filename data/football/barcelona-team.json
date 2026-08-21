@@ -59,6 +59,13 @@
       "nationality": "Hungary"
     },
     {
+      "id": 2000,
+      "name": "João Cancelo",
+      "position": "Defence",
+      "dateOfBirth": "1994-05-27",
+      "nationality": "Portugal"
+    },
+    {
       "id": 3455,
       "name": "Andreas Christensen",
       "position": "Defence",
@@ -274,5 +281,5 @@
   "ok": true,
   "endpoint": "team",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-08-21T06:42:43Z"
+  "generatedAt": "2026-08-21T12:42:45Z"
 }
