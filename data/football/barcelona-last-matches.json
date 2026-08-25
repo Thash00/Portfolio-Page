@@ -45,7 +45,7 @@
       "matchday": 2,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-25T10:20:35Z",
+      "lastUpdated": "2026-08-25T15:20:35Z",
       "homeTeam": {
         "id": 285,
         "name": "Elche CF",
@@ -81,5 +81,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-08-25T12:43:13Z"
+  "generatedAt": "2026-08-25T18:36:52Z"
 }
