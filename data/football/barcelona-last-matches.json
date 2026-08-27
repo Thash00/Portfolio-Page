@@ -8,12 +8,12 @@
     "limit": 5
   },
   "resultSet": {
-    "count": 1,
+    "count": 2,
     "competitions": "PD",
     "first": "2026-08-23",
-    "last": "2026-08-23",
-    "played": 1,
-    "wins": 0,
+    "last": "2026-08-27",
+    "played": 2,
+    "wins": 1,
     "draws": 0,
     "losses": 0
   },
@@ -36,7 +36,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 2,
+        "currentMatchday": 3,
         "winner": null
       },
       "id": 564642,
@@ -45,7 +45,7 @@
       "matchday": 2,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-27T05:20:34Z",
+      "lastUpdated": "2026-08-27T15:20:30Z",
       "homeTeam": {
         "id": 285,
         "name": "Elche CF",
@@ -76,10 +76,69 @@
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
       "referees": []
+    },
+    {
+      "area": {
+        "id": 2224,
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "https://crests.football-data.org/760.svg"
+      },
+      "competition": {
+        "id": 2014,
+        "name": "Primera Division",
+        "code": "PD",
+        "type": "LEAGUE",
+        "emblem": "https://crests.football-data.org/laliga.png"
+      },
+      "season": {
+        "id": 2518,
+        "startDate": "2026-08-16",
+        "endDate": "2027-05-30",
+        "currentMatchday": 3,
+        "winner": null
+      },
+      "id": 564630,
+      "utcDate": "2026-08-27T19:00:00Z",
+      "status": "FINISHED",
+      "matchday": 1,
+      "stage": "REGULAR_SEASON",
+      "group": null,
+      "lastUpdated": "2026-08-27T23:03:14Z",
+      "homeTeam": {
+        "id": 81,
+        "name": "FC Barcelona",
+        "shortName": "Barça",
+        "tla": "FCB",
+        "crest": "https://crests.football-data.org/81.png"
+      },
+      "awayTeam": {
+        "id": 77,
+        "name": "Athletic Club",
+        "shortName": "Athletic",
+        "tla": "ATH",
+        "crest": "https://crests.football-data.org/77.png"
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 2,
+          "away": 0
+        },
+        "halfTime": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": []
     }
   ],
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-08-27T07:26:45Z"
+  "generatedAt": "2026-08-27T21:48:38Z"
 }
