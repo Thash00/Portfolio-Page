@@ -45,7 +45,7 @@
       "matchday": 3,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-28T15:20:37Z",
+      "lastUpdated": "2026-08-29T05:20:35Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -104,7 +104,7 @@
       "matchday": 4,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-28T15:20:37Z",
+      "lastUpdated": "2026-08-29T05:20:35Z",
       "homeTeam": {
         "id": 95,
         "name": "Valencia CF",
@@ -163,7 +163,7 @@
       "matchday": 5,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-28T15:20:37Z",
+      "lastUpdated": "2026-08-29T05:20:35Z",
       "homeTeam": {
         "id": 88,
         "name": "Levante UD",
@@ -222,7 +222,7 @@
       "matchday": 6,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-28T15:20:37Z",
+      "lastUpdated": "2026-08-29T05:20:35Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -281,7 +281,7 @@
       "matchday": 7,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-28T15:20:37Z",
+      "lastUpdated": "2026-08-29T05:20:35Z",
       "homeTeam": {
         "id": 559,
         "name": "Sevilla FC",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-08-28T21:43:55Z"
+  "generatedAt": "2026-08-29T05:45:24Z"
 }
