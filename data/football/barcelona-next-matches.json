@@ -10,8 +10,8 @@
   "resultSet": {
     "count": 5,
     "competitions": "PD,CL",
-    "first": "2026-08-31",
-    "last": "2026-09-16",
+    "first": "2026-09-06",
+    "last": "2026-09-19",
     "played": 0,
     "wins": 0,
     "draws": 5,
@@ -39,72 +39,13 @@
         "currentMatchday": 3,
         "winner": null
       },
-      "id": 564650,
-      "utcDate": "2026-08-31T19:30:00Z",
-      "status": "TIMED",
-      "matchday": 3,
-      "stage": "REGULAR_SEASON",
-      "group": null,
-      "lastUpdated": "2026-08-31T10:20:36Z",
-      "homeTeam": {
-        "id": 81,
-        "name": "FC Barcelona",
-        "shortName": "Barça",
-        "tla": "FCB",
-        "crest": "https://crests.football-data.org/81.png"
-      },
-      "awayTeam": {
-        "id": 87,
-        "name": "Rayo Vallecano de Madrid",
-        "shortName": "Rayo Vallecano",
-        "tla": "RAY",
-        "crest": "https://crests.football-data.org/87.png"
-      },
-      "score": {
-        "winner": null,
-        "duration": "REGULAR",
-        "fullTime": {
-          "home": null,
-          "away": null
-        },
-        "halfTime": {
-          "home": null,
-          "away": null
-        }
-      },
-      "odds": {
-        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-      },
-      "referees": []
-    },
-    {
-      "area": {
-        "id": 2224,
-        "name": "Spain",
-        "code": "ESP",
-        "flag": "https://crests.football-data.org/760.svg"
-      },
-      "competition": {
-        "id": 2014,
-        "name": "Primera Division",
-        "code": "PD",
-        "type": "LEAGUE",
-        "emblem": "https://crests.football-data.org/laliga.png"
-      },
-      "season": {
-        "id": 2518,
-        "startDate": "2026-08-16",
-        "endDate": "2027-05-30",
-        "currentMatchday": 3,
-        "winner": null
-      },
       "id": 564659,
       "utcDate": "2026-09-06T14:15:00Z",
       "status": "TIMED",
       "matchday": 4,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-31T10:20:36Z",
+      "lastUpdated": "2026-09-01T00:20:33Z",
       "homeTeam": {
         "id": 95,
         "name": "Valencia CF",
@@ -163,7 +104,7 @@
       "matchday": 1,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-08-31T10:20:35Z",
+      "lastUpdated": "2026-09-01T00:20:33Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -222,7 +163,7 @@
       "matchday": 5,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-31T10:20:36Z",
+      "lastUpdated": "2026-09-01T00:20:33Z",
       "homeTeam": {
         "id": 88,
         "name": "Levante UD",
@@ -281,7 +222,7 @@
       "matchday": 6,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-08-31T10:20:36Z",
+      "lastUpdated": "2026-09-01T00:20:33Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -312,10 +253,69 @@
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
       "referees": []
+    },
+    {
+      "area": {
+        "id": 2224,
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "https://crests.football-data.org/760.svg"
+      },
+      "competition": {
+        "id": 2014,
+        "name": "Primera Division",
+        "code": "PD",
+        "type": "LEAGUE",
+        "emblem": "https://crests.football-data.org/laliga.png"
+      },
+      "season": {
+        "id": 2518,
+        "startDate": "2026-08-16",
+        "endDate": "2027-05-30",
+        "currentMatchday": 3,
+        "winner": null
+      },
+      "id": 564690,
+      "utcDate": "2026-09-19T19:00:00Z",
+      "status": "TIMED",
+      "matchday": 7,
+      "stage": "REGULAR_SEASON",
+      "group": null,
+      "lastUpdated": "2026-09-01T00:20:33Z",
+      "homeTeam": {
+        "id": 559,
+        "name": "Sevilla FC",
+        "shortName": "Sevilla FC",
+        "tla": "SEV",
+        "crest": "https://crests.football-data.org/559.png"
+      },
+      "awayTeam": {
+        "id": 81,
+        "name": "FC Barcelona",
+        "shortName": "Barça",
+        "tla": "FCB",
+        "crest": "https://crests.football-data.org/81.png"
+      },
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": null,
+          "away": null
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": []
     }
   ],
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-08-31T12:46:49Z"
+  "generatedAt": "2026-08-31T22:29:28Z"
 }
