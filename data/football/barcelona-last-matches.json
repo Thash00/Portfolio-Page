@@ -36,7 +36,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 3,
+        "currentMatchday": 6,
         "winner": null
       },
       "id": 564642,
@@ -45,7 +45,7 @@
       "matchday": 2,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-02T00:20:33Z",
+      "lastUpdated": "2026-09-02T10:20:34Z",
       "homeTeam": {
         "id": 285,
         "name": "Elche CF",
@@ -95,7 +95,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 3,
+        "currentMatchday": 6,
         "winner": null
       },
       "id": 564630,
@@ -104,7 +104,7 @@
       "matchday": 1,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-02T00:20:33Z",
+      "lastUpdated": "2026-09-02T10:20:34Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -154,7 +154,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 3,
+        "currentMatchday": 6,
         "winner": null
       },
       "id": 564650,
@@ -163,7 +163,7 @@
       "matchday": 3,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-02T00:20:33Z",
+      "lastUpdated": "2026-09-02T10:20:34Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -199,5 +199,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-09-02T03:01:28Z"
+  "generatedAt": "2026-09-02T10:41:07Z"
 }
