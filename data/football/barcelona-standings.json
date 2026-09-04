@@ -31,6 +31,25 @@
         {
           "position": 1,
           "team": {
+            "id": 86,
+            "name": "Real Madrid CF",
+            "shortName": "Real Madrid",
+            "tla": "RMA",
+            "crest": "https://crests.football-data.org/86.png"
+          },
+          "playedGames": 4,
+          "form": null,
+          "won": 3,
+          "draw": 1,
+          "lost": 0,
+          "points": 10,
+          "goalsFor": 10,
+          "goalsAgainst": 2,
+          "goalDifference": 8
+        },
+        {
+          "position": 2,
+          "team": {
             "id": 81,
             "name": "FC Barcelona",
             "shortName": "Barça",
@@ -46,25 +65,6 @@
           "goalsFor": 12,
           "goalsAgainst": 2,
           "goalDifference": 10
-        },
-        {
-          "position": 2,
-          "team": {
-            "id": 86,
-            "name": "Real Madrid CF",
-            "shortName": "Real Madrid",
-            "tla": "RMA",
-            "crest": "https://crests.football-data.org/86.png"
-          },
-          "playedGames": 3,
-          "form": null,
-          "won": 3,
-          "draw": 0,
-          "lost": 0,
-          "points": 9,
-          "goalsFor": 10,
-          "goalsAgainst": 2,
-          "goalDifference": 8
         },
         {
           "position": 3,
@@ -126,6 +126,25 @@
         {
           "position": 6,
           "team": {
+            "id": 90,
+            "name": "Real Betis Balompié",
+            "shortName": "Real Betis",
+            "tla": "BET",
+            "crest": "https://crests.football-data.org/90.png"
+          },
+          "playedGames": 4,
+          "form": null,
+          "won": 2,
+          "draw": 1,
+          "lost": 1,
+          "points": 7,
+          "goalsFor": 4,
+          "goalsAgainst": 5,
+          "goalDifference": -1
+        },
+        {
+          "position": 7,
+          "team": {
             "id": 559,
             "name": "Sevilla FC",
             "shortName": "Sevilla FC",
@@ -141,25 +160,6 @@
           "goalsFor": 6,
           "goalsAgainst": 5,
           "goalDifference": 1
-        },
-        {
-          "position": 7,
-          "team": {
-            "id": 90,
-            "name": "Real Betis Balompié",
-            "shortName": "Real Betis",
-            "tla": "BET",
-            "crest": "https://crests.football-data.org/90.png"
-          },
-          "playedGames": 3,
-          "form": null,
-          "won": 2,
-          "draw": 0,
-          "lost": 1,
-          "points": 6,
-          "goalsFor": 4,
-          "goalsAgainst": 5,
-          "goalDifference": -1
         },
         {
           "position": 8,
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-09-04T15:48:03Z"
+  "generatedAt": "2026-09-04T20:18:35Z"
 }
