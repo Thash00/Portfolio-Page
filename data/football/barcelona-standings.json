@@ -37,15 +37,15 @@
             "tla": "FCB",
             "crest": "https://crests.football-data.org/81.png"
           },
-          "playedGames": 3,
+          "playedGames": 4,
           "form": null,
-          "won": 3,
+          "won": 4,
           "draw": 0,
           "lost": 0,
-          "points": 9,
-          "goalsFor": 12,
+          "points": 12,
+          "goalsFor": 14,
           "goalsAgainst": 2,
-          "goalDifference": 10
+          "goalDifference": 12
         },
         {
           "position": 2,
@@ -360,15 +360,15 @@
             "tla": "VAL",
             "crest": "https://crests.football-data.org/95.png"
           },
-          "playedGames": 3,
+          "playedGames": 4,
           "form": null,
           "won": 0,
           "draw": 1,
-          "lost": 2,
+          "lost": 3,
           "points": 1,
           "goalsFor": 1,
-          "goalsAgainst": 4,
-          "goalDifference": -3
+          "goalsAgainst": 6,
+          "goalDifference": -5
         },
         {
           "position": 19,
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-09-06T10:18:24Z"
+  "generatedAt": "2026-09-06T14:57:52Z"
 }
