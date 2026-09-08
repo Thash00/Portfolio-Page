@@ -45,7 +45,7 @@
       "matchday": 2,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-08T15:20:52Z",
+      "lastUpdated": "2026-09-08T20:20:28Z",
       "homeTeam": {
         "id": 285,
         "name": "Elche CF",
@@ -104,7 +104,7 @@
       "matchday": 1,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-08T15:20:52Z",
+      "lastUpdated": "2026-09-08T20:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -163,7 +163,7 @@
       "matchday": 3,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-08T15:20:52Z",
+      "lastUpdated": "2026-09-08T20:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -222,7 +222,7 @@
       "matchday": 4,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-08T15:20:52Z",
+      "lastUpdated": "2026-09-08T20:20:28Z",
       "homeTeam": {
         "id": 95,
         "name": "Valencia CF",
@@ -265,5 +265,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-09-08T16:01:50Z"
+  "generatedAt": "2026-09-08T20:44:41Z"
 }
