@@ -8,12 +8,12 @@
     "limit": 5
   },
   "resultSet": {
-    "count": 4,
-    "competitions": "PD",
+    "count": 5,
+    "competitions": "PD,CL",
     "first": "2026-08-23",
-    "last": "2026-09-06",
-    "played": 4,
-    "wins": 2,
+    "last": "2026-09-09",
+    "played": 5,
+    "wins": 3,
     "draws": 0,
     "losses": 0
   },
@@ -45,7 +45,7 @@
       "matchday": 2,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T15:20:34Z",
+      "lastUpdated": "2026-09-09T20:20:28Z",
       "homeTeam": {
         "id": 285,
         "name": "Elche CF",
@@ -104,7 +104,7 @@
       "matchday": 1,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T15:20:34Z",
+      "lastUpdated": "2026-09-09T20:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -163,7 +163,7 @@
       "matchday": 3,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T15:20:34Z",
+      "lastUpdated": "2026-09-09T20:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -222,7 +222,7 @@
       "matchday": 4,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T15:20:34Z",
+      "lastUpdated": "2026-09-09T20:20:28Z",
       "homeTeam": {
         "id": 95,
         "name": "Valencia CF",
@@ -260,10 +260,76 @@
           "nationality": "Spain"
         }
       ]
+    },
+    {
+      "area": {
+        "id": 2077,
+        "name": "Europe",
+        "code": "EUR",
+        "flag": "https://crests.football-data.org/EUR.svg"
+      },
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League",
+        "code": "CL",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/CL.png"
+      },
+      "season": {
+        "id": 2557,
+        "startDate": "2026-09-08",
+        "endDate": "2027-01-27",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 575329,
+      "utcDate": "2026-09-09T16:45:00Z",
+      "status": "FINISHED",
+      "matchday": 1,
+      "stage": "LEAGUE_STAGE",
+      "group": null,
+      "lastUpdated": "2026-09-09T20:40:04Z",
+      "homeTeam": {
+        "id": 81,
+        "name": "FC Barcelona",
+        "shortName": "Barça",
+        "tla": "FCB",
+        "crest": "https://crests.football-data.org/81.png"
+      },
+      "awayTeam": {
+        "id": 675,
+        "name": "Feyenoord Rotterdam",
+        "shortName": "Feyenoord",
+        "tla": "FEY",
+        "crest": "https://crests.football-data.org/675.png"
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 5,
+          "away": 1
+        },
+        "halfTime": {
+          "home": 2,
+          "away": 0
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 15824,
+          "name": "Sven Jablonski",
+          "type": "REFEREE",
+          "nationality": "Germany"
+        }
+      ]
     }
   ],
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-09-09T15:57:36Z"
+  "generatedAt": "2026-09-09T20:27:41Z"
 }
