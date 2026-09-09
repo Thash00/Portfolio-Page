@@ -45,7 +45,7 @@
       "matchday": 1,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-09T10:20:32Z",
+      "lastUpdated": "2026-09-09T17:47:48Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -75,7 +75,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 15824,
+          "name": "Sven Jablonski",
+          "type": "REFEREE",
+          "nationality": "Germany"
+        }
+      ]
     },
     {
       "area": {
@@ -104,7 +111,7 @@
       "matchday": 5,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T10:20:32Z",
+      "lastUpdated": "2026-09-09T15:20:34Z",
       "homeTeam": {
         "id": 88,
         "name": "Levante UD",
@@ -163,7 +170,7 @@
       "matchday": 6,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T10:20:32Z",
+      "lastUpdated": "2026-09-09T15:20:34Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -222,7 +229,7 @@
       "matchday": 7,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T10:20:32Z",
+      "lastUpdated": "2026-09-09T15:20:34Z",
       "homeTeam": {
         "id": 559,
         "name": "Sevilla FC",
@@ -281,7 +288,7 @@
       "matchday": 8,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-09T10:20:32Z",
+      "lastUpdated": "2026-09-09T15:20:34Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -317,5 +324,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-09-09T10:48:14Z"
+  "generatedAt": "2026-09-09T15:57:36Z"
 }
