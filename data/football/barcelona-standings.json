@@ -126,30 +126,30 @@
         {
           "position": 6,
           "team": {
-            "id": 78,
-            "name": "Club Atlético de Madrid",
-            "shortName": "Atleti",
-            "tla": "ATL",
-            "crest": "https://crests.football-data.org/78.png"
-          },
-          "playedGames": 4,
-          "form": null,
-          "won": 2,
-          "draw": 1,
-          "lost": 1,
-          "points": 7,
-          "goalsFor": 7,
-          "goalsAgainst": 6,
-          "goalDifference": 1
-        },
-        {
-          "position": 6,
-          "team": {
             "id": 559,
             "name": "Sevilla FC",
             "shortName": "Sevilla FC",
             "tla": "SEV",
             "crest": "https://crests.football-data.org/559.png"
+          },
+          "playedGames": 5,
+          "form": null,
+          "won": 2,
+          "draw": 2,
+          "lost": 1,
+          "points": 8,
+          "goalsFor": 7,
+          "goalsAgainst": 6,
+          "goalDifference": 1
+        },
+        {
+          "position": 7,
+          "team": {
+            "id": 78,
+            "name": "Club Atlético de Madrid",
+            "shortName": "Atleti",
+            "tla": "ATL",
+            "crest": "https://crests.football-data.org/78.png"
           },
           "playedGames": 4,
           "form": null,
@@ -373,6 +373,25 @@
         {
           "position": 19,
           "team": {
+            "id": 95,
+            "name": "Valencia CF",
+            "shortName": "Valencia",
+            "tla": "VAL",
+            "crest": "https://crests.football-data.org/95.png"
+          },
+          "playedGames": 5,
+          "form": null,
+          "won": 0,
+          "draw": 2,
+          "lost": 3,
+          "points": 2,
+          "goalsFor": 1,
+          "goalsAgainst": 9,
+          "goalDifference": -8
+        },
+        {
+          "position": 20,
+          "team": {
             "id": 285,
             "name": "Elche CF",
             "shortName": "Elche",
@@ -388,25 +407,6 @@
           "goalsFor": 5,
           "goalsAgainst": 12,
           "goalDifference": -7
-        },
-        {
-          "position": 20,
-          "team": {
-            "id": 95,
-            "name": "Valencia CF",
-            "shortName": "Valencia",
-            "tla": "VAL",
-            "crest": "https://crests.football-data.org/95.png"
-          },
-          "playedGames": 4,
-          "form": null,
-          "won": 0,
-          "draw": 1,
-          "lost": 3,
-          "points": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 9,
-          "goalDifference": -8
         }
       ]
     }
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-09-11T15:54:36Z"
+  "generatedAt": "2026-09-11T20:29:28Z"
 }

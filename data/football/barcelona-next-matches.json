@@ -281,7 +281,7 @@
       "matchday": 2,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-11T15:20:38Z",
+      "lastUpdated": "2026-09-11T20:20:11Z",
       "homeTeam": {
         "id": 610,
         "name": "Galatasaray SK",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-09-11T15:54:36Z"
+  "generatedAt": "2026-09-11T20:29:28Z"
 }
