@@ -45,7 +45,7 @@
       "matchday": 5,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-13T01:32:00Z",
+      "lastUpdated": "2026-09-13T10:20:32Z",
       "homeTeam": {
         "id": 88,
         "name": "Levante UD",
@@ -104,7 +104,7 @@
       "matchday": 6,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-13T01:32:03Z",
+      "lastUpdated": "2026-09-13T10:20:32Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -163,7 +163,7 @@
       "matchday": 7,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-13T01:32:07Z",
+      "lastUpdated": "2026-09-13T10:20:32Z",
       "homeTeam": {
         "id": 559,
         "name": "Sevilla FC",
@@ -222,7 +222,7 @@
       "matchday": 8,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-12T10:20:31Z",
+      "lastUpdated": "2026-09-13T10:20:32Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -272,7 +272,7 @@
         "id": 2557,
         "startDate": "2026-09-08",
         "endDate": "2027-01-27",
-        "currentMatchday": 1,
+        "currentMatchday": 2,
         "winner": null
       },
       "id": 575344,
@@ -281,7 +281,7 @@
       "matchday": 2,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-12T20:20:16Z",
+      "lastUpdated": "2026-09-13T10:20:31Z",
       "homeTeam": {
         "id": 610,
         "name": "Galatasaray SK",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-09-13T03:19:48Z"
+  "generatedAt": "2026-09-13T11:08:14Z"
 }
