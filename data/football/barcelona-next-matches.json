@@ -36,7 +36,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 6,
+        "currentMatchday": 7,
         "winner": null
       },
       "id": 564690,
@@ -95,7 +95,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 6,
+        "currentMatchday": 7,
         "winner": null
       },
       "id": 564700,
@@ -163,7 +163,7 @@
       "matchday": 2,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-17T15:20:35Z",
+      "lastUpdated": "2026-09-17T20:20:32Z",
       "homeTeam": {
         "id": 610,
         "name": "Galatasaray SK",
@@ -213,7 +213,7 @@
         "id": 2518,
         "startDate": "2026-08-16",
         "endDate": "2027-05-30",
-        "currentMatchday": 6,
+        "currentMatchday": 7,
         "winner": null
       },
       "id": 564713,
@@ -281,7 +281,7 @@
       "matchday": 3,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-17T15:20:35Z",
+      "lastUpdated": "2026-09-17T20:20:32Z",
       "homeTeam": {
         "id": 524,
         "name": "Paris Saint-Germain FC",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-09-17T16:17:31Z"
+  "generatedAt": "2026-09-17T20:57:53Z"
 }
