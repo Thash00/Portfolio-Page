@@ -290,9 +290,9 @@
           "draw": 2,
           "lost": 3,
           "points": 5,
-          "goalsFor": 9,
+          "goalsFor": 10,
           "goalsAgainst": 11,
-          "goalDifference": -2
+          "goalDifference": -1
         },
         {
           "position": 15,
@@ -386,8 +386,8 @@
           "lost": 3,
           "points": 3,
           "goalsFor": 3,
-          "goalsAgainst": 10,
-          "goalDifference": -7
+          "goalsAgainst": 11,
+          "goalDifference": -8
         },
         {
           "position": 20,
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-09-17T20:57:53Z"
+  "generatedAt": "2026-09-18T03:19:48Z"
 }
