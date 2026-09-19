@@ -170,7 +170,7 @@
       "matchday": 1,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-19T15:20:08Z",
+      "lastUpdated": "2026-09-19T20:20:16Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -345,5 +345,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-09-19T15:24:54Z"
+  "generatedAt": "2026-09-19T20:05:31Z"
 }
