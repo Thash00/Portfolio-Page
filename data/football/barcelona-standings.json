@@ -39,13 +39,13 @@
           },
           "playedGames": 7,
           "form": null,
-          "won": 6,
-          "draw": 1,
+          "won": 7,
+          "draw": 0,
           "lost": 0,
-          "points": 19,
-          "goalsFor": 29,
+          "points": 21,
+          "goalsFor": 31,
           "goalsAgainst": 7,
-          "goalDifference": 22
+          "goalDifference": 24
         },
         {
           "position": 2,
@@ -88,25 +88,6 @@
         {
           "position": 4,
           "team": {
-            "id": 559,
-            "name": "Sevilla FC",
-            "shortName": "Sevilla FC",
-            "tla": "SEV",
-            "crest": "https://crests.football-data.org/559.png"
-          },
-          "playedGames": 7,
-          "form": null,
-          "won": 4,
-          "draw": 2,
-          "lost": 1,
-          "points": 14,
-          "goalsFor": 10,
-          "goalsAgainst": 7,
-          "goalDifference": 3
-        },
-        {
-          "position": 5,
-          "team": {
             "id": 78,
             "name": "Club Atlético de Madrid",
             "shortName": "Atleti",
@@ -122,6 +103,25 @@
           "goalsFor": 14,
           "goalsAgainst": 6,
           "goalDifference": 8
+        },
+        {
+          "position": 5,
+          "team": {
+            "id": 559,
+            "name": "Sevilla FC",
+            "shortName": "Sevilla FC",
+            "tla": "SEV",
+            "crest": "https://crests.football-data.org/559.png"
+          },
+          "playedGames": 7,
+          "form": null,
+          "won": 4,
+          "draw": 1,
+          "lost": 2,
+          "points": 13,
+          "goalsFor": 10,
+          "goalsAgainst": 9,
+          "goalDifference": 1
         },
         {
           "position": 6,
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-09-19T20:05:31Z"
+  "generatedAt": "2026-09-20T03:33:19Z"
 }
