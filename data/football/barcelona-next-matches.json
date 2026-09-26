@@ -45,7 +45,7 @@
       "matchday": 8,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-25T20:20:24Z",
+      "lastUpdated": "2026-09-26T05:20:30Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -104,7 +104,7 @@
       "matchday": 2,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-25T20:20:23Z",
+      "lastUpdated": "2026-09-26T05:20:29Z",
       "homeTeam": {
         "id": 610,
         "name": "Galatasaray SK",
@@ -163,7 +163,7 @@
       "matchday": 9,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-25T20:20:24Z",
+      "lastUpdated": "2026-09-26T05:20:30Z",
       "homeTeam": {
         "id": 90,
         "name": "Real Betis Balompié",
@@ -222,7 +222,7 @@
       "matchday": 3,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-09-25T20:20:23Z",
+      "lastUpdated": "2026-09-26T05:20:29Z",
       "homeTeam": {
         "id": 524,
         "name": "Paris Saint-Germain FC",
@@ -281,7 +281,7 @@
       "matchday": 10,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-09-25T20:20:24Z",
+      "lastUpdated": "2026-09-26T05:20:30Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-09-25T21:07:12Z"
+  "generatedAt": "2026-09-26T03:40:44Z"
 }
