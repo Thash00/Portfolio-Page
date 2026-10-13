@@ -9,81 +9,15 @@
   },
   "resultSet": {
     "count": 5,
-    "competitions": "CL,PD",
-    "first": "2026-09-09",
-    "last": "2026-10-10",
+    "competitions": "PD,CL",
+    "first": "2026-09-13",
+    "last": "2026-10-13",
     "played": 5,
-    "wins": 3,
+    "wins": 2,
     "draws": 0,
     "losses": 0
   },
   "matches": [
-    {
-      "area": {
-        "id": 2077,
-        "name": "Europe",
-        "code": "EUR",
-        "flag": "https://crests.football-data.org/EUR.svg"
-      },
-      "competition": {
-        "id": 2001,
-        "name": "UEFA Champions League",
-        "code": "CL",
-        "type": "CUP",
-        "emblem": "https://crests.football-data.org/CL.png"
-      },
-      "season": {
-        "id": 2557,
-        "startDate": "2026-09-08",
-        "endDate": "2027-01-27",
-        "currentMatchday": 2,
-        "winner": null
-      },
-      "id": 575329,
-      "utcDate": "2026-09-09T16:45:00Z",
-      "status": "FINISHED",
-      "matchday": 1,
-      "stage": "LEAGUE_STAGE",
-      "group": null,
-      "lastUpdated": "2026-10-13T15:20:37Z",
-      "homeTeam": {
-        "id": 81,
-        "name": "FC Barcelona",
-        "shortName": "Barça",
-        "tla": "FCB",
-        "crest": "https://crests.football-data.org/81.png"
-      },
-      "awayTeam": {
-        "id": 675,
-        "name": "Feyenoord Rotterdam",
-        "shortName": "Feyenoord",
-        "tla": "FEY",
-        "crest": "https://crests.football-data.org/675.png"
-      },
-      "score": {
-        "winner": "HOME_TEAM",
-        "duration": "REGULAR",
-        "fullTime": {
-          "home": 5,
-          "away": 1
-        },
-        "halfTime": {
-          "home": 2,
-          "away": 0
-        }
-      },
-      "odds": {
-        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-      },
-      "referees": [
-        {
-          "id": 15824,
-          "name": "Sven Jablonski",
-          "type": "REFEREE",
-          "nationality": "Germany"
-        }
-      ]
-    },
     {
       "area": {
         "id": 2224,
@@ -111,7 +45,7 @@
       "matchday": 5,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-13T15:20:38Z",
+      "lastUpdated": "2026-10-13T20:20:37Z",
       "homeTeam": {
         "id": 88,
         "name": "Levante UD",
@@ -177,7 +111,7 @@
       "matchday": 6,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-13T15:20:38Z",
+      "lastUpdated": "2026-10-13T20:20:37Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -243,7 +177,7 @@
       "matchday": 7,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-13T15:20:38Z",
+      "lastUpdated": "2026-10-13T20:20:37Z",
       "homeTeam": {
         "id": 559,
         "name": "Sevilla FC",
@@ -309,7 +243,7 @@
       "matchday": 8,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-13T15:20:38Z",
+      "lastUpdated": "2026-10-13T20:20:37Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -347,10 +281,76 @@
           "nationality": "Spain"
         }
       ]
+    },
+    {
+      "area": {
+        "id": 2077,
+        "name": "Europe",
+        "code": "EUR",
+        "flag": "https://crests.football-data.org/EUR.svg"
+      },
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League",
+        "code": "CL",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/CL.png"
+      },
+      "season": {
+        "id": 2557,
+        "startDate": "2026-09-08",
+        "endDate": "2027-01-27",
+        "currentMatchday": 2,
+        "winner": null
+      },
+      "id": 575344,
+      "utcDate": "2026-10-13T19:00:00Z",
+      "status": "FINISHED",
+      "matchday": 2,
+      "stage": "LEAGUE_STAGE",
+      "group": null,
+      "lastUpdated": "2026-10-13T22:55:41Z",
+      "homeTeam": {
+        "id": 610,
+        "name": "Galatasaray SK",
+        "shortName": "Galatasaray",
+        "tla": "GAL",
+        "crest": "https://crests.football-data.org/610.png"
+      },
+      "awayTeam": {
+        "id": 81,
+        "name": "FC Barcelona",
+        "shortName": "Barça",
+        "tla": "FCB",
+        "crest": "https://crests.football-data.org/81.png"
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 1,
+          "away": 4
+        },
+        "halfTime": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 11079,
+          "name": "Marco Guida",
+          "type": "REFEREE",
+          "nationality": "Italy"
+        }
+      ]
     }
   ],
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-10-13T13:37:05Z"
+  "generatedAt": "2026-10-13T22:18:04Z"
 }
