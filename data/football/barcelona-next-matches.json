@@ -75,7 +75,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 15628,
+          "name": "Ricardo de Burgos",
+          "type": "REFEREE",
+          "nationality": "Spain"
+        }
+      ]
     },
     {
       "area": {
@@ -104,7 +111,7 @@
       "matchday": 3,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-17T10:20:32Z",
+      "lastUpdated": "2026-10-17T15:20:13Z",
       "homeTeam": {
         "id": 524,
         "name": "Paris Saint-Germain FC",
@@ -281,7 +288,7 @@
       "matchday": 4,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-17T10:20:32Z",
+      "lastUpdated": "2026-10-17T15:20:13Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -317,5 +324,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-10-17T10:11:05Z"
+  "generatedAt": "2026-10-17T14:59:52Z"
 }
