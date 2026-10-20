@@ -234,6 +234,13 @@
       "nationality": "Belgium"
     },
     {
+      "id": 302538,
+      "name": "Álex Campos",
+      "position": null,
+      "dateOfBirth": "2008-02-02",
+      "nationality": "Spain"
+    },
+    {
       "id": 301129,
       "name": "Iker Rodríguez",
       "position": null,
@@ -246,5 +253,5 @@
   "ok": true,
   "endpoint": "team",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-10-20T16:23:09Z"
+  "generatedAt": "2026-10-20T21:16:35Z"
 }
