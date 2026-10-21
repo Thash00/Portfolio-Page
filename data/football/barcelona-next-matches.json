@@ -45,7 +45,7 @@
       "matchday": 10,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-21T10:20:27Z",
+      "lastUpdated": "2026-10-21T15:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -104,7 +104,7 @@
       "matchday": 11,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-21T10:20:27Z",
+      "lastUpdated": "2026-10-21T15:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -163,7 +163,7 @@
       "matchday": 4,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-21T10:20:27Z",
+      "lastUpdated": "2026-10-21T15:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -222,7 +222,7 @@
       "matchday": 12,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-21T10:20:27Z",
+      "lastUpdated": "2026-10-21T15:20:29Z",
       "homeTeam": {
         "id": 78,
         "name": "Club Atlético de Madrid",
@@ -281,7 +281,7 @@
       "matchday": 13,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-21T10:20:27Z",
+      "lastUpdated": "2026-10-21T15:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-10-21T11:13:22Z"
+  "generatedAt": "2026-10-21T16:39:31Z"
 }
