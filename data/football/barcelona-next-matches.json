@@ -10,73 +10,14 @@
   "resultSet": {
     "count": 5,
     "competitions": "PD,CL",
-    "first": "2026-10-25",
-    "last": "2026-11-22",
+    "first": "2026-10-31",
+    "last": "2026-11-25",
     "played": 0,
     "wins": 0,
     "draws": 5,
     "losses": 0
   },
   "matches": [
-    {
-      "area": {
-        "id": 2224,
-        "name": "Spain",
-        "code": "ESP",
-        "flag": "https://crests.football-data.org/760.svg"
-      },
-      "competition": {
-        "id": 2014,
-        "name": "Primera Division",
-        "code": "PD",
-        "type": "LEAGUE",
-        "emblem": "https://crests.football-data.org/laliga.png"
-      },
-      "season": {
-        "id": 2518,
-        "startDate": "2026-08-16",
-        "endDate": "2027-05-30",
-        "currentMatchday": 10,
-        "winner": null
-      },
-      "id": 564723,
-      "utcDate": "2026-10-25T20:00:00Z",
-      "status": "TIMED",
-      "matchday": 10,
-      "stage": "REGULAR_SEASON",
-      "group": null,
-      "lastUpdated": "2026-10-25T10:20:29Z",
-      "homeTeam": {
-        "id": 81,
-        "name": "FC Barcelona",
-        "shortName": "Barça",
-        "tla": "FCB",
-        "crest": "https://crests.football-data.org/81.png"
-      },
-      "awayTeam": {
-        "id": 86,
-        "name": "Real Madrid CF",
-        "shortName": "Real Madrid",
-        "tla": "RMA",
-        "crest": "https://crests.football-data.org/86.png"
-      },
-      "score": {
-        "winner": null,
-        "duration": "REGULAR",
-        "fullTime": {
-          "home": null,
-          "away": null
-        },
-        "halfTime": {
-          "home": null,
-          "away": null
-        }
-      },
-      "odds": {
-        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-      },
-      "referees": []
-    },
     {
       "area": {
         "id": 2224,
@@ -163,7 +104,7 @@
       "matchday": 4,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-25T15:20:10Z",
+      "lastUpdated": "2026-10-25T20:20:23Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -312,10 +253,69 @@
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
       "referees": []
+    },
+    {
+      "area": {
+        "id": 2077,
+        "name": "Europe",
+        "code": "EUR",
+        "flag": "https://crests.football-data.org/EUR.svg"
+      },
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League",
+        "code": "CL",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/CL.png"
+      },
+      "season": {
+        "id": 2557,
+        "startDate": "2026-09-08",
+        "endDate": "2027-01-27",
+        "currentMatchday": 4,
+        "winner": null
+      },
+      "id": 575404,
+      "utcDate": "2026-11-25T17:45:00Z",
+      "status": "TIMED",
+      "matchday": 5,
+      "stage": "LEAGUE_STAGE",
+      "group": null,
+      "lastUpdated": "2026-10-25T20:20:23Z",
+      "homeTeam": {
+        "id": 10233,
+        "name": "Sabah FK",
+        "shortName": "Sabah FK",
+        "tla": "SAB",
+        "crest": "https://crests.football-data.org/10233.png"
+      },
+      "awayTeam": {
+        "id": 81,
+        "name": "FC Barcelona",
+        "shortName": "Barça",
+        "tla": "FCB",
+        "crest": "https://crests.football-data.org/81.png"
+      },
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": null,
+          "away": null
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": []
     }
   ],
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-10-25T15:35:36Z"
+  "generatedAt": "2026-10-25T20:24:08Z"
 }

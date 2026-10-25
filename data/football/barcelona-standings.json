@@ -37,12 +37,12 @@
             "tla": "FCB",
             "crest": "https://crests.football-data.org/81.png"
           },
-          "playedGames": 9,
+          "playedGames": 10,
           "form": null,
           "won": 9,
-          "draw": 0,
+          "draw": 1,
           "lost": 0,
-          "points": 27,
+          "points": 28,
           "goalsFor": 39,
           "goalsAgainst": 9,
           "goalDifference": 30
@@ -75,12 +75,12 @@
             "tla": "RMA",
             "crest": "https://crests.football-data.org/86.png"
           },
-          "playedGames": 9,
+          "playedGames": 10,
           "form": null,
           "won": 7,
-          "draw": 0,
+          "draw": 1,
           "lost": 2,
-          "points": 21,
+          "points": 22,
           "goalsFor": 23,
           "goalsAgainst": 9,
           "goalDifference": 14
@@ -113,15 +113,15 @@
             "tla": "RSO",
             "crest": "https://crests.football-data.org/92.png"
           },
-          "playedGames": 9,
+          "playedGames": 10,
           "form": null,
-          "won": 5,
+          "won": 6,
           "draw": 1,
           "lost": 3,
-          "points": 16,
-          "goalsFor": 17,
-          "goalsAgainst": 17,
-          "goalDifference": 0
+          "points": 19,
+          "goalsFor": 19,
+          "goalsAgainst": 18,
+          "goalDifference": 1
         },
         {
           "position": 6,
@@ -284,15 +284,15 @@
             "tla": "LEV",
             "crest": "https://crests.football-data.org/88.png"
           },
-          "playedGames": 9,
+          "playedGames": 10,
           "form": null,
           "won": 2,
           "draw": 4,
-          "lost": 3,
+          "lost": 4,
           "points": 10,
-          "goalsFor": 15,
-          "goalsAgainst": 17,
-          "goalDifference": -2
+          "goalsFor": 16,
+          "goalsAgainst": 19,
+          "goalDifference": -3
         },
         {
           "position": 15,
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-10-25T15:35:36Z"
+  "generatedAt": "2026-10-25T20:24:08Z"
 }
