@@ -45,7 +45,7 @@
       "matchday": 11,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-25T10:20:29Z",
+      "lastUpdated": "2026-10-26T00:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -104,7 +104,7 @@
       "matchday": 4,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-25T20:20:23Z",
+      "lastUpdated": "2026-10-26T00:20:27Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -163,7 +163,7 @@
       "matchday": 12,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-25T10:20:29Z",
+      "lastUpdated": "2026-10-26T00:20:28Z",
       "homeTeam": {
         "id": 78,
         "name": "Club Atlético de Madrid",
@@ -222,7 +222,7 @@
       "matchday": 13,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-10-25T10:20:29Z",
+      "lastUpdated": "2026-10-26T00:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -281,7 +281,7 @@
       "matchday": 5,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-25T20:20:23Z",
+      "lastUpdated": "2026-10-26T00:20:27Z",
       "homeTeam": {
         "id": 10233,
         "name": "Sabah FK",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-10-25T20:24:08Z"
+  "generatedAt": "2026-10-26T03:21:51Z"
 }

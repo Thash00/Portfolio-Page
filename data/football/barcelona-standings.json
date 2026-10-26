@@ -40,12 +40,12 @@
           "playedGames": 10,
           "form": null,
           "won": 9,
-          "draw": 1,
-          "lost": 0,
-          "points": 28,
-          "goalsFor": 39,
-          "goalsAgainst": 9,
-          "goalDifference": 30
+          "draw": 0,
+          "lost": 1,
+          "points": 27,
+          "goalsFor": 40,
+          "goalsAgainst": 11,
+          "goalDifference": 29
         },
         {
           "position": 2,
@@ -77,13 +77,13 @@
           },
           "playedGames": 10,
           "form": null,
-          "won": 7,
-          "draw": 1,
+          "won": 8,
+          "draw": 0,
           "lost": 2,
-          "points": 22,
-          "goalsFor": 23,
-          "goalsAgainst": 9,
-          "goalDifference": 14
+          "points": 24,
+          "goalsFor": 25,
+          "goalsAgainst": 10,
+          "goalDifference": 15
         },
         {
           "position": 4,
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-10-25T20:24:08Z"
+  "generatedAt": "2026-10-26T03:21:51Z"
 }
