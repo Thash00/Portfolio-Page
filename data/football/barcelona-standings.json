@@ -19,7 +19,7 @@
     "id": 2518,
     "startDate": "2026-08-16",
     "endDate": "2027-05-30",
-    "currentMatchday": 10,
+    "currentMatchday": 11,
     "winner": null
   },
   "standings": [
@@ -414,5 +414,5 @@
   "ok": true,
   "endpoint": "standings",
   "sourceUrl": "https://api.football-data.org/v4/competitions/PD/standings",
-  "generatedAt": "2026-10-29T04:31:02Z"
+  "generatedAt": "2026-10-29T12:20:05Z"
 }
