@@ -111,7 +111,7 @@
       "matchday": 2,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-31T15:20:10Z",
+      "lastUpdated": "2026-10-31T20:20:16Z",
       "homeTeam": {
         "id": 610,
         "name": "Galatasaray SK",
@@ -243,7 +243,7 @@
       "matchday": 3,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-10-31T15:20:10Z",
+      "lastUpdated": "2026-10-31T20:20:16Z",
       "homeTeam": {
         "id": 524,
         "name": "Paris Saint-Germain FC",
@@ -352,5 +352,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-10-31T16:51:19Z"
+  "generatedAt": "2026-10-31T21:00:14Z"
 }
