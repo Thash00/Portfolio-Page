@@ -45,7 +45,7 @@
       "matchday": 9,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-07T05:20:29Z",
+      "lastUpdated": "2026-11-07T10:20:29Z",
       "homeTeam": {
         "id": 90,
         "name": "Real Betis Balompié",
@@ -102,7 +102,7 @@
         "id": 2557,
         "startDate": "2026-09-08",
         "endDate": "2027-01-27",
-        "currentMatchday": 4,
+        "currentMatchday": 5,
         "winner": null
       },
       "id": 575367,
@@ -111,7 +111,7 @@
       "matchday": 3,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-11-07T05:20:28Z",
+      "lastUpdated": "2026-11-07T10:20:28Z",
       "homeTeam": {
         "id": 524,
         "name": "Paris Saint-Germain FC",
@@ -177,7 +177,7 @@
       "matchday": 10,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-07T05:20:29Z",
+      "lastUpdated": "2026-11-07T10:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -243,7 +243,7 @@
       "matchday": 11,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-07T05:20:29Z",
+      "lastUpdated": "2026-11-07T10:20:29Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -300,7 +300,7 @@
         "id": 2557,
         "startDate": "2026-09-08",
         "endDate": "2027-01-27",
-        "currentMatchday": 4,
+        "currentMatchday": 5,
         "winner": null
       },
       "id": 575380,
@@ -309,7 +309,7 @@
       "matchday": 4,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-11-07T05:20:28Z",
+      "lastUpdated": "2026-11-07T10:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -352,5 +352,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-11-07T04:46:37Z"
+  "generatedAt": "2026-11-07T12:29:54Z"
 }
