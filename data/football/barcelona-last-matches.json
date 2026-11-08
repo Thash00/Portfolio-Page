@@ -111,7 +111,7 @@
       "matchday": 3,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-11-08T10:20:26Z",
+      "lastUpdated": "2026-11-08T20:20:20Z",
       "homeTeam": {
         "id": 524,
         "name": "Paris Saint-Germain FC",
@@ -309,7 +309,7 @@
       "matchday": 4,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-11-08T10:20:26Z",
+      "lastUpdated": "2026-11-08T20:20:20Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -352,5 +352,5 @@
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-11-08T12:48:12Z"
+  "generatedAt": "2026-11-08T21:41:55Z"
 }
