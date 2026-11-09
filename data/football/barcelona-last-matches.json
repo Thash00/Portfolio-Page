@@ -9,81 +9,15 @@
   },
   "resultSet": {
     "count": 5,
-    "competitions": "PD,CL",
-    "first": "2026-10-17",
-    "last": "2026-11-03",
+    "competitions": "CL,PD",
+    "first": "2026-10-20",
+    "last": "2026-11-08",
     "played": 5,
     "wins": 3,
     "draws": 0,
     "losses": 2
   },
   "matches": [
-    {
-      "area": {
-        "id": 2224,
-        "name": "Spain",
-        "code": "ESP",
-        "flag": "https://crests.football-data.org/760.svg"
-      },
-      "competition": {
-        "id": 2014,
-        "name": "Primera Division",
-        "code": "PD",
-        "type": "LEAGUE",
-        "emblem": "https://crests.football-data.org/laliga.png"
-      },
-      "season": {
-        "id": 2518,
-        "startDate": "2026-08-16",
-        "endDate": "2027-05-30",
-        "currentMatchday": 12,
-        "winner": null
-      },
-      "id": 564713,
-      "utcDate": "2026-10-17T16:30:00Z",
-      "status": "FINISHED",
-      "matchday": 9,
-      "stage": "REGULAR_SEASON",
-      "group": null,
-      "lastUpdated": "2026-11-08T10:20:27Z",
-      "homeTeam": {
-        "id": 90,
-        "name": "Real Betis Balompié",
-        "shortName": "Real Betis",
-        "tla": "BET",
-        "crest": "https://crests.football-data.org/90.png"
-      },
-      "awayTeam": {
-        "id": 81,
-        "name": "FC Barcelona",
-        "shortName": "Barça",
-        "tla": "FCB",
-        "crest": "https://crests.football-data.org/81.png"
-      },
-      "score": {
-        "winner": "AWAY_TEAM",
-        "duration": "REGULAR",
-        "fullTime": {
-          "home": 2,
-          "away": 5
-        },
-        "halfTime": {
-          "home": 1,
-          "away": 2
-        }
-      },
-      "odds": {
-        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-      },
-      "referees": [
-        {
-          "id": 15628,
-          "name": "Ricardo de Burgos",
-          "type": "REFEREE",
-          "nationality": "Spain"
-        }
-      ]
-    },
     {
       "area": {
         "id": 2077,
@@ -111,7 +45,7 @@
       "matchday": 3,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-11-08T20:20:20Z",
+      "lastUpdated": "2026-11-09T05:20:28Z",
       "homeTeam": {
         "id": 524,
         "name": "Paris Saint-Germain FC",
@@ -177,7 +111,7 @@
       "matchday": 10,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-08T10:20:27Z",
+      "lastUpdated": "2026-11-09T05:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -243,7 +177,7 @@
       "matchday": 11,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-08T10:20:27Z",
+      "lastUpdated": "2026-11-09T05:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -309,7 +243,7 @@
       "matchday": 4,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-11-08T20:20:20Z",
+      "lastUpdated": "2026-11-09T05:20:28Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -347,10 +281,76 @@
           "nationality": "Italy"
         }
       ]
+    },
+    {
+      "area": {
+        "id": 2224,
+        "name": "Spain",
+        "code": "ESP",
+        "flag": "https://crests.football-data.org/760.svg"
+      },
+      "competition": {
+        "id": 2014,
+        "name": "Primera Division",
+        "code": "PD",
+        "type": "LEAGUE",
+        "emblem": "https://crests.football-data.org/laliga.png"
+      },
+      "season": {
+        "id": 2518,
+        "startDate": "2026-08-16",
+        "endDate": "2027-05-30",
+        "currentMatchday": 12,
+        "winner": null
+      },
+      "id": 564746,
+      "utcDate": "2026-11-08T20:00:00Z",
+      "status": "FINISHED",
+      "matchday": 12,
+      "stage": "REGULAR_SEASON",
+      "group": null,
+      "lastUpdated": "2026-11-09T05:20:28Z",
+      "homeTeam": {
+        "id": 78,
+        "name": "Club Atlético de Madrid",
+        "shortName": "Atleti",
+        "tla": "ATL",
+        "crest": "https://crests.football-data.org/78.png"
+      },
+      "awayTeam": {
+        "id": 81,
+        "name": "FC Barcelona",
+        "shortName": "Barça",
+        "tla": "FCB",
+        "crest": "https://crests.football-data.org/81.png"
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 1,
+          "away": 2
+        },
+        "halfTime": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 80747,
+          "name": "Javier Alberola Rojas",
+          "type": "REFEREE",
+          "nationality": null
+        }
+      ]
     }
   ],
   "ok": true,
   "endpoint": "last-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=FINISHED&limit=5",
-  "generatedAt": "2026-11-08T21:41:55Z"
+  "generatedAt": "2026-11-09T04:47:07Z"
 }
