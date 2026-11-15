@@ -11,7 +11,7 @@
     "count": 5,
     "competitions": "PD,CL",
     "first": "2026-11-22",
-    "last": "2026-12-06",
+    "last": "2026-12-05",
     "played": 0,
     "wins": 0,
     "draws": 5,
@@ -45,7 +45,7 @@
       "matchday": 13,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-15T10:20:34Z",
+      "lastUpdated": "2026-11-15T20:20:30Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -104,7 +104,7 @@
       "matchday": 5,
       "stage": "LEAGUE_STAGE",
       "group": null,
-      "lastUpdated": "2026-11-15T10:20:33Z",
+      "lastUpdated": "2026-11-15T20:20:29Z",
       "homeTeam": {
         "id": 10233,
         "name": "Sabah FK",
@@ -163,7 +163,7 @@
       "matchday": 14,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-15T10:20:34Z",
+      "lastUpdated": "2026-11-15T20:20:30Z",
       "homeTeam": {
         "id": 560,
         "name": "RC Deportivo La Coruña",
@@ -222,7 +222,7 @@
       "matchday": 23,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-15T10:20:34Z",
+      "lastUpdated": "2026-11-15T20:20:30Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -276,12 +276,12 @@
         "winner": null
       },
       "id": 564773,
-      "utcDate": "2026-12-06T00:00:00Z",
-      "status": "SCHEDULED",
+      "utcDate": "2026-12-05T20:00:00Z",
+      "status": "TIMED",
       "matchday": 15,
       "stage": "REGULAR_SEASON",
       "group": null,
-      "lastUpdated": "2026-11-15T10:20:34Z",
+      "lastUpdated": "2026-11-15T20:20:30Z",
       "homeTeam": {
         "id": 81,
         "name": "FC Barcelona",
@@ -317,5 +317,5 @@
   "ok": true,
   "endpoint": "next-matches",
   "sourceUrl": "https://api.football-data.org/v4/teams/81/matches?status=SCHEDULED&limit=5",
-  "generatedAt": "2026-11-15T13:28:11Z"
+  "generatedAt": "2026-11-15T22:29:40Z"
 }
