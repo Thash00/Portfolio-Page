@@ -234,6 +234,13 @@
       "nationality": "Belgium"
     },
     {
+      "id": 304326,
+      "name": "Òscar Gistau",
+      "position": null,
+      "dateOfBirth": "2008-03-08",
+      "nationality": "Spain"
+    },
+    {
       "id": 302801,
       "name": "Ebrima Tunkara",
       "position": null,
@@ -267,5 +274,5 @@
   "ok": true,
   "endpoint": "team",
   "sourceUrl": "https://api.football-data.org/v4/teams/81",
-  "generatedAt": "2026-11-25T16:49:38Z"
+  "generatedAt": "2026-11-26T01:35:29Z"
 }
